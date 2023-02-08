@@ -1,0 +1,884 @@
+% \chapter{Group Theory and Particle Physics}
+\newappendix{Group Theory and Particle Physics}\label{sec:groups}
+
+The extent to which these components are described by mathematics is the profound, and historically unintuitive, foundation on which the field of physics is based.
+This appendix describes the mathematical foundation of the Standard Model from the humble perspective of an experimentalist graduate student.
+The casual reader is encouraged to follow the broad strokes rather than the fine details. The experimentalist reader is encouraged to consult the included references. The theorist reader is requested to proceed with a sense of humor.
+
+% ##############################################################
+\section{Mathematical Structures}\label{sec:math}
+% ##############################################################
+
+A mathematical structure consists of objects and the relations between them.
+This statement is made with the highest degree of abstraction. The mathematical structure is defined without regard to \emph{what} the objects are.
+Despite the degree of abstraction, the concept of a mathematical structure is useful in the study of physical systems.
+There often exists a mathematical structure that exhibits, through analogy, the same components and interactions as a physical system.
+In this case, by studying the mathematical structure, it is possible to study the physical system.
+This combination of abstraction and analogy makes mathematics a powerful tool for the study of physical systems.
+
+A broad selection of mathematical structures falls into the category of  \emph{Groups}.
+This class will be the focus of the remainder of this section.
+
+Several resources were invaluable in the preparation of this chapter.
+The books \emph{Elementary Particles and Their Interactions} by Ho-Kim and Pham \cite{hokim}, \emph{The Lie Algebras su(N)} by Pfeifer\cite{pfeifer} and \emph{Transformation Groups and Lie Algebras} by Ibragimov\cite{ibragimov} provide a basis for the mathematics underlying the Standard Model.
+Further details are informed by the series of papers, \emph{A Simple Introduction to Particle Physics} by Robinson \etal \cite{robinson}.
+
+\subsection{Groups and their Properties}
+
+\subsubsection{Group Definition}
+A Group is comprised by a set of elements, $G=\{g_i,g_j,...\}$, and a relation between them, ``$\circ$''. 
+As mentioned earlier, the elements and their relations are completely abstract notions.
+While the relation is often called a \emph{product rule}, any suitable function $\circ(g_i,g_j)\equiv g_ig_j=g_k$ that maps two Group members onto a third Group member is acceptable.
+
+There are four requirements of the Group elements and product rule.
+\begin{enumerate}
+    \item Closure: the product of any two elements in the Group yields an element that is also in the Group. Concisely, $g_ig_j=g_k\in G$, $\forall g_i,g_j\in G$.
+    \item Associativity: the sequence of the application of the product rule does not change the result. In other words, $g_i(g_jg_k)=(g_ig_j)g_k$, $\forall g_i,g_j,g_k\in G$.
+    \item Identity: There is a unique element, $e$, in the Group whose product with any other element results in the latter. Explicitly, $\exists!e\in G$ such that $eg_i=g_ie=g_i$, $\forall g_i\in G$. The element $e$ is labeled the \emph{identity element}, or the \emph{identity}.
+    \item Invertibility: For every element in the Group, there also exists an element whose product with the first element yields the identity element. Symbolically, $\forall g_i\in G$, $\exists g_j\in G$ such that $g_ig_j=e$. The element $g_j$ is called the inverse of $g_i$ and is denoted as $g_i^{-}$.
+\end{enumerate}
+This short set of requirements is all that is needed to define the concept of a Group.
+
+Several terms are useful when discussing groups.
+A Group is called \emph{Abelian} if a product of elements yields the same result regardless of their order: $g_ig_j=g_jg_i$, $\forall g_i,g_j\in G$.
+Likewise, a Group is called \emph{non-Abelian} if $g_ig_j\ne g_jg_i$ for any elements of the Group.
+These definitions hint at the utility of the \emph{commutator} function $[g_i,g_j]$, which will gain an explicit form when square matrices represent $ g_i$ and $g_j$.
+
+The set of elements that makes up the group can be finite or infinite.
+In both cases, the number of elements in the group is called the group's \emph{order}.
+Furthermore, the elements of a Group can be discrete or continuous.
+In the continuous case, the label $i$ in $g_i$ is a continuous variable that identifies the Group element.
+Such Groups form a class called \emph{Lie Groups}.
+If a Group is parameterized by one real continuous variable $i$ within a given interval and a unique value of $i=i_0$ corresponding to the identity element, this group is a \emph{one-parameter} group. 
+One-parameter Groups are of particular interest in particle physics.
+The number of parameters needed to specify an element in the group is the group's \emph{dimension}.
+
+The definition given here is sufficient to investigate the nature of Groups. The tables in Figure \ref{tab:cayley} show the relations between the elements of several Groups.
+The relations are shown for the Groups of order 1 (Table \ref{tab:cayley1}), order 2 (Table \ref{tab:cayley2}), and order 3 (Table \ref{tab:cayley3}), which all happen to be uniquely defined by their order.
+These tables are generalized versions of arithmetic multiplication tables.
+They specify the two components of a Group: the elements along with the row/column headers, and the relations between them. 
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subcaptionbox{One element group\label{tab:cayley1}}{
+    \begin{tabular}{c|c c c c}\toprule
+    $\circ$ & $e$ \\ \hline
+    $e$     & $e$ \\
+    \bottomrule\end{tabular} 
+    \hspace{0.20\textwidth}%
+}
+\subcaptionbox{Two element group\label{tab:cayley2}}{
+    \begin{tabular}{c|c c c c}\toprule
+    $\circ$ & $e$   & $g_2$ \\ \hline
+    $e$     & $e$   & $g_2$ \\
+    $g_2$   & $g_2$ & $e$   \\
+    \bottomrule\end{tabular} 
+    \hspace{0.10\textwidth}%
+}
+\subcaptionbox{Three element group\label{tab:cayley3}}{
+    \begin{tabular}{c|c c c c}\toprule
+    $\circ$ & $e$   & $g_2$ & $g_3$  \\ \hline
+    $e$     & $e$   & $g_2$ & $g_3$ \\
+    $g_2$   & $g_2$ & $g_3$ & $e$   \\
+    $g_3$   & $g_3$ & $g_3$ & $g_2$ \\
+    \bottomrule\end{tabular} 
+    \hspace{0.10\textwidth}%
+}
+\caption{Cayley tables for the first three Groups by their order. These tables show the result of the product between each element of the group. Since the first three Groups are Abelian, the order of the column and row elements in the product does not change the result. These Groups are uniquely defined by their order, without mention of the product rule. The first (a) group contains only the identity due to the third Group property listed in the text. The second (b) and third (c) Group structures are derived from the requirements for invertibility of the elements. Groups of higher order are identified by their product rule as well.}
+\label{tab:cayley}
+\end{figure}
+
+\subsubsection{Representations}\label{sec:representations}
+A Group, consisting of a set of elements $G$ and a product rule $\circ$, is denoted $(G,\circ)$. 
+The elements $g_i\in G$ are not numbers, or matrices, or any other concrete object.
+Nevertheless, sets of concrete objects and associated product rules can be found that satisfy the same relationships as the elements of group $(G,\circ)$.
+In such a case, the concrete set and product rules form a \emph{representation} of the corresponding group.
+It can be said that a representation is isomorphic to the group that it represents.
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subcaptionbox{Two element group}{
+    \begin{tabular}{c|c c c c}\toprule
+    $\circ$ & $e$   & $g_2$ \\ \hline
+    $e$     & $e$   & $g_2$ \\
+    $g_2$   & $g_2$ & $e$   \\
+    \bottomrule\end{tabular} 
+    \hspace{0.10\textwidth}%
+}
+\subcaptionbox{Representation under addition\label{tab:repAddition}}{
+    \begin{tabular}{c|c c c c}\toprule
+    +\%2  & 0   & 1 \\ \hline
+    0     & 0   & 1 \\
+    1   & 1 & 0   \\
+    \bottomrule\end{tabular} 
+    \hspace{0.10\textwidth}%
+}
+\subcaptionbox{Representation under multiplication\label{tab:repMultiplication}}{
+    \begin{tabular}{c|c c c c}\toprule
+    $\times$     & 1   & -1 \\ \hline
+    1       & 1   & -1 \\
+    -1      & -1  & 1   \\
+    \bottomrule\end{tabular} 
+    \hspace{0.10\textwidth}%
+}
+\caption{Cayley tables for the group with two elements (a), and for two different representations (b) and (c).}
+\label{tab:representations}
+\end{figure}
+
+Groups have infinite numbers of representations.
+For example, consider the group of order 2, sometimes called the cyclic group $C_2$, from Table \ref{tab:cayley2}.
+One representation of this group is real numbers under addition modulo 2.
+This representation has elements $\{0,1\}$, and the product rule ``addition modulo 2'' (+\%2), and can be labeled $(\{0,1\},+\%2)$.
+The identity element under addition in this representation is $0$.
+This representation is illustrated in the Cayley Table \ref{tab:repAddition}. Here, the abstract Group elements and product rule have been replaced with the elements and rule of the representation:
+\begin{equation}\begin{split}
+    \circ\to+\%2; \quad e\to0; \quad g_2\to1 \\
+\end{split}\end{equation} 
+%
+Another representation of $C_2$ is the set of integers $\{-1,1\}$ under multiplication, or $(\{1,-1\},\times)$.
+In contrast to the first representation, the identity element for multiplication is $1$.
+This representation is illustrated in Table \ref{tab:repMultiplication}. Here, the mapping between group components and representation components is different:
+\begin{equation}\begin{split}
+    \circ\to\times; \quad e\to1; \quad g_2\to-1 \\
+\end{split}\end{equation} 
+%
+This comparison illustrates several essential points.
+First, groups can have multiple representations. While Figure \ref{tab:representations} shows two mathematical representations, Table \label{tab:repAddition} clearly describes the idealized behavior of a logical \code{XOR} gate, another representation of $C_2$.
+Second although representations $(\{0,1\},+\%2)$ and $(\{1,-1\},\times)$ express themselves differently, their isomorphism to $C_2$ means that knowledge of $C_2$ can be applied to each representation.
+These points are true for every group and every representation, including those that will become physically meaningful later on.
+
+If each element of one Group, $G_b$, is also an element of another Group, $G_a$, then $G_b$ is called a \emph{subgroup} of $G_a$.
+Immediately it is clear that every group has at least two trivial subgroups: the group itself and the single element identity group shown in Table \ref{tab:cayley}.
+
+Finally, two groups $G_a$ and $G_b$ can be combined to form a third group $G_c$ called a \emph{product group}.
+This group simply has elements $(g_a,g_b)\in G_c$ for all $g_a\in G_a$ and $g_b\in G_b$.
+The elements of $G_c$ transform independently according to their parent group.
+This product is denoted $G_c=G_a\otimes G_b$.
+A similar concept is that of the \emph{semidirect product} between two subgroups of $G_c$.
+$G_c$ is the semidirect product $G_a$ and $G_b$ if for every element $g\in G_c$, there are unique elements of $G_a$ and $G_b$ whose product is $g$.
+
+\subsubsection{Algebras}\label{sec:algebras}
+
+The elements of a Group $G$ of $\text{order}(G)=n$ can be associated with orthonormal unit vectors. 
+For every element $g_i\in G$, there is an associated unit vector $\ket{g_i}$.
+The space spanned by basis vectors $\ket{g_i}$ is called an \emph{algebra} of the group:
+\begin{equation}\begin{split}\label{eqn:algebra}
+    C[G]\equiv\left\{\sum_{i=0}^{n-1}c_i\ket{g_i}\vert c_i\in \mathbb{C} \forall i\right\}
+\end{split}\end{equation} 
+Where $c_i$ are complex numbers. The dimension of the algebra is the dimension of the vector space.
+
+The algebra of a Lie Group is referred to as a \emph{Lie algebra}.
+Conceptually, the Lie algebra is a vector space whose product satisfies the Jacobi identity (Eqn. \ref{eqn:jacobi}).
+The explicit definition of a Lie algebra has four requirements for the elements of its vector space $\mathfrak{g}$:
+\begin{enumerate}
+    \item The commutation $[a,b]\in\mathfrak{g}$ for all elements $a,b\in\mathfrak{g}$.
+    \item The commutation relationship $[a,b]=-[b,a]$ holds for all elements $a,b\in\mathfrak{g}$. \footnote[1]{In general, there is an explicit requirement that $[a,a]=0$. However for the Lie algebras under consideration here this has been implied by $[a,b]=-[b,a]$. \cite{pfeifer}}
+    \item The linearity of commutators: $[c_1a+c_2b,c]=c_1[a,c]+c_2[b,c]$.
+    \item The elements satisfy the Jacobi identity,
+    \begin{equation}\begin{split}\label{eqn:jacobi}
+        [a,[b,c]]+[b,[c,a]]+[c,[a,b]]=0,
+    \end{split}\end{equation} 
+    for all elements $a,b,c\in\mathfrak{g}$.
+\end{enumerate}
+Because the Lie algebra is a vector space, the linear combination of two elements remaining in the space ($c_1a+c_2b\in\mathfrak{g}$ $\forall a,b\in\mathfrak{g}$ and  $\forall c_1,c_2\in\reals$) is implied.
+
+Lie algebras are particularly useful due to Ado's Theorem, which makes two important statements. First, every Lie algebra of finite dimension is isomorphic to a Lie algebra of matrices. Second, the commutation relationship is:
+\begin{equation}\begin{split}\label{eqn:commutator}
+    [a,b]=ab-ba; \quad(\forall a,b\in\mathfrak{g}).
+\end{split}\end{equation}
+These statements motivate the subsequent use of square matrices as the primary representation of groups.
+It follows matrices form a basis for their algebras.
+
+It is useful to consider an explicit example of a Lie Group and algebra.
+Unlike the discrete groups specified in Section \ref{sec:representations}, such Groups are parameterized by one or more continuous variables.
+The number of parameters needed to specify an element is synonymous with the group's \emph{rank}.
+Because the parameters are continuous, they identify an infinite number of elements within the group.
+The General Linear Group $\text{GL}(1,\reals)$ over reals is represented by reals numbers under addition, or $(\reals,+)$.
+This can be thought of as translations along a single dimension. For any two elements of the representation $x,a\in\reals$, their sum
+is also in the representation: $x+a\in\reals$. This defines a transformation,
+\begin{equation}\begin{split}\label{eqn:simpleTransform}
+    x\to x'=x+a,
+\end{split}\end{equation} 
+which is identified as a \emph{translation} through space.
+
+The Lie algebra of $\text{GL}(1,\reals)$ is all the real numbers.
+Equation \ref{eqn:algebra} expresses this set of real numbers as the set of all possible sums of real numbers.
+Working with this particular expression of the set is complicated.
+First, this definition contains many duplicate entries.
+Additionally, this means that the group's order matches the infinite number of the set of real numbers.
+\footnote{As a side note, this means that a Cayley table such as those in Figure \ref{tab:cayley} impractical to write down.}
+However, the dimension of \reals is 1, and all the elements of the space can be represented by a single basis vector $\ket{x}$.
+In this trivial example, any real number can be selected as a basis vector.
+Equation \ref{eqn:algebra} can be rewritten:
+\begin{equation}\begin{split}\label{eqn:algebra2}
+    C[\text{GL}(1,\reals)]=&\left\{\sum_{i=0}^{\infty}c_i\ket{g_i}\eval c_i\in \reals \forall i\right\} \\
+                          =&\{i\ket{x}|\forall i\in\reals\}.
+\end{split}\end{equation}
+Hence the Lie algebra of a group with infinite elements can be described by a finite basis.
+The following section makes use of this fact.
+
+% Modules
+The square \nxn matrices of a Lie algebra can form a product with $1\times n$ vectors, resulting in a new vector. 
+The vector is said to \emph{transform} due to the element of the algebra.
+% Equation \ref{eqn:simpleTransform} can be reinterpreted in this view if $x$ is considered to be a $1\time1$ vector, and $
+This is apparent in the group SO(2), whose representations describe rotation on a two-dimensional plane.
+This group is a one-parameter group, with $\theta\in[0,2\pi)$.
+Elements of the group, $g_\theta$ are mapped to a representation through a function function $D(g_\theta)$.
+In this instance, $D(g_\theta)$ maps group elements onto a representation of $2\times2$ matrices:
+\begin{equation}\begin{split}\label{eqn:so2Rep}
+    D(g_\theta) = \begin{pmatrix}
+        \cos\theta &-\sin\theta \\
+        \sin\theta & \cos\theta \\
+    \end{pmatrix}.
+\end{split}\end{equation} 
+Matrices such as $g(\theta)$ can both act on other elements of the representation, 
+\begin{equation}\begin{split}
+    \begin{pmatrix}
+        \cos\theta_1 &-\sin\theta_1 \\
+        \sin\theta_1 & \cos\theta_1 \\
+    \end{pmatrix}
+    \begin{pmatrix}
+        \cos\theta_2 &-\sin\theta_2 \\
+        \sin\theta_2 & \cos\theta_2 \\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        \cos(\theta_1+\theta_2) &-\sin(\theta_1+\theta_2) \\
+        \sin(\theta_1+\theta_2) & \cos(\theta_1+\theta_2) \\
+    \end{pmatrix},
+\end{split}\end{equation} 
+as well as on $1\time2$ vectors,
+\begin{equation}\begin{split}
+    \begin{pmatrix}
+        \cos\theta &-\sin\theta \\
+        \sin\theta & \cos\theta \\
+    \end{pmatrix}
+    \begin{pmatrix}a\\b\end{pmatrix}
+    =
+    \begin{pmatrix}a\cos\theta-b\sin\theta\\a\sin\theta+b\cos\theta\end{pmatrix}.
+\end{split}\end{equation} 
+In the first case, an $2\time2$ matrix element of the representation transformed a second element of the representation into a third element of the representation.
+In the second case, an element of the representation transformed a corresponding vector into a different vector.
+Linear combinations of the objects that can be transformed by a given representation also form a vector space called a \emph{module}.
+
+% I am forever confused about doublet/singlet. Should check these definitions. https://physics.stackexchange.com/questions/178249/su3-singlets-and-triplets
+The elements of a module for the singlet representation are called, ambiguously, \emph{singlets}. %\check
+If $2\times2$ matrices are used for a representation, the module elements are called \emph{doublets}. Likewise, in the case of $3\times3$ matrices, the elements are called \emph{triplets}.
+
+% reducible:
+An \emph{invariant subspace} is a region of a larger space with closure under any transformation in a group: points in the space can only transform into other points in the space.
+A representation is labeled as reducible when its module contains a subspace in which elements transform only into themselves.
+Likewise, a representation is irreducible if this is not the case. 
+A module $M_a$ corresponding to a reducible representation, with two subspaces $M_b$ and $M_c$, is denoted as the direct sum $M_a=M_b\oplus M_c$. The same is true for the elements of groups.
+% A reducible representation can be constructed through the \emph{direct sum} of two representations 
+
+
+There are three commonly named representations.
+These are named here and defined in the following sections.
+%
+The first is the trivial or \emph{singlet} representation.
+In this case, the map $D(g)=\ident$ for all group elements, with multiplication as the product rule.
+% Fundamental
+The next is the \emph{fundamental} representation, which is based on infinitesimal changes in the algebra.
+This representation will be defined in Section \ref{sec:generators}.
+% The elements of a module for such a more 
+% & Adjoint
+The third is the \emph{adjoint} representation, which is based on the relationships between elements of the fundamental representation.
+The adjoint is defined in Section \ref{sec:adjoint}.
+
+
+
+\subsubsection{Generators}\label{sec:generators}
+The definition of algebras as a vector space naturally raises the question of what basis vectors span the algebra.
+For a particular representation, it is convenient to define the basis infinitesimally close to the identity, \ident.
+Here representation is defined by the map $D(g_{\theta})$, where $g_{\theta}$ is an element of a one-parameter Lie Group.
+The parameter is defined such that $D(g_{\theta})\eval_{\theta=0}$.
+Expanding the representation for a parameter $\delta\theta$ close to the identity via a Taylor series yields:
+\begin{equation}\begin{split}\label{eqn:taylorRep}
+    D(g_{\delta\theta})\approx&\mathbb{I}+\delta\theta\frac{\partial D(g_{\theta})}{\partial\theta}\eval_{\theta=0} +...\\
+    \approx&\mathbb{I}+i\delta\theta T+... \\
+\end{split}\end{equation}
+With the definition
+\begin{equation}\begin{split}\label{eqn:generator}
+    T\equiv&-i\frac{\partial D(g_{\delta\theta})}{\partial\theta}\eval_{\theta=0}. \\
+\end{split}\end{equation} 
+This gives an approximation of the representation, for small divergences $\delta$ from the identity.
+The term $T$ is identified as an \emph{infinitesimal generator}, or commonly generator, for the representation.
+The generators are used to build a basis to span the algebra.
+This is readily generalized to groups with multiple parameters by expanding for one parameter at a time.
+
+The generators defined in Equation \ref{eqn:generator} define infinitesimal transformations.
+The generators are, in fact, tangent vectors to the direction that a succession of infinitesimal transformations will carry a point in the algebra.
+This corresponds to a small deviation from the identity element. In this case, a matrix representation is the diagonal identity matrix \ident.
+Within a representation, the matrix corresponding to an infinitesimal transformation is $(\ident+i\delta T)$.
+It is useful to represent not just infinitesimal transformations, but finite ones as well.
+This can be achieved by in the large limit of $N$ infinitesimal transformations.
+First, small parameter $\delta\theta$ is redefined as a fraction of a finite parameter $\theta$ as $\delta\theta=\theta/N$.
+Then, multiple successive transformations close to the identity, $(\ident+i\delta\theta T)^N$, take the form in the limit of large $N$:
+\begin{equation}\begin{split}
+\lim_{N\to\infty}(\ident+i\frac{\theta}{N}T)^N\equiv e^{i\theta X_i}. \\
+\end{split}\end{equation}
+Therefore, the transformation corresponding to any parameter $\theta$ can be represented with a generator $T$ in the form $e^{i\theta X_i}$.
+
+The SO(2) representation presented in Section \ref{sec:algebras} provides a concrete example of how generators work.
+Taking the derivative of Equation \ref{eqn:so2Rep} as suggested in Equation \ref{eqn:generator} yields the generator $T=-i\begin{pmatrix}0&-1\\1&0\end{pmatrix}$.
+The representation $e^{i\theta X_i}$ can then be expanded in a Taylor series:
+\begin{equation}\begin{split}
+e^{i\theta X_i} = & 
+            \begin{pmatrix}1&0\\0&1\end{pmatrix} +  % 1
+            \begin{pmatrix}0&-\theta\\\theta&0\end{pmatrix} +  % x
+            \frac{1}{2!}\begin{pmatrix}-\theta&0\\0&-\theta\end{pmatrix} + % x**2/2
+            \frac{1}{3!}\begin{pmatrix}0&\theta\\-\theta&0\end{pmatrix} + % x**3/6
+            \frac{1}{4!}\begin{pmatrix}\theta&0\\0&\theta\end{pmatrix} + ..., % x**4/4!
+\end{split}\end{equation}
+which is simply the Taylor expansion of the representation in Equation \ref{eqn:so2Rep}.
+
+While the group SO(2) has one parameter, this process is readily generalized for groups with multiple parameters. Each parameter will result in a distinct generator.
+The number of generators for a representation is equivalent to the dimension of a group.
+The generators defined in Equation \ref{eqn:generator} form a representation designated the fundamental representation.
+
+In practice, the representation contains \nxn matrices, which act on elements of the representation and its module, through a function of matrix multiplication. %{\color{red} [Find several definitions, is this correct]}
+The action $g^j\cdot g^i$ is $A^i\to B^jA^i$ for an elements of the representation $D(g^i)=A^i$ and $D(g^j)=B^j$.
+Likewise, the module transforms under a function of the \nxn matrix representation on the module's n-vector element. %\check
+In the fundamental representation this function is normal matrix multiplication.
+
+
+\subsubsection{Structure Constants and Adjoint}\label{sec:adjoint}
+According to the first requirement listed for Lie algebras, the group elements' commutation yields a result in the group.
+Without making any further assumption, the commutator can be expressed as a linear combination of the basis vectors of the algebra.
+In Section \ref{sec:generators} the generators $T^i$ were selected as a suitable basis for a representation with rank $n$, with the label $i$ running through $i\in\{0,1,...,n-1\}$.
+Consequently, \footnote{Later, the position of the indices will be meaningful, but that is not the case here.}
+\begin{equation}\begin{split}\label{eqn:structure}
+    [T^i,T^j]=\sum_{k=0}^{n-1}if_{ijk}T^k.
+\end{split}\end{equation} 
+The numbers $f_{ijk}$ are \emph{structure constants}. 
+The structure constants depend on the given basis of the Lie algebra, and so must be defined together.
+The basis vectors and structure constants, together, uniquely identify their group.
+It can also be noted that in the case of Abelian groups, with zero commutators, the structure constants vanish.
+
+Once a suitable choice of matrices to represent the generators has been made, the values $f_{ijk}$ are fixed.
+For non-Abelian groups, the structure constants do not vanish and can define the adjoint representation.
+This entails defining the \nxn elements of $n$ matrices.
+For a matrix $A^i$, it's elements are defined
+\begin{equation}\begin{split}\label{eqn:adjoint}
+[A^i]_{jk}\equiv-if_{ijk}
+\end{split}\end{equation} 
+Since there is an adjoint representation matrix for each structure constant, the adjoint representation has a dimension equal to the rank of the group.
+
+Finally, the action of the adjoint elements is not normal matrix multiplication, as was the case with the fundamental representation.
+Instead, the action $g^j\cdot g^i$ is $A^i\to B^jA^iB^{j\dagger}$ for an elements of the representation $D(g^i)=A^i$ and $D(g^j)=B^j$. %\check
+Likewise, the module of the adjoint representation consists of \nxn matrices, which transform in the same way.
+
+\subsubsection{Root Space}
+A subset of generators of a representation can be simultaneously diagonalized.
+As a result, these diagonal generators commute with each other and form the basis for an Abelian \emph{Cartan subalgebra}.
+The generators are called \emph{Cartan generators} $H^i$ with $i\in\{1,...,n\}$.
+The remaining generators are non-Cartan generators $E^i$ with $i\in\{1,...,m\}$.
+Each generator $T^a$ for the algebra has an eigenvector, and each Cartan generator $H^i$ has an eigenvalue for the eigenvector of $T^a$.
+For each of the $m+n$ eigenvectors, a \emph{weight vector} is defined with a component for each Cartan generator.
+The values of the components are the eigenvalues of the Cartan generator for the vector's corresponding eigenvector.
+For example, the weight vector $t_i$ is defined for eigenvector $i\in\{1,...,m+n\}$:
+\begin{equation}\begin{split}
+t_i\equiv \begin{pmatrix}t_i^1&t_i^2&t_i^3&...&t_i^{n}\end{pmatrix}
+\end{split}\end{equation} 
+
+\section{Groups in Particle Physics}\label{sec:particlePhysicsGroups}
+
+This section presents the groups that are relevant to studying particles.
+The groups can be divided conceptually into two sets.
+First are the groups related to spacetime.
+These are groups that describe rotations, translations, and boosts.
+Together, these spacetime groups form the \emph{\poincare Group}.
+Next are the groups related to particles and their interactions, named SU(3), SU(2), and U(1).
+The Group product of these is the basis of the Standard Model.
+All of these groups will be defined and described in this section.
+
+The general linear group GL(n) is the group of \emph{all} n-dimensional transformations.
+It is represented by all non-singular \nxn matrices.
+All of the groups shown here are subgroups of GL(n).
+The first set of groups shown Section \ref{sec:poincare} are subgroups of the real \nxn matrices of GL(n), which itself defines the subgroup $\text{GL}(n,\reals)$.
+The second set of groups presented in the Sections \ref{sec:unitary} and \ref{sec:specialUnitary} are represented by complex matrices.
+
+\subsection{\poincare Group}\label{sec:poincare}
+
+
+The \poincare group is composed of several subgroups, which are described here.
+
+% Translations
+The three-dimensional translation group, $T(3)$, describes displacements in three-dimensional space.
+Representations of the one-dimensional version of this group, $T(1)$, was presented as an example in Equation \ref{eqn:simpleTransform}.
+% The representation of T(3) has an algebra of diagonal $3\times3$ matrices. %\check
+% The module of this representation, on which elements can act, is 3-vectors.
+A $4\times4$ matrix representation of $T(3)$ exists:
+% This representation is unintuitive, and a more intuitive $4\times4$ matrix representation exists:
+\begin{equation}\begin{split}
+\begin{pmatrix}
+x\\y\\z\\1
+\end{pmatrix}\to
+\begin{pmatrix}
+1& & & a_x \\
+ &1& & a_y \\
+ & &1& a_z \\
+ & & & 1   \\
+\end{pmatrix}
+\begin{pmatrix}
+x\\y\\z\\1
+\end{pmatrix}=
+\begin{pmatrix}
+x+a_x\\y+a_y\\z+a_z\\1
+\end{pmatrix}
+\end{split}\end{equation} 
+The invariant quantity under translations is the displacement between two vectors $x_1-x_2$.
+Since T(3) elements are identified by three continuous angles, T(3) has rank 3.
+Since translations commute, the group is Abelian and hence does not have an adjoint representation.
+
+% Rotations
+The orthogonal group, O(3), describes transformations in three-dimensional space that preserve distance.
+Such transformations include both rotations as well as reflections. 
+This is made clear by introducing an invariant quantity, a squared distance $x^2=x^T\cdot x=x_1^2+x_2^2+x_3^2$ where $x$ is a 3-vector representing distance in space. 
+Any inner product between two vectors could be considered, but for illustration $x^2$ is used.
+Of course, this requirement can also be generalized for groups O($n$), where $x$ becomes an $n$-vector.
+% In this example, the space of vectors $x$ is the module of the 
+In a matrix representation, the algebra of O(3) is composed of $3\times3$ rotation/inversion matrices.
+The vectors $x\in\mathbb{R}^3$ form the module for the representation.
+These and their transpose transform under the elements of the algebra, $R$, as:
+\begin{equation}\begin{split}\label{eqn:oTransform}
+    x^T\to&x'^T=x^TR^T \\
+    x\to&x'=Rr \\
+    % x^2\to&x^TR^TRr=x \\
+\end{split}\end{equation}
+Therefore the squared quantity transforms as $x^2\to x^TR^TRr$.
+For this to be invariant, $R^TR=\ident$, meaning the elements of the algebra $R$ are orthogonal matrices with determinant equal to $\pm1$.
+Since O(3) elements are identified by three continuous rotation angles and a discrete parity index, O(3) has rank 4.
+Since rotations do not commute, the group is non-Abelian.
+
+A subgroup of O(3) is the \emph{special orthogonal group} SO(3).
+This group only contains the subset of O(3) elements with representations having determinant equal to $+1$.
+Matrices with determinants $-1$ invert parity, so SO(3) describes only rotations, while O(3) describes rotations and reflections.
+
+The Euclidean group, $E(3)$ is the semidirect product of the two subgroups $\text{O}(3)\rtimes\text{T}(3)$.
+E(3) is an intermediate step towards building the \poincare group.
+This group describes translations, reflections, and rotations.
+It has rank seven and is non-Abelian.
+
+% Lorentz
+While the Euclidean group is concerned with three space dimensions, the \emph{Lorentz} group is additionally concerned with time.
+The Lorentz group, also called O(1;3), is a generalization of the O(3) group. 
+While a group O($n$) keeps the quantity $x^2=x_1^2+x_2^2+...+x_{n}^2$ invariant under transformations, the transformations under group SO(m,n) keep the quantity \mbox{$x^2=-x_1^2-...-x_{m}^2+x_{m+1}^2+...+x_{m+n}^2$} unchanged.
+This is simplified by the introduction of the metric tensor,
+\begin{equation}\begin{split}\label{eqn:metric}
+    \eta^{\mu\nu}\equiv\begin{pmatrix}1&&&\\&-1&&\\&&-1&\\&&&-1\end{pmatrix}.
+\end{split}\end{equation}
+The metric tensor defines $x^\mu=\eta^{\mu\nu}x_\nu$.
+
+Transformations under O(1;3) are represented by $4\times4$ matrices $L$.
+In the representation's module, a 4-vector $x$ transforms as $x^\mu\to x'^\mu=L_\nu^\mu x^\nu$, where repeated indices are summed under Einstein notation.
+In the defining used here, the first element of the 4-vector represents the time dimension, and the remaining represent space dimensions.
+Using the tensor in Equation \ref{eqn:metric}, the inner product between two vectors is then $x_\mu y^\mu=x_\mu\eta^\mu_\nu y^\nu$.
+This inner product transforms as $x_\mu y^\mu\to x_\alpha [\eta^{\mu\nu}L_\mu^\alpha L_\nu^\beta] y_\beta=x_\alpha\eta^{\alpha\beta}y_\beta$.
+Then the constraint on matrices $L$ is that the quantity in the square brackets is:
+\begin{equation}\begin{split}\label{eqn:lorentzReq}
+    \eta^{\mu\nu}L_\mu^\alpha L_\nu^\beta=\eta^{\alpha\beta}.
+\end{split}\end{equation} 
+Two matrices that satisfy this requirement are $\eta^{\mu\nu}$ and $-\eta^{\mu\nu}$.
+The former inverts the space dimensions and represents a parity transformation; the latter inverts the time dimension and represents time reversal.
+
+A further restriction can be made that the transformation matrix's determinant is positive, which excludes parity transformations.
+This restriction defines a subgroup of O(1;3) called SO(1;3), which will replace the Lorentz group from now on.
+Another group of matrices that satisfy Equation \ref{eqn:lorentzReq} are the matrices that also represent rotations in the SO(3) Group.
+These $3\times3$ matrices $\pmb R$ will satisfy Equation \ref{eqn:lorentzReq} embedded into $4\times4$ matrices $\begin{pmatrix}1&\\&\pmb R\end{pmatrix}$. %\check
+Finally, a new set of matrices that satisfy Equation \ref{eqn:lorentzReq} can be represented with the general form shown in Equation \ref{eqn:lorentzTrans}.
+\begin{equation}\begin{split}\label{eqn:lorentzTrans}
+L^{\mu\nu} = 
+\begin{pmatrix}
+\cosh\rho_i & ... & \sinh\rho_i & ... \\
+... & 1 & ... \\
+\sinh\rho_i & ... & \cosh\rho_i & ... \\
+... & & ... & 1 \\
+\end{pmatrix}
+\end{split}\end{equation} 
+Where ``$...$'' indicates that the non-zero terms are arranged at the vertices of a square.
+Inspection of Equation \ref{eqn:lorentzTrans} reveals that three parameters $\rho_i$ can be used to identify any transformation.
+For physical transformations, the parameters will be defined by the corresponding Lorentz factor, $\gamma$, via $\gamma=\text{cosh}^{-1}(\rho)$. %\check
+Applying the matrix specified in Equation \ref{eqn:lorentzTrans} corresponding to $i=1$ to a 4-vector yields the familiar Lorentz transformations.
+\begin{equation}\begin{split}
+\begin{pmatrix}x_0\\x_1\\...\end{pmatrix}\to
+\begin{pmatrix}
+    \cosh\rho_1 & \sinh\rho_1 & ... \\
+    \sinh\rho_1 & \cosh\rho_1 & ... \\
+    ... & ... & ... \\
+\end{pmatrix}
+\begin{pmatrix}x_0\\x_1\\...\end{pmatrix} =
+\begin{pmatrix}
+    x_0\cosh{\rho_1}+x_1\sinh{\rho_1} \\
+    x_1\cosh{\rho_1}+x_0\sinh{\rho_1} \\
+    ... \\
+\end{pmatrix}
+\end{split}\end{equation} 
+Elements of the Lorentz group can be identified as rotations, described by three continuous angles, boosts, described by three continuous parameters $\rho$.
+Therefore, the rank and the total parameters to specify an element of the Lorentz Group are six.
+The group is non-Abelian.
+
+% Poincare group
+The \poincare Group is the semidirect product of the translations T(4) and the Lorentz group SO(1;3): $\text{T}(4)\rtimes\text{SO}(1;3)$.
+Following the definition of semidirect products, every element of the \poincare group is equivalent to successive translations and Lorentz transformations.
+T(4) is used instead of T(3) discussed earlier, because the Lorentz group has introduced time as an additional dimension in which translations are allowed, bringing the total to four.
+Since the rank of T(4) is four, and the rank of SO(1;3) is six, the total rank of the \poincare group is ten.
+
+% The rank of the group corresponds to the number of conserved quantities under its actions.
+
+The \poincare group leaves quantities expressed as inner products of 4-vectors, $x_\mu y^\mu$, invariant.
+This is the fundamental symmetry of space and time. 
+
+\subsection{Unitary Groups U(n)}\label{sec:unitary}
+
+The Unitary Groups U(n) are more abstract than the groups previously introduced.
+It is more straight forward to define them based on their \nxn square matrix representations.
+Elements of a group U(n) representation are complex \emph{unitary} matrices, obeying the condition $U^\dagger U=UU^\dagger=\ident$
+The elements of a U(n) representation consequently are invertible and have determinants with a magnitude of 1.
+As is the case for all unitary matrices, representations $U$ of U(n) can be written in exponential form: $e^{i\alpha}$ where $\alpha$ is a Hermitian matrix.
+
+Some meaning can be gleaned by comparison to the invariant quantity found for O(n) illustrated in Equation \ref{eqn:oTransform}.
+For an element of the U(n) representation $U$, elements of the O(n) module $x$ transform 
+\begin{equation}\begin{split}\label{eqn:uTransform}
+    x^\dagger\to&x'^\dagger=x^\dagger U^\dagger \\
+    x\to&x'=Ur \\
+    x^2\to&x^\dagger U^\dagger Ur \\
+\end{split}\end{equation}
+The unitary condition for U(n) representations keeps the quantity $x^2$ is invariant under U(n) transformations.
+
+The first unitary group, U(1), is represented by complex scalar numbers.
+This fact means that U(1) is an Abelian group by definition.
+Looking ahead, the module of U(1) will act on will be physical states, $\psi$.
+It will transform these states under $\psi\to e^{i\alpha}\psi$.
+It is worth defining the U(1) generators since this group will ultimately be physically meaningful.
+Consulting Equation \ref{eqn:generator}, and evaluating for the representation $e^{i\alpha}$ close to $\alpha=0$, it is apparent that the generator is simply $T=1$.
+
+\subsection{Special Unitary Groups SU(n)}\label{sec:specialUnitary}
+% The second unitary group, U(2), is represented by complex $2\times 2$ matrices.
+The unitary condition on U(n) requires these matrices to have a determinant $\pm1$.
+A subgroup of each U(n) is represented by the matrices with positive determinants.
+This is the complex analog to the SO(n) groups discussed earlier.
+% This further restricts the representation to matrices to those that preserve 
+While defining the SU(n) groups should be done in the abstract, it is helpful to consider their most intuitive representation.
+Like the special orthogonal groups, the special unitary groups have representations that describe rotations around an n-sphere that preserve a distance.
+While SO(n) representations describe rotations in an n-dimensional real Euclidean space, SU(n) describes rotations in a complex n-dimensional apace, or a $2n$ real Euclidean space. %\check
+
+The algebra of SU(n) is a real subalgebra of U(n).
+Two SU(n) groups are of interest here. 
+SU(2) will be discussed first, and then SU(3).
+
+\subsection{Special Unitary Group SU(2)}
+SU(2) describes a broad range of physical systems, from the weak force, to strong isospin, to angular momentum.
+SU(2) is the complex analog to SO(2), represented by rotations in two-dimensional Euclidean space.
+
+As in all cases, the generators of an SU(2) depend on the representation.
+The representation consisting of $2\times2$ matrices is the fundamental representation, and has generators related to the Pauli matrices, given in Equation \ref{eqn:pauli}.
+\begin{equation} \begin{split}\label{eqn:pauli}
+    % \sigma^0=\begin{pmatrix}1&0\\0&1\end{pmatrix} ;\quad
+    \sigma^1=\begin{pmatrix}0&1\\1&0\end{pmatrix} ;\quad
+    \sigma^2=\begin{pmatrix}0&-i\\i&0\end{pmatrix} ;\quad
+    \sigma^3=\begin{pmatrix}1&0\\0&-1\end{pmatrix} ;\quad
+\end{split} \end{equation}
+To maintain unitary, a normalization is used, hence the definition of the generators $T^a=\half\sigma^a$, where $a=(1,2,3)$.
+Equation \label{eqn:pauli} reveals that one generator, $T^3$ is diagonal.
+It has eigenvalues of -\half and \half.
+When the spin of spin-\half fermion states is the module for an SU(2) representation, these eigenvalues correspond to the measurable spin of the particles: -\half and \half.
+This identifies quantum spin and other quantum numbers governed by SU(2), as a rotation through an abstract spinor space.
+The number of simultaneously diagonalizable generators is equal to the group's rank. Therefore the rank of SU(2) is one.
+The module of the fundamental representation is vectors with two elements.
+
+Since SU(2) is non-Abelian, it has non-zero structure constants $f_{ijk}$. 
+These can be calculated by inserting the matrices of Equation \ref{eqn:pauli}, with normalization, into Equation \ref{eqn:structure}.
+The result is the totally antisymmetric three dimension Levi-Civita tensor $\epsilon_{ijk}$ shown in Equation \ref{eqn:levi}.
+\begin{equation}\label{eqn:levi}
+f_{ijk} = \epsilon_{ijk} \equiv \begin{cases}
++1 &\text{if (i,j,k)=(1,2,3) and cyclic permutations}\\
+-1 &\text{if (i,j,k)=(3,2,1) and cyclic permutations}\\
+0 &\text{otherwise.}\\
+\end{cases}
+\end{equation} 
+The adjoint representation can be derived from the structure constants with Equation \ref{eqn:adjoint}.
+The result is the set of anti-Hermitian matrices \footnote{These differ from a commonly shown basis $J'$ by a unitary transformation $J'^a=-(1/\sqrt{2})U^\dagger J^aU$.}:
+% Got confused calculating these:
+% https://physics.stackexchange.com/questions/279880/is-the-adjoint-representation-of-su2-the-same-as-the-triplet-representation
+\begin{equation}\begin{split}
+J^1 = \begin{pmatrix}0&0&0\\0&0&i\\0&-i&0\end{pmatrix} ; \quad
+J^2 = \begin{pmatrix}0&0&-i\\0&0&0\\i&0&0\end{pmatrix} ; \quad
+J^3 = \begin{pmatrix}0&i&0\\-i&0&0\\0&0&0\end{pmatrix} ;
+\end{split}\end{equation}
+These matrices form a basis for the adjoint representation of SU(2).
+The module of the adjoint representation is vectors with three elements.
+
+\subsection{Special Unitary Group SU(3)}
+
+The final group of interest is SU(3).
+
+The fundamental representation of SU(3) is the set of $3\times3$ matrices.
+In total, $3\times3$ complex matrices have 18 free parameters.
+The unitary condition restricts the number of free parameters to nine.
+Finally, the requirement of a positive determinant constrains a parameter, leaving eight free parameters.
+The space spanned by these matrices is eight-dimensional, and therefore is spanned by eight matrices.
+These generators are $T^a=\frac{\lambda^a}{2}$ where $\lambda^a$ are the Gell-Mann matrices given in Equation \ref{eqn:gellmann}.
+\begin{equation}\begin{split}\label{eqn:gellmann}
+    \lambda^1=&\begin{pmatrix}0&1&0\\ 1&0&0\\ 0&0&0\end{pmatrix};\phantom{-}\quad \lambda^2=\begin{pmatrix}0&-i&0\\ i&0&0\\ 0&0&0\end{pmatrix};\quad \lambda^3=\begin{pmatrix}1&0&0\\ 0&-1&0\\ 0&0&0\end{pmatrix};\quad \lambda^4=\begin{pmatrix}0&0&1\\ 0&0&0\\ 1&0&0\end{pmatrix};\quad \\
+    \lambda^5=&\begin{pmatrix}0&0&-i\\ 0&0&0\\ i&0&0\end{pmatrix};\quad \lambda^6=\begin{pmatrix}0&0&0\\ 0&0&1\\ 0&1&0\end{pmatrix};\phantom{-}\quad \lambda^7=\begin{pmatrix}0&0&0\\ 0&0&-i\\ 0&i&0\end{pmatrix};\quad \lambda^8=\frac{1}{\sqrt{3}}\begin{pmatrix}1&0&0\\ 0&1&0\\ 0&0&-2\end{pmatrix}. \\
+\end{split}\end{equation}
+As can be seen from the two diagonal matrices, the SU(3) group has rank 2.
+
+The upper left hand $2\times2$ block of $\lambda^1$, $\lambda^2$, and $\lambda^3$ reveals that they are identical to the Pauli matrices in Equation \ref{eqn:pauli}.
+This is not a coincidence, but a consequence of the fact that SU(2) is a subgroup of SU(3), just as SO(2) is a subgroup of SO(3).
+Indeed there are three independent SU(2) subgroups of SU(3).
+
+As was the case with SU(2), SU(3) is non-Abelian, and the structure constants can be calculated by inserting the matrices of Equation \ref{eqn:gellmann} into \ref{eqn:structure}, with the normalization of \half. 
+The result is the anti-symmetric tensor given in Equation \ref{eqn:su3structure}. %\check
+% Calculated by hand - should check somewhere
+\begin{equation}
+\begin{split}\label{eqn:su3structure}
+f_{ijk} =-f_{kji}= \begin{cases}
++1 &\text{if (i,j,k)=(1,2,3) and cyclic permutations (CP)}\\
+\half &\text{if (i,j,k)=(1,4,7), (1,6,5), (2,4,6), (2,5,7), (7,6,3), or (3,4,5) and CP}\\
+% -\half &\text{if (i,j,k)=(3,6,7) and cyclic permutations}\\
+\frac{\sqrt{3}}{2} &\text{if (i,j,k)=(4,5,8), or (6,7,8) and CP}\\
+0 &\text{otherwise.}
+\end{cases} 
+\end{split}
+\end{equation} 
+The adjoint representation is constructed from Equation \ref{eqn:su3structure}, but to conserve space, these $8\times8$ matrices are left to the readers imagination.
+
+\subsection{Summary}
+
+This section has described the mathematical foundation of groups.
+The next step is to identify a group with properties that reflect, to an approximate degree, the properties observed in particles and their interactions.
+To this end, interactions are described by representations of Lie groups.
+The group's generators describe the particles that mediate forces.
+The diagonalizable Cartan generators are particularly interesting, as their eigenvectors are identified as particles and their eigenvalues as charges.
+It is a remarkable and subtle discovery that the mathematical objects defined by groups, generators, and eigenvectors exhibit precise homomorphisms to our world of forces, interactions, and particles
+\cite{robinson}.
+
+\section{Particle physics with Lagrangians}\label{sec:lagrangians}
+
+The previous section dealt with the abstract notions of groups and relations.
+Representations of these groups provide a useful description of the physical world.
+This section will discuss how these representations are used in particle physics theory.
+The task is to build a map between the mathematical structures, which are stripped of physical meaning, and the physical model.
+This is done through the framework of Quantum Field Theory (QFT).
+
+The connection between the abstract words of groups and symmetries and the more concrete world of QFT is as follows.
+The fields of fermions correspond to the modules of certain representations, on which the members of the algebra can act.
+Charges, the physical characteristics of particles that are conserved, correspond to the eigenvalues of the group's generators.
+The number of charges described by a group is equal to the dimension of the representation.
+Physical interactions through a force are described by the eigenvectors of the earlier defined Cartan generators of the group.
+The generators of the group describe particles that mediate forces to particles charged under the group.
+The force-carrying particles described by the Cartan generators do not change the corresponding charge of a particle.
+Non-Cartan generators, however, can change charge.
+
+\subsubsection{Hamilton's Principle}\label{sec:lagrangian}
+
+Hamilton's principle of least action considers a system defined by a field, $\phi$, and its four-dimensional derivatives $\partial_\mu\phi$.
+The state evolves between two points in spacetime, $x_0$ and $x_1$.
+The \emph{action} is a functional of the path taken by $\phi$ between $x_0$ and $x_1$:
+\begin{equation}\begin{split}
+S[\phi]=\int_{x_0}^{x^1} d^4x\mathcal{L}(\phi,\partial_\mu\phi).
+\end{split}\end{equation}
+The action is defined as a path integral between these points of a function of the path, $\mathcal{L}(\phi,\partial_\mu\phi)$.
+$\mathcal{L}$ is a functional of the full path, and is called the \emph{Lagrangian density}, often shortened to a \emph{Lagrangian}.
+Hamilton's principle states that action $S$ is minimized when the fields $\phi_i(x)$ follow their equation of motion.
+This minimization results in the Euler-Lagrange equation:
+\begin{equation}\begin{split}\label{eqn:el}
+    % \frac{\partial\mathcal{L}}{\partial\phi}-\partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\delta_\mu\phi)}\right)=0
+    \frac{\partial\mathcal{L}}{\partial\phi_i}-\partial_\mu\left(\frac{\partial\mathcal{L}}{\delta(\partial\mu\phi_i)}\right)=0
+\end{split}\end{equation}
+Solving Equation \ref{eqn:el} for a given Lagrangian density yields the \emph{equations of motion} for each field.
+
+% Fields
+This raises the issue of what the fields $\phi(x)$ are.
+In QFT, \emph{operators} are introduced for each point in spacetime $x$.
+These operators, $\phi$, are labeled by their corresponding point as $\phi(x)$.
+As in quantum mechanics, operators can intuitively be thought of as representing a measurement. In this case, they represent a measurement of a corresponding field strength.
+The operators act on \emph{state} vectors that represent the physical system.
+For example, the operator $\phi$ can act on the vector representing the vacuum state, $\ket{0}$, at location $x$.
+The vacuum state represents the system in its lowest energy state, such that the eigenvalue of the Hamiltonian operating on the vacuum state is zero.
+This operation is denoted as $\phi(x)\ket{0}$.
+The Lagrangian describes the behavior of fields.
+
+A commonly used type of field is the \emph{scalar} field.
+Scalar fields are scalar-valued, having a single value at all spacetime points $x$.
+The Higgs boson is an example of particles represented by a scalar field.
+Another commonly used type of field is the \emph{Dirac} field.
+These fields are four-component, represented by 4-vectors.
+Fermions are an example of particles represented by Dirac fields.
+Finally, a commonly used type of field is the \emph{vector} field.
+An example is the electromagnetic potential from electromagnetism, $A^\mu=(V,\vec{A})$, which consists of the electric potential $V$ and the magnetic potential $\vec{A}$.
+In the following paragraph, Lagrangians containing each of these fields are shown, along with the corresponding result of Equation \label{eqn:el}.
+
+
+The equations of motion for each field are derived from the Lagrangian.
+As an example, a scalar field $\psi$ described by a simple Lagrangian given in Equation \ref{eqn:scalarLagrangian}.
+\begin{equation}\begin{split}\label{eqn:scalarLagrangian}
+    \mathcal{L}_\text{scalar}=&\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2 \\
+% \frac{\partial\mathcal{L}}{\partial\phi}=&-m^2\phi \\
+% \partial_\mu\frac{\partial\mathcal{L}}{\partial(\delta_\mu)}=&\partial_\mu\partial^\mu\phi \\
+% \partial_\mu\partial^\mu\phi+m^2\phi=&0; \quad\text{Klein-Gordon wave equation}
+\end{split}\end{equation}
+Plugging equation Equation \ref{eqn:scalarLagrangian} into the Euler-Lagrange Equation \label{eqn:el} yields the Klein-Gordon equation of motion.
+An analogous Lagrangian can be written for Dirac fields, $\Psi$, and is given in Equation \ref{eqn:diracLagrangian}.
+\begin{equation}\begin{split}\label{eqn:diracLagrangian}
+    \mathcal{L}_\text{Dirac}=i\overline{\Psi}\gamma^\mu\partial_\mu\Psi-m\overline{\Psi}\Psi \\
+\end{split}\end{equation}
+Where $\overline{\Psi}=\Psi^\dagger\gamma^0$ is the Hermitian conjugate.
+Taking the derivatives in Equation \label{eqn:el} yields the Dirac equation of motion.
+Finally a Lagrangian for the vector field $A^\mu$ can be constructed with the definition of the field tensor $F^{\mu\nu}\partial^\mu A^\nu-\partial^\nu A^\mu$, as shown in Equation \ref{eqn:vectorLagrangian}.
+\begin{equation}\begin{split}\label{eqn:vectorLagrangian}
+    \mathcal{L}_\text{vector}=&-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} \\
+\end{split}\end{equation}
+Which yields the equation of motion is identical to Maxwell's equations with zero electric current.
+The fields and their equation of motion are summarized in Table \ref{tab:fields}.
+
+\begin{table}[htp]
+\begin{center}
+{\footnotesize
+\begin{tabular}{l l l l l}
+\toprule
+Field & Symbol & Equation of motion  \\
+\midrule
+Scalar & $\phi(x)$    & $\partial_\mu\phi\partial^\mu\phi+m^2\phi=0$  \\
+Dirac  & $\Psi(x)$    & $i\gamma^\mu\partial_\mu\Psi-m\Psi=0$  \\
+Vector & $A^\mu(x)$   & $\partial_\mu F^{\mu\nu}=0$  \\
+% \multirow{2}{*}{Weyl} & \multirow{2}{*}{$\psi(x)$}   & $i\overline{\sigma}^\mu\partial_\mu\psi_L=0$ \\
+%                       &                              & $i\sigma^\mu\partial_\mu\psi_R=0$  \\
+\bottomrule
+\end{tabular}
+}
+\caption{Summary of fields, along with examples of their equations of motion derived from the Euler-Lagrange equation for free fields.}
+\label{tab:fields}
+\end{center}
+\end{table}
+
+The Lagrangians of Equations \ref{eqn:scalarLagrangian}, \ref{eqn:diracLagrangian}, and \ref{eqn:vectorLagrangian} all describe freely propagating particles; scalar, Dirac, and vector particles respectively.
+Interactions between particles complicate the Lagrangian with terms containing more than two fields.
+
+\subsubsection{The Matrix Element}\label{sec:me}
+
+The Lagrangian formalism set out in Section \ref{sec:lagrangian} allows the definition of a model.
+The next step is to extract the observable predictions of the model.
+Nearly all observations of particles relate to the question: ``given some initial state, what is the probability of observing a final state''.
+In a particle collider, the initial state may be the colliding beams, and the final state may include some number of electrons.
+The task is to predict the probability of the initial state to evolve to the final state, given the dynamics of a given model.
+This probability is labeled $\mathcal{P}_{i\to f}$.
+In quantum mechanics, the time evolution of a state $\ket{\Phi}$ is given by the time dependant Schrodinger equation,
+\begin{equation}\begin{split}\label{eqn:schrodinger}
+i\hbar\frac{d}{dt}\ket{\Psi}=H\ket{\Psi},
+\end{split}\end{equation}
+where the energy of the system is described by $H$, its Hamiltonian operator.
+The Hamiltonian is derived from a given Lagrangian through a process called \emph{canonical quantization}. The details of this procedure are given in Appendix \label{sec:canQuant}.
+To find the probability that an initial state with two particles $\ket{p_1;p_2}$ to evolve into a final state with multiple particles $\ket{k_1;...;k_n}$, the projection of the latter onto the former is calculated in the distant future.
+\begin{equation}\begin{split}\label{eqn:ifProj}
+\braket{i|f}=\braket{k_1;...;k_n|p_1;p_2}|_{t=\infty}=&_{t=\infty}|\bra{k_1;...;k_n}e^{itH}\ket{p_1;p_2}|_{t=-\infty} \\
+=&|\mathcal{M}|(2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum^n_{i=1} k_i\right) \\
+\end{split}\end{equation}
+Here, the complexities of the Hamiltonian's action on the initial state $\ket{p_1;p_2}$ has been conveniently rolled into the \emph{matrix element}, $|\mathcal{M}|$.
+
+Equation \ref{eqn:ifProj} shows a projection of one state onto another.
+The proper probability of evolving from the initial state to the final state must be normalized.
+Again, the canonical quantization is used to calculate $\braket{i|i}=4E_{p_1}E_{p_2}V^2$ and $\braket{f|f}=\prod_{i=1}^n2E_{k_i}V$ where $V$ is the volume of the box in which the experiment takes pace over time $T$.
+The full probability is
+\begin{equation}\begin{split}\label{eqn:ifProb}
+    \mathcal{P}_{i\to f}=\frac{\braket{f|i}^2}{\braket{i|i}\braket{f|f}}=\frac{|\mathcal{M}|^2(2\pi)^4TV\delta^{(4)}(p_1+p_2-\sum^n_{i=1} k_i)}{4E_{p_1}E_{p_2}V^2\prod_{i=1}^n[2E_{k_i}V]}.
+\end{split}\end{equation}
+In practice it is difficult to arrange for a single interaction, such as the one presented in Equation \ref{eqn:ifProj}.
+Additionally, the volume $V$ is poorly defined for an experiment.
+
+Instead, beams of $N_b$ particles spread out over area $A$ are made to collide.
+The total number of collisions $N$ then defines an effective cross-sectional area $\sigma$ for the interaction is
+\begin{equation}\begin{split}\label{eqn:nCollisions}
+    N=\frac{N_b^2\sigma}{A}=\sigma\int Ldt=N^2\mathcal{P}_{i\to f}
+\end{split}\end{equation}
+The second and third terms define the instantaneous luminosity $L\equiv N_b^2/A$ as the number of potential collisions per time, per area.
+The cross-section $\sigma$ is commonly cited in convenient units of \emph{barns}, with an exact definition of $\text{b}\equiv10^{-24}\text{cm}^2$.
+Instantaneous luminosity benefits from no such useful shorthand, and is commonly cited in units of $\text{s}^{-1}\text{cm}^{-2}$.
+
+The cross-section replaces $\mathcal{P}_{i\to f}$ as the measurable prediction of the model.
+The fourth term in Equation \ref{eqn:nCollisions} connects the cross-section back to the subject of the matrix element $|\mathcal{M}|$.
+It is useful to calculate the differential contribution to the cross-section $d\sigma$ given in Equation \ref{eqn:diffCrossSection}.
+\begin{equation}\begin{split}\label{eqn:diffCrossSection}
+d\sigma=&\frac{|\mathcal{M}|^2}{4E_{p_1}E_{p_2}|\vec{p}_1||\vec{p}_1|}d\Phi_n \\
+d\Phi_n=&(2\pi)^2\delta^{(4)}\left(p_1+p_2-\sum^n_{i=1}k_i\right)\prod^n_{i=1}\left[\frac{d^3\vec{k}_i}{(2\pi)^32E_i}\right] \\
+\end{split}\end{equation}
+The volume terms in Equation \ref{eqn:ifProb}, which arose from the integrating the projections of states over all space, have canceled with volume terms that arose from integrating $\mathcal{P}_{i\to f}$ over all space.
+Equation \ref{eqn:diffCrossSection} defines $d\sigma$ in terms of the differential phase space $d\Phi_n$.
+In a simple $2\to2$ process with center of mass energy $E'$, the differential phase space is greatly simplified as $d\Phi_2=\frac{k_1}{(4\pi)^2E'}d\phi d(\cos\theta)$.
+
+\subsubsection{Particle Decay}
+% {\color{red} [Could do a derivation here]}
+
+A useful corollary to the prediction of the cross-section described in Section \ref{sec:me} is the description of particle decays derived from a model.
+Most massive particles are able to \emph{decay} to lower mass final states.
+This process takes place in a characteristic mean lifetime, $\tau$, within the particle's rest frame.
+The probability for a particle to have decayed after a time $t$, and moving in a frame with Lorentz factor $\gamma$, is given in Equation \ref{eqn:decay}.
+\begin{equation}\begin{split}\label{eqn:decay}
+    P(t)=&1-e^{-\gamma t/\tau}
+\end{split}\end{equation}
+The reciprocal of the lifetime is the \emph{decay width} or \emph{decay rate}, $\Gamma$.
+The fraction of initial state $i$ decays resulting in a particular final state $f$ is called the \emph{branching fraction}, and is denoted $\text{BR}(i\to f)$.
+
+
+The final state, $\bra{f}$ is projected onto the initial state $\ket{i}$ evolved to the same time.
+For a particular particle with mass $m_i$, its differential width is derived following the same procedure described in Section \ref{sec:me}.
+The result is the analog to Equation \ref{eqn:diffCrossSection} with one particle in the initial state shown in Equation \ref{eqn:diffWidth}.
+\begin{equation}\begin{split}\label{eqn:diffWidth}
+    d\Gamma=&\frac{1}{2m_i}|\mathcal{M}|^2d\Phi_n \\
+    d\Phi_n=&(2\pi)^4\delta^{(4)}(p-\sum_ik_i)\prod^n_{i=1}\left(\frac{d^3\vec{k}_i}{(2\pi)^32E_i}\right) \\
+\end{split}\end{equation}
+For a two-body decay, with two particles in the final state with masses $m_{f,1}$ and $m_{f,2}$, the expression for $d\Gamma$ is simplified.
+\begin{equation}\begin{split}
+    d\Gamma=&\frac{K}{32\pi^2m_i}|\mathcal{M}|^2d\phi_1d(\cos{\theta_1}) \\
+    d\Phi_2=&\frac{K}{16\pi^2m_i}d\phi_1d(\cos{\theta_1}) \\
+\end{split}\end{equation}
+Where $K$ is the momentum of the final state such that energy is conserved.
+The decays relevant to this thesis have two decay products with equal mass, $m_{f,1}=m_{f,2}\equiv m_f$.
+In this case, a further simplification of $d\Gamma$ can be made, giving
+\begin{equation}\begin{split}
+    d\Gamma=&\frac{|\mathcal{M}|^2}{64\pi^2m_i^2}\sqrt{1-4\frac{m_f^2}{m_i^2}}d\phi_1d(\cos\theta_1)
+\end{split}\end{equation}
+This result allows the calculation of two-body decays.
+The details of the model are contained in the matrix element $\mathcal{M}$.
+
+\subsubsection{Feynman Rules}\label{sec:feynmanRules}
+The calculations of cross-sections and differential widths in the preceding sections are, in principle, carried out through the expansion of the involved fields into expressions of creation and annihilation operators.
+The Hamiltonian from Equation \ref{eqn:ifProj} is, in turn, expressed in terms of these operators.
+The non-commuting relationships between the creation/annihilation operators lead to a non-zero matrix element in Equations for the differential cross-section (Equation \ref{eqn:diffCrossSection}) and partial width (Equation \ref{eqn:diffWidth}).
+This process is complicated, but, fortunately, particular leading terms of the matrix elements can often be abstracted and represented graphically with \emph{Feynman diagrams}.
+These diagrams consist of \emph{vertices} that correspond to interactions between more than two particles, and \emph{lines} that correspond to the free propagation of an individual particle.
+
+The Feynman rules can be determined for a particular Lagrangian.
+A general an interaction term containing $n$ different types of fields $\Phi^i_j$, each repeated $m_i$ times ($i\in\{1,...,n\}$, $j\in\{1,...,m_i\}$) can be written:
+\begin{equation}\begin{split}\label{eqn:feynmanRuleInt}
+\mathcal{L}_\text{int}=-\frac{\lambda}{\prod_{i=1}^n (m_i!)}\prod_{i=1}^n\prod_{j=1}^{m_i}\Phi^i_j.
+\end{split}\end{equation}
+The part of the Hamiltonian $H_\text{int}$ that corresponds to the interaction is $H_\text{int}=-\int\mathcal{L}_\text{int}d^3\vec{x}$.
+The coupling constant in Equation \label{eqn:feynmanRuleInt} consequently appears in the Hamiltonian along with combinatorial factors that cancel the denominator.
+This is used to calculate the Feynman rule for the interaction term's contribution to the matrix element is $-i\lambda$.
+Interactions are represented graphically in a Feynman diagram by a vertex showing the intersection of lines corresponding to each field $\Phi^i_j$.
+
+A term in a Lagrangian is called a \emph{free} term if it includes the same field $\Phi$ exactly twice.
+A general free term for a complex field may be written with an implicit sum over repeated indices.
+\begin{equation}\begin{split}\label{eqn:feynmanRuleProp}
+\mathcal{L}_\text{free}=(\Phi^\dagger)_iP_{ij}\Phi
+\end{split}\end{equation}
+Here, indices represent the components of the field $\Phi$.
+The matrix $P$ includes constants and spacetime derivatives. A one dimensional example for scalar fields is $P=-\partial^\mu\partial_\mu-m^2$.
+Free terms describe the free propagation of a field, without interactions.
+The part of the Hamiltonian $H_0$ that corresponds to the free term acts on the states in Equation \ref{eqn:ifProj}, which are eigenvectors of $H_0$.
+The eigenvalues of $H_0$ combine to form what is called the \emph{propagator}.
+The Feynman rule for the contribution of a free term to the matrix element is $i(P^{-1})_{ij}$, where spatial derivatives $\partial_\mu$ are replaced with the particle's momentum $-ip_\mu$.
+Propagators are represented by lines in Feynman diagrams, connected to vertices on either side. The vertices are labeled with $i$ and $j$, respectively.
+
+Finally, the fields in the Lagrangian are expanded in terms of creation and annihilation operators.
+When these operators in the expansion of $H_\text{int}$ act on the initial or final states (depending on the operator), the coefficient is introduced into the matrix element.
+These coefficients form a basis for the equation of motion.
+A coefficient is introduced corresponding to each particle in the initial and final state.
+In Feynman diagrams, these are represented by external lines that do not connect to a vertex on one end.
+

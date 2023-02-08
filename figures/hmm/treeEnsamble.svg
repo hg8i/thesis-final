@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="treeEnsamble.svg"
+   inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/tree.png"
+   inkscape:export-xdpi="185.06"
+   inkscape:export-ydpi="185.06">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1331"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1329"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1325"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1323"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1309"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1307"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1303"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1301"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1181"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1179"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1175"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1173"
+       effect="simplify" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1159"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1157"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1153"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1151"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1119"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1117"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1113"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1111"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1083"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect1081"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1077"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect1075"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1000"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect998"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect994"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect992"
+       effect="simplify" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect964"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect962"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect948"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect946"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect831"
+       effect="spiro" />
+    <inkscape:path-effect
+       simplifyJustCoalesce="false"
+       simplifyindividualpaths="false"
+       simplify_just_coalesce="false"
+       simplify_individual_paths="false"
+       helper_size="0"
+       smooth_angles="360"
+       threshold="0.5"
+       steps="1"
+       is_visible="true"
+       id="path-effect829"
+       effect="simplify" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect825"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect823"
+       is_visible="true"
+       steps="1"
+       threshold="0.5"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="918.77369"
+     inkscape:cy="385.63624"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1276"
+     inkscape:window-height="977"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g962"
+       transform="matrix(0.80779101,0,0,0.80779101,21.728296,44.887376)"
+       style="stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none">
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1049"
+         cx="66.145836"
+         cy="198.90985" />
+      <text
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none"
+         x="54.995529"
+         y="201.93365"
+         id="text1055"><tspan
+           sodipodi:role="line"
+           id="tspan1053"
+           x="54.995529"
+           y="201.93365"
+           style="stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none">v<tspan
+   id="tspan1051"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         cy="198.90985"
+         cx="66.145836"
+         id="ellipse1065"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect1075;#path-effect1077"
+         inkscape:connector-curvature="0"
+         id="path1073"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.32753934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(0,157.42175)" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         transform="matrix(-1,0,0,1,132.48065,157.42175)"
+         style="fill:none;stroke:#000000;stroke-width:0.32753934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path1079"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1081;#path-effect1083"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428" />
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         cy="232.9277"
+         cx="41.199406"
+         id="ellipse1085"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988" />
+      <text
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         id="text1091"
+         y="235.95151"
+         x="30.049101"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none"
+           y="235.95151"
+           x="30.049101"
+           id="tspan1089"
+           sodipodi:role="line">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1087">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1101"
+         cx="41.199406"
+         cy="232.9277" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         transform="translate(-24.946429,191.43961)"
+         style="fill:none;stroke:#000000;stroke-width:0.32753934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path1109"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1111;#path-effect1113"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect1117;#path-effect1119"
+         inkscape:connector-curvature="0"
+         id="path1115"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.32753934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-1,0,0,1,107.53422,191.43961)" />
+      <circle
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         r="8.1264877"
+         cy="267.51251"
+         cx="17.197916"
+         id="circle1121"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle1127"
+         cx="90.903275"
+         cy="233.68364"
+         r="8.1264877" />
+      <circle
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         r="8.1264877"
+         cy="267.70151"
+         cx="65.578873"
+         id="circle1133"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753934;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none"
+       x="58.041592"
+       y="290.41562"
+       id="text1347"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-ydpi="185.06"><tspan
+         sodipodi:role="line"
+         id="tspan1345"
+         x="58.041592"
+         y="290.41562"
+         style="stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none">f<tspan
+   id="tspan1349"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none">1</tspan>(<tspan
+   id="tspan1351"
+   style="font-weight:bold;stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none">x</tspan><tspan
+   style="font-size:65%;baseline-shift:sub;stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1465">i</tspan>)</tspan></text>
+    <text
+       id="text1359"
+       y="290.41562"
+       x="165.61353"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       xml:space="preserve"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-ydpi="185.06"><tspan
+         style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         y="290.41562"
+         x="165.61353"
+         id="tspan1357"
+         sodipodi:role="line">f<tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1353">2</tspan>(<tspan
+   style="font-weight:bold;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1355">x</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1471">i</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       x="271.22046"
+       y="290.41562"
+       id="text1367"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-ydpi="185.06"><tspan
+         sodipodi:role="line"
+         id="tspan1365"
+         x="271.22046"
+         y="290.41562"
+         style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">f<tspan
+   id="tspan1361"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">3</tspan>(<tspan
+   id="tspan1363"
+   style="font-weight:bold;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">x</tspan><tspan
+   id="tspan1479"
+   style="font-weight:normal;font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>)</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458333;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect943"
+       width="96.39286"
+       height="96.39286"
+       x="19.690029"
+       y="182.78799" />
+    <g
+       style="stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(-0.80779101,0,0,0.80779101,216.02772,44.887376)"
+       id="g999">
+      <ellipse
+         cy="198.90985"
+         cx="66.145836"
+         id="ellipse964"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <text
+         id="text971"
+         y="201.93365"
+         x="54.995529"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06"><tspan
+           style="stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none"
+           y="201.93365"
+           x="54.995529"
+           id="tspan969"
+           sodipodi:role="line">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan966">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse973"
+         cx="66.145836"
+         cy="198.90985"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <path
+         transform="translate(0,157.42175)"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path975"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1075;#path-effect1077"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <path
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect1081;#path-effect1083"
+         inkscape:connector-curvature="0"
+         id="path977"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-1,0,0,1,132.48065,157.42175)"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <ellipse
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse979"
+         cx="41.199406"
+         cy="232.9277"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none"
+         x="30.049101"
+         y="235.95151"
+         id="text985"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06"><tspan
+           sodipodi:role="line"
+           id="tspan983"
+           x="30.049101"
+           y="235.95151"
+           style="stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none">v<tspan
+   id="tspan981"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         cy="232.9277"
+         cx="41.199406"
+         id="ellipse987"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <path
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect1111;#path-effect1113"
+         inkscape:connector-curvature="0"
+         id="path989"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(-24.946429,191.43961)"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <path
+         transform="matrix(-1,0,0,1,107.53422,191.43961)"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path991"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1117;#path-effect1119"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle993"
+         cx="17.197916"
+         cy="267.51251"
+         r="8.1264877"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <circle
+         r="8.1264877"
+         cy="233.68364"
+         cx="90.903275"
+         id="circle995"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32753935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle997"
+         cx="65.578873"
+         cy="267.70151"
+         r="8.1264877"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+    </g>
+    <rect
+       y="182.78799"
+       x="126.66621"
+       height="96.39286"
+       width="96.39286"
+       id="rect1001"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1039"
+       width="96.39286"
+       height="96.39286"
+       x="233.64215"
+       y="182.78799" />
+    <g
+       id="g1085"
+       transform="translate(6.3500003)">
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         ry="6.1952715"
+         rx="15.660371"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1003"
+         cx="274.2962"
+         cy="205.56497" />
+      <text
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.5491209px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none"
+         x="265.28909"
+         y="208.00757"
+         id="text1009"><tspan
+           sodipodi:role="line"
+           id="tspan1007"
+           x="265.28909"
+           y="208.00757"
+           style="stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none">v<tspan
+   id="tspan1005"
+   style="font-size:5.55692863px;baseline-shift:sub;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         cy="205.56497"
+         cx="274.2962"
+         id="ellipse1011"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="15.660371"
+         ry="6.1952715" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect1075;#path-effect1077"
+         inkscape:connector-curvature="0"
+         id="path1013"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.80779101,0,0,0.80779101,220.86419,172.05125)" />
+      <path
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         transform="matrix(-0.80779101,0,0,0.80779101,327.88087,172.05125)"
+         style="fill:none;stroke:#000000;stroke-width:0.32753935;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path1015"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1081;#path-effect1083"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428" />
+      <circle
+         inkscape:export-ydpi="185.06"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle1033"
+         cx="294.29504"
+         cy="233.65492"
+         r="6.5645037" />
+      <circle
+         transform="scale(-1,1)"
+         r="6.5645037"
+         cy="233.65492"
+         cx="-254.45003"
+         id="circle1056"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+         inkscape:export-xdpi="185.06"
+         inkscape:export-ydpi="185.06" />
+    </g>
+    <text
+       inkscape:export-ydpi="185.06"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       id="text1096"
+       y="233.24146"
+       x="333.76154"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         y="233.24146"
+         x="333.76154"
+         id="tspan1094"
+         sodipodi:role="line">...</tspan></text>
+    <g
+       id="g1135"
+       transform="matrix(0.80803065,0,0,0.80803065,30.033881,44.939835)">
+      <ellipse
+         cy="73.025902"
+         cx="66.680374"
+         id="path815"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988" />
+      <text
+         id="text850"
+         y="76.049706"
+         x="55.530067"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+           y="76.049706"
+           x="55.530067"
+           id="tspan848"
+           sodipodi:role="line">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan852">i</tspan>&gt;a</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.25476456px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+         x="53.027916"
+         y="93.437958"
+         id="text858"><tspan
+           sodipodi:role="line"
+           id="tspan856"
+           x="53.027916"
+           y="93.437958"
+           style="stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none">no</tspan></text>
+      <text
+         id="text862"
+         y="93.437958"
+         x="70.862312"
+         style="font-style:normal;font-weight:normal;font-size:6.25476456px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+           y="93.437958"
+           x="70.862312"
+           id="tspan860"
+           sodipodi:role="line">yes</tspan></text>
+      <ellipse
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse912"
+         cx="66.680374"
+         cy="73.025902" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         x="55.530067"
+         y="76.049706"
+         id="text922"><tspan
+           sodipodi:role="line"
+           id="tspan920"
+           x="55.530067"
+           y="76.049706"
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">v<tspan
+   id="tspan918"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>&gt;a</tspan></text>
+      <path
+         transform="translate(0.53453905,31.537804)"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path944"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect946;#path-effect948"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428" />
+      <path
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect962;#path-effect964"
+         inkscape:connector-curvature="0"
+         id="path960"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-1,0,0,1,133.01519,31.537804)" />
+      <ellipse
+         ry="7.6693988"
+         rx="19.386662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse966"
+         cx="41.733944"
+         cy="107.04375" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         x="30.583639"
+         y="110.06757"
+         id="text972"><tspan
+           sodipodi:role="line"
+           id="tspan970"
+           x="30.583639"
+           y="110.06757"
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">v<tspan
+   id="tspan968"
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">i</tspan>&gt;a</tspan></text>
+      <ellipse
+         cy="107.04375"
+         cx="41.733944"
+         id="ellipse982"
+         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="19.386662"
+         ry="7.6693988" />
+      <text
+         id="text988"
+         y="110.06757"
+         x="30.583639"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+           y="110.06757"
+           x="30.583639"
+           id="tspan986"
+           sodipodi:role="line">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan1002">j</tspan>&lt;b</tspan></text>
+      <path
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428"
+         inkscape:path-effect="#path-effect992;#path-effect994"
+         inkscape:connector-curvature="0"
+         id="path990"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(-24.41189,65.555662)" />
+      <path
+         transform="matrix(-1,0,0,1,108.06876,65.555662)"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.854166,49.047619 41.955357,67.946428"
+         id="path996"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect998;#path-effect1000"
+         inkscape:original-d="M 60.854166,49.047619 41.955357,67.946428" />
+      <circle
+         style="fill:#d62728;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1012"
+         cx="17.732454"
+         cy="141.62857"
+         r="8.1264877" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         x="14.519661"
+         y="145.7863"
+         id="text1016"><tspan
+           sodipodi:role="line"
+           id="tspan1014"
+           x="14.519661"
+           y="145.7863"
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">S</tspan></text>
+      <circle
+         r="8.1264877"
+         cy="107.7997"
+         cx="91.437813"
+         id="circle1018"
+         style="fill:#d62728;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text1022"
+         y="111.95743"
+         x="88.225014"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+           y="111.95743"
+           x="88.225014"
+           id="tspan1020"
+           sodipodi:role="line">S</tspan></text>
+      <circle
+         style="fill:#1f77b4;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle1024"
+         cx="66.113411"
+         cy="141.81755"
+         r="8.1264877" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         x="62.900608"
+         y="145.97528"
+         id="text1028"><tspan
+           sodipodi:role="line"
+           id="tspan1026"
+           x="62.900608"
+           y="145.97528"
+           style="stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">B</tspan></text>
+      <text
+         id="text1139"
+         y="127.81939"
+         x="27.300314"
+         style="font-style:normal;font-weight:normal;font-size:6.25476456px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+           y="127.81939"
+           x="27.300314"
+           id="tspan1137"
+           sodipodi:role="line">no</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.25476456px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none"
+         x="45.134712"
+         y="127.81939"
+         id="text1143"><tspan
+           sodipodi:role="line"
+           id="tspan1141"
+           x="45.134712"
+           y="127.81939"
+           style="stroke-width:0.1563691;stroke-miterlimit:4;stroke-dasharray:none">yes</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       x="228.2085"
+       y="235.35809"
+       id="text1867"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-ydpi="185.06"><tspan
+         sodipodi:role="line"
+         id="tspan1865"
+         x="228.2085"
+         y="235.35809"
+         style="text-align:center;text-anchor:middle;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none">+</tspan></text>
+    <text
+       inkscape:export-ydpi="185.06"
+       inkscape:export-xdpi="185.06"
+       inkscape:export-filename="/home/prime/thesis/draft-text-030820/figures/hmm/treeEnsamble.png"
+       id="text1871"
+       y="235.35809"
+       x="121.42445"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+       xml:space="preserve"><tspan
+         style="text-align:center;text-anchor:middle;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none"
+         y="235.35809"
+         x="121.42445"
+         id="tspan1869"
+         sodipodi:role="line">+</tspan></text>
+  </g>
+</svg>

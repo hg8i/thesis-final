@@ -1,0 +1,143 @@
+\chapter{Search for Non-resonant Signatures and Contact Interactions}\label{sec:ci}
+
+% Physical processes that produce a pair of final state leptons offer a clear window into the dynamics of high energy collisions.
+Observations of pairs of leptons, both of electron and muon flavors, offer a clear window into the dynamics of high energy collisions.
+The clarity of this window is due to the long lifetime and ease of detection offered by those leptons.
+Of particular use is the invariant-mass spectra of dilepton pairs, which elucidates the possible mechanisms of their production by means of local enhancements, or resonances. 
+This has proved a useful tool that has been exploited throughout the history of experimental particle physics.
+In 1974, a group working at Brookhaven National Laboratory\cite{jpsiBnl} and another group working at the Stanford Linear Accelerator Center\cite{jpsiSlac} used the dielectron mass spectrum to independently discover the \jpsi resonance at \mee=3.1~GeV.
+In 1977, a group working at Fermilab used the dimuon mass spectrum to discover the $\Upsilon$ resonance at \muu=9.5~GeV \cite{upsilon}.
+In 1983, the UA1 group working at the SPS collider at CERN used both dielectron and dimuon events to detect the decay of the \Z boson at a mass of $\mll\approx95$~GeV\cite{z0ua1}.
+Later in the same year, the UA2 group used dielectron events to produce a measurement of \mee=91.9~GeV.
+The utility of the dilepton final state is derived from the fact that the final state consisting of two leptons is fully reconstructible.
+
+\begin{figure}[htp]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.7\textwidth]{figures/ci/lowmass/lowmass-lower.pdf}
+\caption{The invariant-mass spectra around the \Z boson mass peak from one million collisions with two muons.}
+\label{fig:ciLowMass}
+\end{figure}
+
+% General non-resonant
+The discoveries made with the invariant-mass spectra associate enhancement in rate of observed events with new mechanisms responsible for the enhancement.
+These enhancements may be localized, as is the case for narrow resonances produced by \jpsi decay.
+Alternatively, broad enhancements are possible as well; such enhancements, termed \emph{non-resonant}, are the focus of this search.
+\footnote{Broad deficits are possible as well; one example is the observations of negative (positive) interference between $\gamma^*$ and \Z that changes the forward-backward charge symmetry below (above) the \Z mass peak in electron-positron experiments \cite{fbasym}.}
+The investigation presented in this chapter contemplates the dielectron and dimuon invariant mass spectra in search for new and broad excesses appearing in the high mass tail.
+
+Many new physics models beyond the Standard Model predict broad enhancements in dilepton production.
+% Contact interactions
+A particularly interesting cause of a non-resonant signature is a \emph{contact interaction} (CI) between quarks and leptons at an energy scale exceeding that of the collision energy.
+Although direct resonant production is inaccessible, a new contact interaction would lead to off-shell production and interference with the SM production.
+This can be caused by a mediator particle with a mass far above the \sqrts=13~TeV collision energies offered by the LHC.
+A \qqll CI is also interesting because it is a necessary outcome of quarks and leptons sharing a common substructure \cite{eichten}.
+
+Many new physics models outside the Standard Model predict non-resonant excesses.
+To maintain a degree of generality and model independence, the products of this search are designed to be agnostic as to the underlying mechanism behind the feature.
+As a result, when possible, the procedure used to produce results tends to limit or exclude the role played by signal models.
+Due to the nature of the chosen analysis strategy, several choices must be made with respect to the region of date in which the search is conducted.
+In these cases, the analysis is designed in order to optimize sensitivity to a generic formulation of contact interaction that serves as a benchmark.
+This model dependant optimization remains, for the greater part, separate from the final results.
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.99\textwidth]{figures/ci/massRanges.pdf}
+\caption{
+A schematic example of the dilepton invariant mass spectrum. 
+The monotonically falling total background shape is shown by the solid black line, while the dotted red line shows an example of a CI signal plus the total background shape.
+A background model is fit to the data it in a low-mass control region (shaded blue area) where a potential bias from the presence of a signal is negligible.
+The resulting background shape is extrapolated from the control region into the high-mass signal region (shaded red area).
+% The gap illustrated between the CR and the SR is found to be the preferred case for the destructive interference cases only.
+}
+\label{fig:ciStrat}
+\end{figure}
+
+% Challenges
+This search for contact interactions is carried out using the dielectron and dimuon invariant-mass spectra.
+Since CI produce final states of the same topology as some SM backgrounds, the signal production interferes either constructively or destructively with these backgrounds.
+In the constructive case, the CI strictly enhances the spectra with a broad non-resonant shape.
+In the destructive case, the interference modifies the background spectra as illustrated in Figure \ref{fig:ciStrat}. 
+Both types of interference are considered in this analysis.
+
+This search is complicated by both experimental and phenomenological challenges.
+It involves probing the highest energy regimes and smallest length scales ever accessed by observation.
+The first challenge results from the width of the non-resonant shape of interest, as shown in the red line of Figure \ref{fig:ciStrat}.
+This shape is qualitatively similar to the shape of the background, so care must be taken to avoid interpreting an existing signal as background, thereby losing sensitivity to new physics.
+The second challenge is the focus on new CI signals that may manifest themselves in the tail of the invariant-mass spectra.
+Attention must be paid to systematic uncertainties in this regime, as well as to the relevant resolution of the measured spectra.
+The third challenge is in modeling statistical knowledge of the background in signal regions with very low occupancy.
+The sensitivity of the analysis is similarly impacted by statistical and experimental uncertainties on the background expectation, as these are of similar magnitude of the background itself.
+New techniques are required to properly address these challenges.
+
+% new analysis strategy: data-driven
+This analysis introduces a number of changes that depart from previous searches.
+The result presented here is the first non-resonant dilepton search at the LHC to use a functional form fit to data to estimate the background, rather than a background estimate derived from simulated events.
+This choice removes the dependence of the background on the theoretical assumptions involved in the simulation process.
+This is important because these assumptions are both significant and poorly constrained in the high-mass regime.
+
+% Solution: avoid fitting signal shape
+The contact interactions that provide a benchmark model predict deviations from the expected gradient of the high-mass tail of the dilepton mass spectrum; the subtlety of this effect could easily be masked by a background description of sufficient flexibility to match the data.
+Therefore, the background event distribution at high masses is estimated based on a low-mass control region (CR) where the contribution of the benchmark signals are negligible.
+A functional form is fit to the observed data in the CR, and extrapolated to higher masses to model the production rate of background events.
+The search is then performed in a high-mass signal region (SR); here, event production by the benchmark signals is predicted to dominate over the background production.
+The arrangement of these mass ranges is illustrated in Figure \ref{fig:ciStrat}.
+The extrapolation from CR to SR avoids fitting the data in the regime where CI signals could potentially perturb the fit.
+This strategy reduces the impact of a signal shape, if present in the data, on the fitted background model.
+
+% Solution: avoid resolution, etc
+ATLAS measures electron transverse energy, \et, and muon transverse momentum, \pt.
+Consequently the invariant-mass resolution of dielectron pairs depends on \et resolution.
+For high-\et electrons, this grows as a constant fraction of \et. 
+Meanwhile, the invariant-mass resolution of dimuon pairs depends on \pt.
+As a result, the fractional muon resolution grows linearly with \pt.
+Both of these resolutions propagate to their respective invariant-mass spectra.
+A single-bin SR is used to combat the effects of these resolutions, which are particularly impactful in the high-mass regime.
+All events falling within the SR are counted identically, which mitigates the importance of \et and \pt resolution.
+This approach has the additional benefit of removing shape information in the signal region, making the results readily reinterpretable for signal models predicting different non-resonant shapes.
+
+% new analysis strategy: Bayesian
+A key part of this analysis is the statistical treatment of the observations.
+The Bayesian statistics used in previous ATLAS and CMS searches for CI has been replaced frequentist statistical framework.
+This removes the dependence of the result on prior probabilities to observe a signal.
+If the interference between signal and SM processes is not negligible, as is the case for CI, the choice of one prior over another is poorly motivated~\cite{Aad:2012hf,EXOT-2016-05}.
+% The choice to analyse the observations using frequentist statistics produces in more robust results.
+
+Finally, the transition to a background estimation from the data exchanges the systematic uncertainties in theoretical predictions for statistical uncertainties in data.
+There are three new uncertainties that arise from this approach.
+The dominant uncertainty in the expected background is due to statistical fluctuations in the CR.
+Next in importance is the uncertainty in the degree to which the extrapolation from the CR can produce a background estimate different from the underlying distribution. Such a difference leads to a signal-like deflection in the SR. This uncertainty is quantified using the simulated background and the associated uncertainties.
+The third and smallest uncertainty describes the impact of potential signal contamination in the CR.
+
+Two signal regions are considered for each lepton flavor, leading to four signal regions in total.
+For each flavor, the first SR extends to relatively lower invariant-mass and targets CI that interfere constructively with the SM.
+The second SR remains at relatively high invariant-mass and targets CI that interfere destructively with the SM.
+For the latter case, a gap is left between the CR and SR in order to avoid counting the destructive interference in the SR, as illustrated in Figure \ref{fig:ciStrat}.
+
+A statistical analysis is performed on the observation in each SR.
+The first results of the analysis are limits on the \xsbr in each SR, which can readily be reinterpreted in terms of various new physics models, without limitation to contact interactions.
+This result is the first of its kind, and is a new development for non-resonant searches at the LHC.
+The second result uses these four signal regions to set limits on CI models.
+These are produced to be reinterpretable in terms of arbitrary CI models \cite{chala}.
+The results of this analysis were published on November 4, 2020 \cite{ciAaron}.
+
+% Chapter outline
+This chapter describes the ATLAS search for contact interactions using the Run~2 dataset.
+Section \ref{sec:ciMotivation} discusses the theoretical motivation.
+Section \ref{sec:ciEvSel} describes the selection of data used for the search.
+Sections \ref{sec:ciSig} and \ref{sec:ciBkg} present the signal and background models, respectively.
+Next Section \ref{sec:ciSyst} discusses the systematic uncertainties used in the result.
+Section \ref{sec:ciStat} details the statistical analysis of the data.
+Finally Section \ref{sec:ciResults} presents the results and Section \ref{sec:ciConclusion} summarizes the analysis.
+
+\input{sections/contactInteractions-motivation}
+\input{sections/contactInteractions-datamc}
+\input{sections/contactInteractions-background}
+\input{sections/contactInteractions-signal}
+\input{sections/contactInteractions-syst}
+\input{sections/contactInteractions-stats}
+\input{sections/contactInteractions-results}
+\input{sections/contactInteractions-conclusion}
+
+

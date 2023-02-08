@@ -1,0 +1,157 @@
+\chapter{Higgs Decays to Two Muons}\label{sec:hmumu}
+
+
+The joint observation of the Higgs boson by ATLAS \cite{atlashiggs} and CMS \cite{cmshiggs} in 2012 initiated an era of studies of this particle and its interactions.
+One of the reasons that the Higgs boson is interesting is that the Englert-Brout-Higgs (BEH) mechanism generates the mass of fermions by means of Yukawa couplings to the Higgs boson.
+The most direct way to study these couplings is through the fermionic decay of the Higgs, described in Section \ref{sec:phenoHiggs}.
+As the fermion branching ratios given Equation \ref{eqn:higgsDecayFermions} indicate, the Yukawa coupling is proportional to the fermion mass squared.
+The $H\to\ttbar$ decay is kinematically forbidden because the top quark mass, $m_t\approx173$~GeV, exceeds the mass of the Higgs boson.
+Consequently, the most probable decay path is to bottom quark pairs due to their large mass $m_b=4.2$~GeV. 
+Despite this, the $H\ttbar$ coupling can be measured through the ttH process described in Table \ref{tab:higgsProdDiagrams}.
+The $Hb\bbar$ coupling was observed at the ATLAS experiment using the VH production channels \cite{atlasHbb}.
+The next most massive fermion after the bottom quark is the tau lepton, with $m_\tau=1.8$~GeV, which has been studied by ATLAS \cite{atlasTauTau} and CMS \cite{cmsTauTau}.
+% I don't want the thesis to be immediately out of date
+Although the charm quark with follows with a mass $m_c=1.3$~GeV, the messy hadronization of final state proves difficult to identify and study.
+Searches for $H\to c\cbar$ remain insensitive even to $Hc\cbar$ couplings $\sim100$ times the Standard Model expectation.
+This leaves the muon and the $H\mm$ coupling, where the muon's mass of $\m_\mu=0.1$~GeV results in a challengingly small branching fraction.
+However, unlike the case with the charm quarks, the final state of two muons is easily identified by a clear experimental signature.
+The result is that the $H\mm$ is the third and most challenging Higgs Yukawa coupling that is feasible to study at ATLAS.
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.7\textwidth]{figures/hmumu/massCouplingPlot.pdf}
+\caption{Summary of ATLAS measurements of various fermion ($t$, $b$, $\tau$, and $\mu$) and gauge bosons. The plot shows the ``reduced coupling strength moderators'', where $\kappa$ is the deviation relative to the Standard Model prediction, compared to the particle's mass.
+The SM prediction for both cases is also shown as a dotted line.
+The contribution of this study appears in the bottom left corner of this plot. 
+}
+\label{fig:higgsMassCoupling}
+\end{figure}
+
+The $H\mm$ coupling also provides a unique opportunity as both the $Hb\bbar$ and $H\tautau$ couplings are to third-generation fermions.
+This means that the \hmm measurement adds a valuable point to the global picture of Higgs couplings, as illustrated in Figure \ref{fig:higgsMassCoupling}.
+Measuring this coupling provides a test of the Standard Model and also insight into the nature of the muon's mass.
+
+Detecting the decays of Higgs to two muons is particularly challenging on two counts.
+First, the Higgs branching fraction to muons is tiny ($2.18\times10^{-4}$).
+Second, there is a sizeable irreducible dimuon background from Drell-Yan and Diboson processes.
+Together these evoke the idiomatic needle-in-a-haystack to describe the search for \hmm.
+It is only with the enormous number of events collected by ATLAS during the Run 2 data-taking campaign that it became feasible to perform this search.
+
+%%%%%%%%%%%%% VH #################3
+
+Of particular interest in this thesis are Higgs bosons produced through the VH production mechanisms.
+These mechanisms are listed in Table \ref{tab:higgsProdDiagrams} as Higgs-strahlung and gluon-originated ZH.
+They result in final states with a Higgs boson as well as an associated \W or \Z vector boson.
+These events offer both a chance to look at a new, unstudied phase space, as well as a contribution to the overall sensitivity in the search for \hmm.
+The events where the vector boson decays leptonically are particularly useful.
+The additional leptons help differentiate VH events from the Drell-Yan background and provide kinematic information for further discrimination.
+
+The cross-section of WH is 1.36~pb in center-of-mass collisions with energy $\sqrt{s}=13$~TeV, while the ZH cross-section is just 0.88~pb.
+
+\begin{table}[htbp]
+ \caption{Expected numbers of events from 139 fb$^{-1}$ $\sqrt{S}=13$ TeV data for WH and ZH. The first column shows the number of VH events, while the second column scales this by BR($H\to\mu\mu$) and the third column additionally multiplies by BR($V\to\ell\ell$) where $\ell$ is $e$ or $\mu$.}
+ \begin{center}
+\begin{tabular}{l c c c c}\toprule
+% Production   & $H\to\mu\mu$ & $H\to\mu\mu,~V\to\ell\ell$ \\
+Vector Boson  & VH & VH(\hmm) & VH(\hmm,~$^{W\to\ell\nu}_{Z\to\ll}$) \\
+\midrule
+V=\W & 189,040 & 41.5 & 9.14 \\
+V=\Z & 122,320 & 26.9 & 1.83 \\
+\bottomrule\end{tabular}
+ \end{center}
+\label{tab:vh-predict}
+\end{table}
+
+Studying \hmm with VH produced events introduces several challenges and opportunities.
+First the tiny VH cross-section produces relatively few events to study.
+Second is the question of how to use the new information from the leptonic vector boson decay products to separate the background from diboson production processes.
+This information is particularly important to remove diboson (ZZ and WZ) backgrounds.
+% Techniques to address challenge
+Careful choices are made in the selection criteria targeted at VH production in order to capture as many VH/\hmm events as possible.
+A multivariate analysis (MVA) discriminant is used to take advantage of the kinematic information in the \W and \Z decays.
+Steps must be taken to understand and to limit the level of bias that these techniques introduce to the results. 
+This is necessary to avoid invalidating the final measurements. 
+
+\begin{figure}[htpb]
+  \centering
+    % \centered{\begin{tikzpicture}
+    % \begin{feynman}
+    %     \vertex (qa){\(\qbar\)};
+    %     \vertex [below right=of qa] (p1);
+    %     \vertex [below left=of p1] (qb){\(q'/q\)};
+    %     \vertex [right=of p1] (p2);
+    %     \vertex [above right=of p2] (h){\(H\)};
+    %     \vertex [below right=of p2] (v){\(W/Z\)};
+    %     \diagram* {
+    %     (qb) --[fermion] (p1) --[fermion] (qa),
+    %     (p1) --[boson,edge label=\(W/Z\)] (p2),
+    %     (v) --[boson] (p2) --[scalar] (h),
+    %     };
+    % \end{feynman}
+    % \end{tikzpicture}} 
+
+\centered{\begin{tikzpicture}\begin{feynman}[medium]
+    \vertex (p1);
+    \vertex [right=3.6em of p1] (p2);
+    \vertex [above left=of p1] (qa){\(\phantom{q'/}\qbar\)};
+    \vertex [below left=of p1] (qb){\(q'/q\)};
+    \vertex [above right=of p2] (h){\(H\phantom{/Z}\)};
+    \vertex [below right=of p2] (v){\(W/Z\)};
+    \diagram* {
+    (qb) --[fermion] (p1) --[fermion] (qa),
+    (p1) --[boson,edge label=\(W/Z\)] (p2),
+    (v) --[boson] (p2) --[scalar] (h),
+    };
+\end{feynman}
+\end{tikzpicture}} 
+  \caption{VH production originating from quarks}
+    \label{fig:vh-prod}
+\end{figure}
+
+The VH production mechanisms, WH and ZH, exemplified in Figure \ref{fig:vh-prod}, are the third and fourth leading Higgs boson production mechanisms at the LHC.
+The cross-section of WH is 1.36~pb in center-of-mass collisions with energy $\sqrt{S}=13$, while the ZH cross-section is just 0.88~pb.
+The cross-section, combined with the branching ratio of \hmm, results in the number of expected events per 139 fb$^{-1}$ shown in the first column of Table \ref{tab:vh-predict}.
+In addition to the quark originating ZH shown in figure \ref{fig:vh-prod}, gluon originating ZH events contribute $\approx10\%$ to the total ZH cross-section.
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subfloat[][]{{
+    \feynmandiagram [small,baseline=(v.base),horizontal=a to v] {a[particle=\(W^\pm\)] --[boson] v --[fermion] b[particle=\(\ell^\pm\)], c[particle=\(\nu\)] --[fermion] v,};
+}}
+\hspace{3em}
+\subfloat[][]{{
+    \feynmandiagram [small,baseline=(v.base),horizontal=a to v] {a[particle=\(Z\)] --[boson] v --[fermion] b[particle=\(\ell^+\)], c[particle=\(\ell^-\)] --[fermion] v,};
+}}
+  \caption{Leptonic decays of the \W (a) and \Z (b) bosons.}
+  \label{fig:vh-decay}
+\end{figure}
+
+The search for \hmm is conducted in several categories of phase space defined based on the kinematics of the event.
+Two inclusive categories are defined first: a 4-lepton selection targeting ZH produced events and a 3-lepton selection optimized for WH produced events.
+These target leptonic ZH events with $\mu\mu\mu\mu$ or $ee\mu\mu$ final states, and leptonic WH events with $\mu\nu\mu\mu$ or $e\nu\mu\mu$.
+In the case of leptonic decays of the \W, only the charged lepton is reconstructed, while a neutrino may be inferred from the scale and direction of missing transverse energy \met.
+A further set categories are derived from these inclusive categories.
+In the case of the 3-lepton selection, two sub-selections are defined with high WH yields and low background yields.
+In the case of the 4-lepton selection, one high purity sub-selection is defined.
+The delimitation of these exclusive categories from within the inclusive selections is based on the MVA discriminant.
+This MVA is a function that maps various kinematic variables calculated from each event onto a spectrum related to the likelihood that an event is produced by a VH mechanism. 
+The search is performed in the dimuon invariant-mass spectrum across these two inclusive and three exclusive categories.
+A combination is performed using an additional seventeen categories that target other Higgs production mechanisms listed in Table \ref{tab:higgsProdDiagrams}.
+The observations of this analysis were made public in June 2020 \cite{atlasHmm}.
+
+This chapter describes the search for \hmm using the VH production channels with the full Run 2 dataset collected by ATLAS.
+Section \ref{sec:hmmEvSel} describes the selection of data used for the search, followed by Section \ref{sec:hmmBdt} that describes the MVA based categorization.
+Sections \ref{sec:hmmBkg} and \ref{sec:hmmSig} present the signal and background models, respectively.
+Next Section \ref{sec:hmmSyst} discusses the systematic uncertainties used in the result.
+Section \ref{sec:hmmStat} details the statistical analysis of the data.
+Finally Section \ref{sec:hmmResults} presents the results of the analysis.
+
+\input{sections/hmumu-eventSelection}
+\input{sections/hmumu-bdt}
+\input{sections/hmumu-bkg}
+\input{sections/hmumu-signal}
+\input{sections/hmumu-systematics}
+\input{sections/hmumu-statistics}
+\input{sections/hmumu-results}

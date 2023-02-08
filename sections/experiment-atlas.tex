@@ -1,0 +1,472 @@
+\section{ATLAS Detector}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.75\textwidth]{figures/experiment/atlas/atlasLayout.jpg}
+\caption[Computer generated image of ATLAS with a section of the barrel removed for visibility. Illustration by Joao Pequenao.]{Computer generated image of ATLAS with a section of the barrel removed for visibility. Illustration by Joao Pequenao\footnotemark.}
+\label{fig:atlas3d}
+\end{figure}
+\footnotetext{Joao Pequenao. \emph{Computer generated image of the whole ATLAS detector}, 2008. \url{https://cds.cern.ch/record/1095924}}
+
+% \begin{wrapfigure}{r}{0.5\textwidth}
+%      \caption[Caption for LOF]{\footnotemark}
+%   \begin{center}
+%     \includegraphics[scale=0.5]{figures/experiment/atlas/atlasLayout.jpg}
+%   \end{center}
+% \end{wrapfigure}
+% \footnotetext{s. 183}
+
+%ATLAS detector
+This thesis uses data collected by the ATLAS (A Large Toroidal Lhc ApparatuS) detector.
+ATLAS is a multipurpose experiment designed built around an interaction point at the LHC.
+Two overarching goals influenced the design of the experiment: to cover as much of the solid angle surrounding the collisions and to precisely measure the particles exiting a collision.
+An enormous amount of equipment is required to achieve these goals: the experiment has a cylindrical geometry 46~m in length and 25~m in diameter.
+
+The detector subsystems perform various tasks, ranging from measuring charge tracks left by particles to measuring their energy and momentum.
+Some detectors specialize in precisely recording the effects of particles (hits), while others focus on quickly identifying patterns of interest for analysis (triggers).
+
+Throughout the design of the various systems, a key concern is the amount, or budget, of material that each introduces.
+Particles may lose energy, be absorbed, or produce secondary particles through interactions as they pass through these materials.
+With few exceptions, it is advantageous to reduce the total material that particles pass through.
+
+Four systems comprise the experiment and serve different purposes in the measurement of particles leaving the collisions.
+The ATLAS magnet system immerses the detector in a strong magnetic field that bends charged particles proportionally to their momentum.
+Three cylindrical coaxial systems interact with both charged and neutral particles to collect information.
+The first is the inner detector, which precisely measures the tracks of charged particles.
+Next, the calorimeters measure the energies of particles.
+Finally, the muon system helps to identify muons and measure their momentum.
+The organization of these systems is illustrated in Figure \ref{fig:atlasLayout}.
+
+\afterpage{
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[scale=0.55]{figures/experiment/atlasSide.pdf} \\
+\includegraphics[scale=0.55]{figures/experiment/atlas.pdf}
+\caption{Layout of the ATLAS detector with subsystems coded by color. 
+\textbf{Top:} a view of the barrel looking along the beamline in the $z$ direction.
+\textbf{Bottom:} a view of the detector from the side looking in the $x$ direction.
+\textbf{Red:} muon system with CSC (light), MDT (medium), and trigger (dark) chambers. 
+\textbf{Blue:} calorimeter system with tile (light), LAr (medium), and FCal (dark) calorimeters. 
+\textbf{Green:} inner detector with pixel (light), strip (medium), and TRT (dark) detectors.
+\textbf{Grey:} magnet system with ECT (light), BT (medium), and CS (black) magnets.
+}
+\label{fig:atlasLayout}
+\end{figure}
+\clearpage
+}
+
+% Coordinates
+Three coordinate systems are commonly used to describe different aspects of ATLAS and its operation.
+A Cartesian coordinate system is defined with its origin at the center of the detector.
+The longitudinal $z$ axis runs parallel to the beamline in the counter-clockwise direction when viewed from above.
+The $y$ axis points towards the top of the detector, and the $x$ axis points towards the center of the LHC ring.
+A cylindrical coordinate system is also defined as sharing the same $z$ axis as the Cartesian system.
+The azimuthal angle $\phi$ is defined with respect to the Cartesian $x$ axis, and the radius $\rho$ is defined from the $z$ axis.
+Since the detector is nearly symmetric under reversing the $z$ axis, it is helpful to refer to the detector's side with positive $z$ coordinates as the \emph{A side} and the opposite side as the \emph{C side}.
+The main body of the experiment, the \emph{Barrel}, is located between the A and C side \emph{end-caps}.
+Both of these systems are used in describing the positions of detectors and components within ATLAS.
+In particular, the cylindrical system is used to describe the locations of collisions and impact parameter displacements from the beam.
+
+Spherical coordinates are more natural than Cartesian and cylindrical when describing the physical interactions.
+This system shares an origin with the previous two systems and shares the azimuthal angle with the cylindrical system.
+The radius $r$ is defined from the center of the detector.
+The polar angle $\theta$ is defined with respect to the $z$ axis.
+It is common to map polar angles onto \emph{pseudorapidity} defined as $\eta\equiv-\ln(\tan\frac{\theta}{2})$.
+The pseudorapidity is conveniently calculated from the longitudinal component \plong of a particle's total momentum $p$ as $\eta=\arctan{\frac{\plong}{|p|}}$.
+
+% Particle ID
+While detectors in ATLAS measure the location of, and energy deposited by, particles, it is the arrangement of detectors that allows the experiment to identify the particle type.
+Electrons, photons, muons, and other particles interact differently with various layers of the detector.
+Certain idiosyncratic patterns are compatible with different particle types.
+For example, charged particles leave tracks of energy deposited in the inner detector, while neutral particles pass directly through.
+Electrons are stopped with a shower of electromagnetic radiation in first calorimeter, while muons penetrate out to the muon spectrometer.
+Examples of these patterns are shown in Figure \ref{fig:particleInteractions}.
+The various patterns left by different particles are evident.
+A charged hadron bends in the magnetic field, leaving a curved track in the inner detector, before depositing its energy in the outer hadronic calorimeter.
+A neutral hadron leaves no track before producing a hadronic shower.
+Electrons are similarly differentiated from photons by their track in the inner detector as well as the shape of their electromagnetic showers in the inner calorimeter.
+The direction that particles bend helps determine their electric charge, while the radius of their curved track helps determine their momentum.
+
+\begin{figure}[htb]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.95\textwidth]{figures/experiment/particleId.pdf}
+\caption{A cross section of ATLAS looking along the beamline. The detectors are color coded: green for the inner detector, blue for the calorimeter, and red for the muon spectrometer. Several particle paths are shown in blue. Dashed lines represent a particle passing through the detectors without interacting. Yellow areas indicate electromagnetic or hadronic showers in the calorimeters and other interactions with the detector. Outside the inner solenoid, the muon is bent parallel to the beamline by a toroidal magnetic field.}
+\label{fig:particleInteractions}
+\end{figure}
+
+This section will describe the experiment's design, beginning with the four systems that make up the ATLAS.
+Following this, the systems for identifying interesting collisions and recording them will be presented.
+
+
+
+
+\subsection{Inner Detector}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/experiment/atlas/id.jpg}
+\caption[Computer generated image of the inner detector with a section removed for visibility. Illustration by Joao Pequenao.]{Computer generated image of the inner detector with a section removed for visibility. Illustration by Joao Pequenao\footnotemark.}
+\label{fig:atlasId}
+\end{figure}
+\footnotetext{Joao Pequenao. \emph{Computer generated image of the ATLAS inner detector}, 2008. \url{https://cds.cern.ch/record/1095926}}
+
+The ATLAS Inner Detector (ID) is the innermost detector system.
+Its purpose is to precisely measure the locations of energy deposits left by particles leaving a collision.
+To this end, it is comprised of three subsystems: the pixel detector, the silicon-strip tracker, and the transition radiation tracker.
+These are shown in Figure \ref{fig:atlasId}.
+These are positioned in coaxial cylindrical arrangements around the region of the beam pipe where collisions take place.
+The cylinders arrange detectors in a barrel covering $|\eta|<1$ and bookended by two mirrored end-caps.
+The total length of the ID is 7~m and the diameter is 2.3~m, which enables the full coverage of $|\eta|<2.5$.
+The data from the ID subsystems (hits) are used to identify tracks left by particles as they transverse the detector.
+In this regard, it helps measure the impact parameter of particles with a precision that enables the identification of decay products of bottom quarks and tau leptons that travel short distances before decaying\cite{pixel}.
+
+
+Both the pixel detector and the silicon-strip tracker belong to the category of solid-state silicon detectors in that they detect ionizing particles through their interaction with a semiconductor.
+These use a semiconductor layer doped with an element with an electron affinity (p-type) and a semiconductor layer doped with an electron donor element (n-type).
+At the interface between these two layers, electrons equilibrate from the n-type material to the p-type material, producing a \emph{depletion region} and an electric field.
+A positive voltage bias is applied to the n-type side of the juncture to expand the depletion region and strengthen the field.
+When a charged particle passes through the depletion region, it ionizes atoms and liberates electron-hole pairs.
+Under the influence of the electric field, these drift to either end of the depletion region and produce a measurable current.
+Drift does not occur outside the depletion region in the absence of an electric field \cite{grupen}.
+
+The first subsystem that particles pass through is the pixel detector.
+Here, the silicon is subdivided into a grid of many isolated \emph{pixels} that may be read out individually.
+Each pixel is 256~\um thick with a typical surface area of $\sim50\times400\um^2$.
+In the barrel, these are grouped into arrays of 24$\times$160 pixels for readout.
+Sixteen arrays are located on a ``module'', which serves as the repeating basis of the various pixel layers.
+Four layers of detectors are arranged in the barrel, with the inner most layer located inside the beampipe, with radii of 2.9~cm, 5.1~cm, 8.9~cm, and 12.3~cm. 
+In each end-caps, four disks are arranged between $z$=11~cm and $z$=20~cm \cite{pixel,pixel2}.
+The next subsystem that particles interact with is the silicon-strip tracker (SCT).
+The SCT barrel consists of four cylindrical layers, while the end-caps each consist of nine disk layers.
+Each barrel layer is built from modules that host two layers of silicon wafers divided into lines of microstrips that are 126~mm long.
+The strips are oriented differently in the barrel depending on their layer, with some running parallel to the beam axes and others offset at an angle of 40~mrad \cite{sct}.
+
+Finally, particles interact with the transition radiation tracker (TRT) positioned outside the SCT.
+This is a system of 4~mm diameter gaseous proportional-mode drift tubes.
+The tubes, or ``straws'', are made from wound Kapton with a gold-plated 31~\um wire in the center.
+The straws are filled with a drift gas mixture of xenon (70\%), carbon dioxide (27\%), and oxygen (3\$).
+During operation, the Kapton is kept at a -1.5~kV.
+When a charged particle passes through a straw, it ionizes the gas and the resulting free electrons drift towards the grounded wire.
+The induced current is amplified and read out by front end electronics.
+The space between the straws is filled with polymer and foil materials so that charged relativistic particles produce transition radiation when they pass through material interfaces.
+This is strongest for electrons ($\propto E/m$) and is useful for their identification against pions.
+The TRT complements the silicon detectors by providing a large number of tracking points while adding very little to the material budget.
+As a result, the 73 layers of tubes are used in the barrel, while 160 layers make up the end-caps.
+A charged particle passing through the barrel will produce hits in $\sim30$ TRT straws.
+Additionally, the fast readout rate of 80-100~kHz compensates for the relatively slow readout possible with the silicon detectors  \cite{trt}.
+
+In total, 1.5$\times10^{8}$ data channels are read out from the ID, with the majority of these coming from the pixel detector.
+The ID is used to measure tracks left by muons and electrons, to identify displaced vertices from b-jet decays, and measure to overall momentum expelled from collisions.
+
+\subsection{Calorimeters}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.7\textwidth]{figures/experiment/atlas/calo.jpg}
+\caption[Computer generated image of the calorimeters with a section of the removed for visibility. Illustration by Joao Pequenao. ]{Computer generated image of the calorimeters with a section of the removed for visibility. Illustration by Joao Pequenao\footnotemark. }
+\label{fig:atlasCalo}
+\end{figure}
+\footnotetext{Joao Pequenao. \emph{Computer Generated image of the ATLAS calorimeter}, 2008. \url{https://cds.cern.ch/record/1095927}}
+
+The ATLAS Calorimeter System is comprised of two subsystems: the Liquid Argon Calorimeter (LAr), the Tile Calorimeter.
+The LAr is designed to measure energy deposited through electromagnetic interactions.
+The Forward Calorimeter is part of the LAr and is positioned in the large-$\eta$ region and provides additional calorimeter coverage.
+Wrapped around the exterior of LAr, the Tile Calorimeter is designed to measure the energies of hadronic jets.
+Together, these make up the calorimetry system shown in Figure \ref{fig:atlasCalo}.
+This is particularly useful in determining the energies of photons and electrons, and to a lesser extent, muons.
+
+The calorimeters in ATLAS are divided into electromagnetic and hadronic types.
+The electromagnetic calorimeters measure the energy lost by electrons through bremsstrahlung radiation and the energy lost by photons through electron-positron pair production.
+Both processes occur at a rate related to the thickness of material they travel through in terms of \emph{radiation length} $X_0$.
+\footnote{$X_0\equiv\frac{A}{4\alpha N_AZ^2r_e^2\ln(183Z^{-1/3})}$, where $Z$ and $A$ are the atomic number and weight, $r_e\equiv\frac{1}{4\pi\epsilon_0}\frac{e^2}{m_ec^2}$ is the classical electron radius, $N_A$ is Avogadro's number, and $\alpha$ is the familiar fine structure constant.}
+Electrons with energy $E$ loose their energy while traveling through a material per length $x$ at a rate:
+\begin{equation}\begin{split}
+    -\frac{dE}{dx}=\frac{E}{X_0}.
+\end{split}\end{equation}
+Photons undergo pair production with a probability based on their frequency:
+\begin{equation}\begin{split}
+    -\frac{dw}{dx}=\frac{1}{\lambda_\text{pair}}e^{-x/\lambda_\text{pair}}; \quad \lambda_\text{pair}=\frac{9}{7}X_0.
+\end{split}\end{equation}
+Both processes produce secondary electrons and photons that in turn produce their own showers of lower energy particles.
+If the radiation length of the material is enough, most of the initial particle's energy will be deposited in the material.
+This energy can be converted into scintillation light or into the ionization of an \emph{active} material, both of which may be used for detection  \cite{grupen}.
+
+Hadronic calorimeters work along with similar principles to electromagnetic calorimeters, except the primary interactions are nuclear instead of electromagnetic.
+They measure the energy of hadrons, which is particularly useful at ATLAS to measure the energy of columnated jets of hadrons produced by collisions.
+The radiation length is replaced with the average nuclear interaction length $\lambda_I\approx35\text{g/cm}^2A^{1/3}$, where $A$ is the atomic mass number.
+The instead of pair production and bremsstrahlung, hadrons traveling through a calorimeter lose their energy through momentum exchanged through nuclear interactions.
+This results in a \emph{cascade} of light hadrons and, to the detriment of all of physics, neutrinos produced from the initial incoming hadron.
+These can be distinguished from an electromagnetic shower by their broad width that begins deeper within the calorimeter.
+The charged products of the cascade can produce detectable scintillation light that may be used for detection  \cite{grupen}.
+
+
+For homogeneous calorimeters such as those in ATLAS, the energy measured in the shower can be used to estimate the energy of the original particle.
+This is limited by several uncertainties: the point of the first interaction, leakage of the shower out through the calorimeter.
+The measurement of energy by the calorimeters is specified by a resolution of the form in Equation \ref{eqn:caloRes}.
+\begin{equation}\begin{split}\label{eqn:caloRes}
+    \frac{\Delta E}{E}=\frac{\sigma_a}{\sqrt{E}}\oplus\frac{\sigma_b}{E}\oplus\sigma_c.
+\end{split}\end{equation}
+Here, the term $\sigma_a$ is a stochastic uncertainty in photoelectric statistics.
+The term $\sigma_b$ has a value of $\approx0$ at ATLAS.
+The term of constant relative uncertainty, $\sigma_c$, is due to uncertainty in the calibration.
+For high-energy events, the constant term dominates.
+
+\subsubsection{Liquid Argon Calorimeter}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subfloat[][]{\label{fig:atlasTile}{\includegraphics[width=0.50\textwidth]{figures/experiment/atlas/tile.pdf}}}
+% \subfloat[][]{\label{fig:atlasTile}{\includegraphics[width=0.40\textwidth]{figures/experiment/atlas/tile.png}}}
+\subfloat[][]{\label{fig:atlasLar}{\includegraphics[width=0.50\textwidth]{figures/experiment/atlas/lar.pdf}}}
+% \subfloat[][]{\label{fig:atlasLar}{\includegraphics[width=0.60\textwidth]{figures/experiment/atlas/lar.png}}}
+\caption{(a) A module in the TileCal consisting of staggered scintillator (blue) and steel (grey) layers read out on both sides by fiber optics connected to photomultipliers. Source tubes in the TileCal allow radioactive sources to be inserted for calibration. (b) A section from the LAr, consisting of towers (red) composed of accordion shaped electrodes submerged in liquid argon.}
+\label{fig:atlasCalo}
+\end{figure}
+
+The Liquid Argon Calorimeter is situated outside of the inner detector.
+It is divided into subsystems for the barrel region and end-cap regions.
+The barrel consists of two symmetric half-cylinder electromagnetic calorimeters.
+In the end-cap regions, the LAr electromagnetic end-cap (EMEC) is followed by the LAr hadronic end-cap (HEC) and then the Forward Calorimeter (FCal).
+The electromagnetic calorimeters cover $|\eta|<3.2$.
+The combined coverage with the HEC and FCal covers $|\eta|<4.8$
+
+The primary purpose of the barrel and EMEC calorimeters is to measure the energy of photons and electrons.
+Both systems share a similar construction.
+Accordion shaped electrodes made of copper etchings on polyimide substrates are held at a voltage of 2~kV.
+Between the electrodes, grounded steel-clad lead absorbers interact with primary incident particles and produce showers of electrons and photons.
+Both the electrodes and the absorbers are submerged in cryogenic liquid argon that acts as the active material.
+The primary and secondary particles ionize the argon, which produces showers of electrons that drift towards the electrodes.
+The electrodes are organized into narrow strip towers, square sampling towers, and wide trigger towers.
+Signals are read out from individual towers.
+These are illustrated in Figure \ref{fig:atlasLar}.
+A particle passes through a series of towers in the calorimeter.
+The first are the strip towers, which form a presampler that helps correct for the amount of energy lost before reaching the calorimeter.
+After the presampler, a particle enters the sampling towers.
+With a radiation length of approximately $X_0=20$, these are longer than the presampler and consequently absorb the majority of the energy from electron or photon showers.
+Finally, the shower reaches the trigger towers on the outer layer of the LAr.
+The total radiation length in the barrel is over $X_0=22$.
+The design of the barrel and EMEC calorimeters provides a relative energy resolution $\sigma_a=10\%$ and $\sigma_c=0.7\%$  \cite{lar}.
+
+The HEC wheels consist of alternate copper absorbers and electrodes.
+The electrodes have the same design as those from the electromagnetic calorimeters but are flat instead of accordion-shaped.
+The radiation length of the HEC is $X_0=10$.
+This design provides a resolution with $\sigma_a=50\%$ and $\sigma_c=3\%$.
+The FCal is located within the HEC at a higher $\eta$.
+It has a very different geometry, consisting of a copper layer followed by two tungsten layers.
+These are perforated by circular holes, in which slightly smaller rods are inserted.
+The gap between the layer and the rod serves as the drift volume.
+The FCal design measures energies to a resolution with $\sigma_a=100\%$ and $\sigma_c=10\%$  \cite{lar}.
+
+\subsubsection{Tile Calorimeter}
+
+The ATLAS Tile Calorimeter (TileCal) is built surrounding the LAr calorimeters and designed to measure the energies of hadronic jets.
+Its relative position is illustrated in Figure \ref{fig:atlasCalo}.
+It makes use of sheets of steel as the absorbing material and scintillating plates as the active material.
+The TileCal consists of three barrel segments and, unlike the previously discussed detectors, no end-cap components.
+The central barrel is 5.6~m long, while the two outer ``extended'' barrels are 2.9~m long.
+The barrels have an inner radius of 2.3~m and an outer radius of 4.2~m.
+The central barrel covers a pseudorapidity of $|\eta|<1$ and the extended barrels provide coverage up to $|\eta|<1.7$.
+The energy resolution of the Tile design is $\sigma_a=50\%$ and $\sigma_c=7\%$  \cite{tileTdr}.
+
+As a hadronic calorimeter, the operating principle of the TileCal is similar to the LAr calorimeters.
+Each module of the TileCal consists of stacks of absorber and scintillator tiles, as shown in Figure \ref{fig:atlasTile}.
+These are staggered in radial layers and perpendicular to the beamline.
+Incident hadrons interact with the absorbers and produce hadronic cascades.
+These, in turn, scintillate as they pass through the 3~mm plastic scintillator tiles.
+Two fiber optic cables collect scintillation light from each tile, transform its wavelength, and carry it to a bank of photomultiplier tubes, where it is digitized.
+The effective hadronic depth of the TileCal is $\sim7\lambda_I$  \cite{tile}.
+
+\subsection{Muon System}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/experiment/muonSys.pdf}
+% \includegraphics[width=0.8\textwidth]{figures/experiment/atlas/muon.png}
+% \subfloat[][]{\label{fig:atlasMsBarrel}{\includegraphics[width=0.5\textwidth]{figures/experiment/atlas/muonCross.eps}}}
+\caption{ATLAS muon system, with chambers of various types labeled.}
+\label{fig:atlasMs}
+\end{figure}
+
+The outermost detector system, the ATLAS Muon Spectrometer (MS), is the largest muon spectrometer ever constructed.
+The MS can identify muons and measure their transverse momentum, especially for those with $\pt>300$~GeV.
+In this task, it shares a similar geometry to the ID.
+The spectrometer is comprised of a barrel region with cylindrical layers of detectors at radii of 5, 7.5, and 10~m.
+The symmetrical end-cap regions consist of four layers located at $z$ of 7, 10, 14, 21-23~m.
+All layers have 16-fold symmetry in azimuth.
+The MS uses four subsystems in different regions of pseudorapidity and for different tasks.
+To provide fast hits to the trigger system in order to identify events containing muons, the Resistive Plate Chambers operate in the barrel ($|\eta|<1.05$), and the Thin Gap Chambers operate in the end-cap wheel ($1.05<|\eta|<2.7$).
+Precision tracking data for muons is provided by the Monitored Drift Rubes in the barrel ($|\eta|<2.7$) along with the Cathode Strip Chambers in the region from $2.0<|\eta|<2.7$.
+The various systems are shown in Figure \ref{fig:atlasMs}  \cite{muonTdr}.
+
+The function of the MS is to measure transverse momentum using a track of hits left by a muon as it bends in a strong magnetic field.
+The hits directly determine the sagitta $s$ of the track, which is related to the angle of magnetic deflection $\theta$ and the radial coordinate by $s=\rho(1-\cos\theta/2)$.
+In a perpendicular magnetic field and for small $\theta$,
+\begin{equation}\begin{split}
+    s=\frac{eBL^2}{8p},
+\end{split}\end{equation}
+where $B$ and $L$ are the strength and length of the magnetic field.
+This is limited by the measurement precision of the track, as well as the relatively constant uncertainty from multiple-scattering.
+This results in a relative resolution that grows linearly at high momentum.
+The total momentum of the muon can then be measured using the polar angle (with attendant uncertainty), $p=\pt/\sin{\theta}$  \cite{grupen}.
+The MS is required to measure muon momentum with a resolution,
+\begin{equation}\begin{split}
+    \frac{\Delta \pt}{\pt}<1\times10^{-4}\times p/\text{GeV}.
+\end{split}\end{equation}
+This requires hit locations to be measured with an accuracy of 50~\um.
+Hits are registered using cylindrical coordinates in the $r-z$ plane.
+The $z$ coordinate is measured in the barrel region, where the toroidal magnetic field bends muons in the longitudinal direction.
+Meanwhile, $r$ coordinate is measured in the end-caps, where the magnetic field pushes muons in the radial direction  \cite{muonTdr}.
+
+\subsubsection{MDT} % precision
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subfloat[][]{\label{fig:atlasMdt}{\includegraphics[width=0.5\textwidth]{figures/experiment/mdt/drift.pdf}}}
+\subfloat[][]{\label{fig:atlasMdt}{\includegraphics[width=0.5\textwidth]{figures/experiment/mdt/chamber.pdf}}}
+% \subfloat[][]{\label{fig:atlasMdt}{\includegraphics[width=0.5\textwidth]{figures/experiment/atlas/mdt.png}}}
+% \subfloat[][]{\label{fig:atlasMdtChamber}{\includegraphics[width=0.5\textwidth]{figures/experiment/atlas/mdtChamber.png}}}
+\caption{(a) Cross section of a MDT with a muon track illustrated. Ionizing radiation leaves a track of electrons in the drift gas, which drift towards the positive anode wire and induce a signal. (b) Arrangement of MDTs into multi layers, which are then attached to a support structure to build a chamber.}
+\label{fig:atlasMdtChamber}
+\end{figure}
+
+The Monitored Drift Tubes (MDT) are the single wire chambers that provide precision muon measurements in the majority of the MS.
+An MDT consists of a 30~mm aluminum tube cathode with a central 50\um gold-plated tungsten-rhenium wire anode.
+The tube is filled with a mixture of argon (91\%), nitrogen (4\%), and methane (5\%) pressurized to 3~bar.
+Charged particles passing through the tube ionize the gas, freeing a track electrons to drift towards the 3.08~kV wire over the course of $\approx750$~ns.
+The spatial resolution of a single MDT is 80~\um.
+This is shown in Figure \ref{fig:atlasMdt}.
+The radial displacement of the track is determined from the total drift time.
+Layers of MDTs are laminated together with glue and affixed to a support frame that holds them precisely in positions.
+This is shown in Figure \ref{fig:atlasMdtChamber}.
+The central cross plate is adjustable to bend the outer aluminum tubes to match the gravitational sag of the anode wires.
+The deformation of the chamber is monitored by built-in optical systems.
+
+As shown in Figure \ref{fig:atlasMs}, the MDT chambers are used throughout ATLAS except in the very high pseudorapidity region where particle flux exceeds their measurement rate.
+In the barrel ($|\eta|<1$), chambers are rectangular and arranged into three layers beginning outside the calorimeters.
+In the end-cap ($|\eta|>1$), chambers are trapezoidal and positioned radially on either an inner or outer wheel.
+The MDT system is comprised of 1194 precision chambers, with a total of 370,000 output channels  \cite{muonTdr}.
+
+\subsubsection{CSC} % precision
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=1.0\textwidth]{figures/experiment/mdt/csc.pdf}
+\caption{Cross section of a CSC, showing multiple anode wires and cathode strips.}
+\label{fig:atlasCsc}
+\end{figure}
+
+The Cathode Strip Chambers (CSC) are multiwire proportional chambers that provide precision muon measurements in the region close to the interaction point and the beamline ($2<|\eta|<2.7$).
+The CSCs are designed to have short drift times ($<30$~ns) to avoid saturation from the high particle flux in this region.
+Like the MDTs, the spacial resolution of CSCs is 80~\um.
+They consist of anode wires strung perpendicularly to cathode strips, as shown in Figure \ref{fig:atlasCsc}.
+The wires in the CSCs are 30~\um versions of those used in the MDTs, and the cathode strips are copper adhered to glass-reinforced epoxy.
+Four of these constructions are stacked on top of each other, separated by a closed-cell foam, to complete a CSC chamber.
+The intermediate area is filled with a mixture of carbon dioxide (50\%), argon (30\%), and carbon tetrafluoride (20\%).
+
+When an ionizing particle passes through the CSC, it produces an electron avalanche onto adjacent anode wires.
+This induces a charge on the cathode strips, which in turn is amplified and read out.
+Long cathode strips provide coarse information, while short segmented cathodes provide precision hit data.
+The CSC system is comprised of 32 precision chambers, with a total of 67,000 output channels  \cite{muonTdr}.
+
+\subsubsection{Trigger Chambers}
+
+The MDT and CSC chambers are supported by additional chamber types that provide rapid data for the trigger decision.
+These are the Resistive Plate Chambers (RPC) in the barrel, and the Thin Gap Chambers (TGC) in the end-caps.
+These are positioned in close proximity to a corresponding precision chamber.
+The RPCs consist of two resistive plates coated in thin layers of graphite, held at 8.9~kV.
+A 2~mm gap between the plates is filled with gas (tetrafluoroethane with 3\% isobutane).
+An ionizing particle passing through the gap instigates an electron avalanche, which is read out by conductive strips on both sides of the gap.
+The strips are orthogonal to each other.
+Two RPC layers are combined in a station, separated by a 6~mm support.
+The RPC system is comprised of 596 trigger chambers, with a total of 355,000 output channels.
+The TGCs are multiwire proportional chambers with a small 2.8~mm gap.
+The 50~\um anode wires are held at 3.1~kV, and the chamber is filled with carbon dioxide (55\%) and $n$-pentane (45\%).
+The TGC system is comprised of 192 trigger chambers, with a total of 440,000 output channels  \cite{muonTdr}.
+
+\subsection{Magnet System}
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\subfloat[][]{{\includegraphics[width=0.3\textwidth]{figures/experiment/atlas/mags/end.pdf}}}
+\subfloat[][]{{\includegraphics[width=0.3\textwidth]{figures/experiment/atlas/mags/perspective.pdf}}}
+\subfloat[][]{{\includegraphics[width=0.3\textwidth]{figures/experiment/atlas/mags/side.pdf}}}
+\caption{Illustration of the geometry of the magnet system field coils showing (a) the endcap, (b) perspective, and (c) the side view. The Central Solenoid (green) is inside the eight windings of the Barrel Toroid (red). End-Cap Toroids (blue) appear on either side.
+}
+\label{fig:atlasMagnets}
+\end{figure}
+
+%magnet
+The ATLAS Magnet System is composed of three superconducting magnet systems: the Central Solenoid, the Barrel Toroid, and the two End-Cap Toroids.
+The arrangement of these magnets is shown in Figure \ref{fig:atlasMagnets}.
+The purpose of these magnets is to produce a strong magnetic field to enable the measurement of momenta of charged particles.
+Each coil that makes up the magnets is effected not only by gravity but also by magnetic forces.
+To support them, each coil is enclosed in a mechanical structure that also houses cooling circuits and cryostats to maintain its operating temperature of $\sim4.5$~K.
+The coils are wound with superconducting niobium-titanium in a copper-aluminum matrix.
+When the four magnets are fully energized, the magnet fields store an energy of 1.3 GJ. \footnote{This is equivalent to the energy released by an explosion of 300 kg of TNT}
+
+The large Barrel Toroid (BT) magnet is one of the most visible features of the experiment.
+The magnet is the largest in ATLAS and spans 26~m along the beamline with a diameter of 20~m.
+It consists of eight air-cooled coils surrounding parts of the muon spectrometer.
+The coils each contain 120 turns, and the coils are wired in series.
+At its strongest, the field of the BT reaches 3.9~T.
+Finally, two air-cooled End-Cap Toroids (ECT) provide a magnetic field for the MS wheels.
+These have a length of 5~m and an outer diameter of 10.7~m. An inner diameter of 1.65~m is left empty to allow passage of the beam.
+Like the BT, both ECTs consist of eight coils, but with 116 turns.
+All 16 ETC coils are wired together in series.
+The fields of the ETC reach a peak of 4.1~T.
+Both toroids are operated with a current of 20 kA.
+Tubes carrying 4.5~K helium are welded onto the casings of the windings to keep them at superconducting temperatures.
+
+The innermost magnet is the cylindrical Central Solenoid (CS), which is 5.3~m long and 2.4~m in diameter.
+The CS produces a magnetic field of 2.0-2.6~T in the region of the inner detector.
+The coil consists of a single layer coil wound 1173 times around a cylinder.
+To reduce the amount of material that particles can interact within the inner detector, the CS shares a vacuum vessel and cryostat with the Liquid Argon Calorimeter  \cite{magnetTdr}.
+
+\subsection{Trigger System}
+
+\begin{figure}[h!]
+\captionsetup[subfigure]{position=b}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/experiment/atlas/trigger.pdf}
+% \includegraphics[width=0.7\textwidth]{figures/experiment/atlas/trigger.png}
+\caption{Flow of data through the trigger system. Trigger decisions are indicated in yellow.}
+\label{fig:atlasTrigger}
+\end{figure}
+
+The nominal 24.96~ns bunch spacing for LHC beams results in 40 million bunch crossings per second.
+A beam with a luminosity of $1.5\times10^{34}$\cms produces approximately 30 collisions per bunch crossing.
+This results in approximately 1.2 billion collisions per second.
+Data is read from approximately one hundred million electronic output channels across approximately three million meters of cables during operation.
+The data recorded from a typical event is 1.5~MB, resulting in 156~EB worth of data generated by ATLAS per day.
+\footnote{For comparison, this volume of collected and processed data is a sizable fraction of humanity's existing storage and roughly 30,000 times the total data collected by the Event Horizon Telescope project.}
+The Trigger System is responsible for rapidly sorting through this data and selecting events to record and events to discard.
+It takes hit information from the ID, MS, and calorimeters and searches for signatures of interesting collisions.
+The trigger decision is made by computers in the nearby underground service area (USA15), so data must first be transmitted to these.
+A schematic of the trigger system is shown in Figure \ref{fig:atlasTrigger}.
+
+The first rejection of events reduces the event rate from $\approx1.2$~GHz to $\approx100$~kHz is performed by the Level-1 (L1) Trigger.
+This selects searches for the signatures of interesting particles (high-\pt muons, electrons, jets, and others) in a subset of the detectors.
+When an event passes the L1 trigger, it sends an ``accept'' signal is sent back to the detector.
+Meanwhile, various front-end electronics have stored precision hit data.
+When they receive an L1 accept, they transmit this data off the detector to USA15.
+Since the front-end electronics must store hit information while waiting for a possible L1 Trigger decision, the target time frame for this is 2~\us \cite{triggerTdr}.
+
+The data is sent from the detector into \emph{readout buffers} (ROB) for temporary storage while the Level-2 (L2) Trigger evaluates the event with a broader set of criteria.
+The L2 trigger reduces the event rate down to $\approx1.2$~kHz.
+It works by searching \emph{regions-of-interest} (ROI) constructed by the preliminary L1 trigger information.
+Based on the $\eta-\phi$ location of the ROI, the trigger logic accessed the precision data stored in the ROBs.
+This process takes longer than the L1 decision, on the order of 10~ms.
+With the precision data available, the L2 trigger can make strict requirements on the kinematics of various objects.
+For example, this analysis uses muon and electron triggers that require leptons passing certain thresholds of \pt or \et, respectively.
+Events passing the L2 trigger are passed along for full reconstruction and storage \cite{atlasTriggerNew}.
+% The fully reconstructed events from the \emph{Event Builder} are filtered by the Event Filter, which reduces the rate down to  $\approx$100~Hz.
+% \cite{triggerTdr}

@@ -1,0 +1,584 @@
+\chapter{The Standard Model of Particle Physics}\label{sec:theory}
+
+This chapter presents the theoretical background of this thesis through the introduction of the Standard Model of particle physics.
+The Standard Model is a quantum field theory description of Nature, based on the elegant foundation of group theory and abstract algebra.
+These concepts are beyond the scope of this thesis, but not beyond the scope of its appendices.
+A description of groups, Lie algebras, and related concepts is provided with minimal overhead in Appendix \ref{sec:math}.
+
+The Standard Model describes many of the interactions and particles that make up the Universe.
+It is formulated as a \emph{quantum field theory} based on operator valued fields that operate on states belonging to a multi-dimensional Hilbert space.
+It is also formulated as a \emph{gauge theory}, such that the physical predictions of the theory are invariant under transformations belonging to a particular group.
+These transformations are representations of a Lie algebra, $\mathfrak{g}$, and are specified by continuous group parameters.
+This is the algebra of the Standard Model Lie group \gsm.
+The group \gsm is direct product of several subgroups.
+These subgoups are introduced in this chapter, while a more detailed definition is provided in Appendix \ref{sec:particlePhysicsGroups}.
+
+% Global symmetry
+The first subgroup is the \poincare group $P$ of rank ten that contains translations, rotations, and boosts through spacetime.
+The \poincare group itself is the semidirect product of a translation group, T(4), and the Lorentz group, SO(1;3).
+The inclusion of this group means that the predictions of Standard Model are invariant under these transformations through spacetime.
+This enforces its compatibility with special relativity.
+The invariance under \poincare group transformations is called a \emph{global symmetry} because it is external to the fields that comprise the theory.
+It forms the group of external symmetries, $\gsm^\text{external}$.
+
+% Internal symmetry
+The invariances under the remaining subgroups are called \emph{internal symmetries}, $\gsm^\text{internal}$, because they describe rotations of fields through abstract mathematical space.
+There are three such subgroups in the Standard Model: U(1), SU(2), and SU(3).
+The algebra of U(1) is represented by $1\times1$ complex unitary matrices.
+These are invertible and have determinants equal to $\pm1$.
+The algebra of SU(2) is represented by $2\times2$ complex unitary matrices with determinants equal to $+1$.
+These describe rotations through the abstract mathematical space of a complex 2-sphere that preserve distance.
+The algebra is spanned by the three Pauli matrices.
+Finally the algebra of SU(3) is represented by $3\times3$ complex unitary matrices with determinants equal to $+1$.
+The algebra is spanned by the eight Gell-Mann matrices.
+The group of internal symmetries is the direct product of these three subgroups as shown in Equation \ref{eqn:smSym}.
+\begin{equation}\begin{split}\label{eqn:smSym}
+    \gsm^\text{internal}\equiv\text{SU}(3)\times\text{SU}(2)\times\text{U}(1)
+\end{split}\end{equation} 
+The theory is defined in order to be invariant under the group $\gsm=\gsm^\text{external}\times\gsm^\text{internal}$.
+% Need to define CP here for later summary
+The result of these symmetries is approximate invariance under charge$\times$parity (CP) inversion, and exact invariance under charge$\times$parity$\times$time (CPT) inversion.
+
+The dynamics of the theory are determined through the Lagrangian formulation. 
+A Lagrangian density, $\mathcal{L}$, is written in terms of operator valued fields that correspond to various particles.
+The dynamics of these fields are then determined by the Euler-Lagrange equation.
+Further predictions of particle scattering and decay probabilities are derived from the time dependant Schr{\"o}dinger equation.
+An explanation as to how such measurable quantities arise from the theory is provided in Appendix \ref{sec:lagrangians}.
+Since the Lagrangian density is a singlet under \gsm transformations, so too are the predictions derived from it.
+
+The subgroups of $\gsm^\text{internal}$ give rise to the dynamics of the Standard Model.
+The SU(3) group is associated with the strong force and the $\text{SU}(2)\times\text{U}(1)$ is associated with the electroweak force.
+These are described by individual field theories because the associated with these forces manifest at very different energy scales.
+Strong interactions are described by Quantum Chromodynamics as defined in Section \ref{sec:thyQCD}.
+Electroweak interactions are described by Electroweak Theory as defined in Section \ref{sec:thyEW}.
+
+\section{Quantum Chromodynamics}\label{sec:thyQCD}
+
+The quantum field theory of Quantum Chromodynamics (QCD) describes interactions between gluons and fermions carrying \emph{color} charge.
+There are two types of elements of the theory: eight massless gluons and six quarks.
+Each of these can carry color charges: quarks carry one charge, while gluons carry two.
+There are three charges: red/anti-red, green/anti-green, and blue/anti-blue.
+
+% Quarks
+Quarks are described by Dirac fields with three components,
+\begin{equation}\begin{split}
+    q=&\begin{pmatrix}q_\text{red}&q_\text{blue}&q_\text{green}\end{pmatrix}^T.
+\end{split}\end{equation}
+
+The fields transform under SU(3) transformations,
+\begin{equation}\begin{split}
+    \text{SU(3):}\quad q\to&e^{i\theta^a(x)T^a}q,
+\end{split}\end{equation}
+where $T^a\equiv\half\lambda^a$ are eight generators based on the Gall-Mann matrices $\lambda^a$.
+The Dirac field transforms under SU(3) with eight generators.
+The functions $\theta^a(x)$ are eight group parameter functions of spacetime that identify the transformation.
+
+% Gluons
+The derivative of the field $q$ introduces eight terms corresponding to each gauge parameter.
+In QCD, eight gluon gauge fields, $A_\mu^a$, are introduced which carry a lower spacetime index $\mu\in\{0,1,2,3\}$, and an upper representation index $a\in\{1,...,8\}$.
+The fields $A_\mu^a$ transform under the adjoint representation of SU(3) as a connection:
+\begin{equation}\begin{split}
+    \text{SU(3):}\quad A_\mu^a\to&A_\mu^a-\frac{1}{g_s}\partial_\mu\theta^a-f^{abc}\theta^bA^c_\mu. \\
+\end{split}\end{equation}
+Here, $f^{abc}$ are the SU(3) structure constants, $\theta^a$ are group parameters that define the transformation, and $g_s$ is a coupling constant.
+
+The QCD Lagrangian can be written through combinations of these fields that are invariant under SU(3) transformations.
+% The covariant derivative, $D_\mu\Psi_i\equiv\partial_\mu\Psi_i+igA_\mu^aT_i^{aj}\Psi_j$, is defined to allow kinetic derivatives of the fermion fields.
+The covariant derivative is defined with the help of the eight gluon fields,
+\begin{equation}\begin{split}
+    D_\mu\equiv\partial_\mu+ig_sA_\mu^aT^a.
+\end{split}\end{equation}
+% checked in romao
+An antisymmetric field strength tensor is defined as $F^a_{\mu\nu}\equiv\partial_\mu A^a_\nu-\partial_\nu A^a_\mu+g_sf^{abc}A_\mu^bA_\nu^c$.
+The product $F^{\mu\nu,a}F^a_{\mu\nu}$ includes terms with two, three, and four $A_\mu^a$ fields.
+Terms with two fields are part of the free Lagrangian, while terms with more fields describe multi-gluon vertices in the interaction Lagrangian.
+The Lagrangian is given in Equation \ref{eqn:qcdLagrangian} with indices on the fermion fields $i$ and $j$ summed over the six quarks.
+
+\begin{flalign}\label{eqn:qcdLagrangian}
+    ~& &\mathcal{L}_\text{0}=                &-\frac{1}{4}(\partial_\mu A^a_\nu-\partial_\nu A^a_\mu)(\partial^\mu A^{a\nu}-\partial^\nu A^{a\mu}) & \text{free Lagrangian} \notag\\
+                                                &&& +\overline{q}_i(i\slashed{\partial}-m)q_i;  \notag\\
+    ~& &\mathcal{L}_{A\overline{q}q}=     &-g_sq_i\slashed{A}^aT_i^{a,j}q_j; & \text{} \notag\\
+    ~& &\mathcal{L}_{AAA}=                      &-\frac{g_s}{4}f^{ab'c'}(\partial_\nu A^a_\mu-\partial_\mu A^a_\nu)A^{b'\mu}A^{c'\nu}) \notag\\
+                                                &&& +\frac{g_s}{4}f^{abc}(A^b_\mu A^c_\nu)(\partial^{\nu}A^{a\mu}-\partial^\mu A^{a\nu}); \notag\\
+    ~& &\mathcal{L}_{AAAA}=                     &-\frac{g_s^2}{4}(f^{abc}A^b_\mu A^c_\nu)(f^{ab'c'}A^{b'\mu}A^{c'\nu}); & \text{} \notag\\
+    ~& &\mathcal{L}_\text{QCD}=&\mathcal{L}_\text{0}+\mathcal{L}_{A\overline{q}q}+\mathcal{L}_{AAAA}+\mathcal{L}_{AAA}; & \text{full Lagrangian}
+\end{flalign} 
+Feynman slash notation denotes the product of a four-vector with the $\gamma$ matrices: $\slashed{A}\equiv\gamma^\mu A_\mu$.
+Through $\mathcal{L}_{A\overline{q}q}$, this Lagrangian includes terms that describe three-point interactions between two quarks and a gluon.
+The terms $\mathcal{L}_{AAA}$ and $\mathcal{L}_{AAAA}$ describe a three- and four-point interactions involving only gluons, respectively. 
+A more compact version of the QCD Lagrangian that makes use of the field strength tensor is shown in Equation \ref{eqn:qcdLagrangian2}.
+\begin{equation}\begin{split}\label{eqn:qcdLagrangian2}
+    \mathcal{L}_\text{QCD}=-\frac{1}{4}F^{\mu\nu a}F^a_{\mu\nu}+i\overline{q}_i\slashed{D}q_i-m\overline{q}^iq_i \\
+\end{split}\end{equation}
+
+The coupling constant $g_s$ is related to the bare coupling constant $\overline{\alpha}_s=\frac{g^2_s}{4\pi}$; however, this is not the full physical picture.
+There is a particularly significant impact on the observed coupling as a result of vacuum polarization.
+This is due to the gluon self-interaction terms $\mathcal{L}_{AAA}$ and $\mathcal{L}_{AAAA}$.
+The value of the effective coupling $\alpha_s(Q^2)$ is a function of the momentum transfer $Q$ of an interaction, with the functional dependence given to leading order in Equation \ref{eqn:alphas}.
+\begin{equation}\begin{split}\label{eqn:alphas}
+    \as(Q^2)=&\frac{\as(Q_0)}{1+\as(Q_0)\beta_0\ln\frac{Q^2}{Q_0^2}} \\
+\end{split}\end{equation}
+Here, $\as(Q_0)$ has been measured at a particular momentum transfer $Q_0$.
+The number of quark flavors accessible at the energy scale $Q$ is $N_f$, and $\beta_0=\frac{33-2N_f}{12\pi}$.
+As $Q^2$ gets smaller than $Q_0^2$, the coupling $\as(Q^2)$ blows up.
+This leads to the confinement of quarks and gluons in strongly bound states and explains the difficulty in observing free quarks.
+Conversely, at low energy scales, the coupling constant decreases.
+This leads to the phenomena of asymptotic freedom, wherein the effective strength of the strong force becomes asymptotically weak.
+
+While QCD predicts the functional form of $\alpha_s(Q)$ with respect to the energy scale, it does not predict the absolute value.
+Instead, experiments have measured $\alpha_s(Q)$ at various energy scales.
+This work provides a powerful test of the theory, along with a significant input.
+Measurements at energy scale of the \Z find $\alpha_s(M_{Z^0})=0.1184\pm0.0007$.
+Additional measurements range from 1.88 GeV to 209 GeV \cite{bethke}.
+Below approximately 1 GeV, the coupling exceeds unity, and perturbative expansion in terms of the coupling no longer converges.
+This poses a challenge for simulating hadronization, which takes place at this scale.
+
+\section{Electroweak Theory}\label{sec:ewTheory}\label{sec:thyEW}
+Electroweak theory (EW) is a field theory that describes the interactions between charged fermions and bosons.
+Its predictions are invariant under $\text{SU}(2)\times\text{U}(1)$ group transformations.
+The charges are \emph{weak isospin}, associated with the eigenvectors of the SU(2) generators, and \emph{weak hypercharge}, associated with U(1).
+As is the case in QCD, the groups' generators are associated with bosons that help define covariant derivatives.
+The three generators of SU(2), labeled $T^a$ for $a\in\{1,2,3\}$ are associated with three bosons $W_\mu^1$, $W_\mu^2$, and $W_\mu^3$.
+The U(1) generator is associated with a boson $B_\mu$.
+Each boson is a matrix valued 4-vector with a spacetime index $\mu$, and transforms $\text{SU}(2)\times\text{U}(1)$ group transformations as shown in Equation \ref{eqn:ewBosonTrans}.
+The EW Lagrangian describes the interaction of these bosons with appropriately charged fermions.
+
+For simplicity, the matrix field $\widetilde{W}_\mu\equiv\frac{\sigma_a}{2}W_\mu^a$ is defined where $\sigma_a$ are the Pauli matrices.
+In this case, the transformations of the bosons under $\text{SU}(2)\times\text{U}(1)$ are given in Equation \ref{eqn:ewBosonTrans}.
+\begin{equation}\begin{split}\label{eqn:ewBosonTrans}
+    \text{SU}(2)\times\text{U}(1):\quad& B_\mu\to B_\mu+\frac{1}{g'}\partial_\mu\beta \\
+    \text{SU}(2)\times\text{U}(1):\quad& \widetilde{W}^a_\mu\to U_L\widetilde{W}_\mu U^\dagger_L -\frac{i}{g}\partial_\mu U_LU^\dagger_L\\
+\end{split}\end{equation}
+Here the transformation matrix is $U_L=\exp{i\frac{\sigma_i}{2}\alpha^i(x)}$.
+The four parameters specifying the gauge transformations are spacetime functions $\alpha^a(x)$ for $a\in\{1,2,3\}$ and $\beta(x)$.
+
+The electroweak force acts on the chiral components of Dirac fermion fields.
+These components, called left-handed and right-handed states, are defined from the projection of the parity operators:
+\begin{equation}\begin{split}\label{eqn:chiralOps}
+P_L=\frac{1-\gamma_5}{2} \quad\text{and}\quad
+P_R=\frac{1+\gamma_5}{2}.
+\end{split}\end{equation}
+While these interactions are different for quarks and leptons, they share some similarity.
+The fermion field can be decomposed into left- and right-handed component states which are denoted by $L$ and $R$ subscripts respectively.
+The theory contains doublets under $\text{SU}(2)\times\text{U}(1)$ that consist of the left-handed projections of the fermions, given in Equation the left side of Table \ref{tab:su2Doublets}, and represented by $\psi_1$.
+It also contains singlets that consist of the right-handed projections, represented by $\psi_2$ and $\psi_3$, which are given on the right side of the table.
+\begin{table}[h!]
+\caption{Definitions of $\psi_1$ as left-handed doublets, and $\psi_2$ and $\psi_3$ as right-handed singlets, for different generations of fermion. To avoid confusion, it should be noted that there are no couplings to the right-handed neutrino fields in the Standard Model.}
+\begin{center}
+\begin{tabular}{l l l l}
+\toprule
+Generation & Doublet & Singlets \\
+\midrule
+Quark 1 & $\psi_1=\begin{pmatrix}u\\d\end{pmatrix}_L$             & $\psi_2=u_R$, $\psi_3=d_R$ \\
+Quark 2 & $\psi_1=\begin{pmatrix}s\\c\end{pmatrix}_L$             & $\psi_2=s_R$, $\psi_3=c_R$ \\
+Quark 3 & $\psi_1=\begin{pmatrix}t\\b\end{pmatrix}_L$             & $\psi_2=t_R$, $\psi_3=b_R$ \\
+Lepton 1 & $\psi_1=\begin{pmatrix}\nu_e\\e\end{pmatrix}_L$        & $\psi_2=\nu_{eR}$, $\psi_3=e_R$ \\
+Lepton 2 & $\psi_1=\begin{pmatrix}\nu_\mu\\\mu\end{pmatrix}_L$    & $\psi_2=\nu_{\mu R}$, $\psi_3=\mu_R$ \\
+Lepton 3 & $\psi_1=\begin{pmatrix}\nu_\tau\\\tau\end{pmatrix}_L$  & $\psi_2=\nu_{\tau R}$, $\psi_3=\tau_R$ \\
+\bottomrule
+\end{tabular}
+\label{tab:su2Doublets}
+\end{center}
+\end{table}
+The behavior of QCD may be discussed in terms of $\psi_1$, $\psi_2$, and $\psi_3$ before finally making reference to quarks, leptons or generations at the end.
+% It should be noted that since there is no compelling experimental evidence for the existence of right-handed neutrinos, these will eventually have no impact on the final result.
+These fields transform under group transformations as shown in Equation \ref{eqn:ewLepTrans}.
+\begin{equation}\begin{split}\label{eqn:ewLepTrans}
+    \text{SU}(2):& \psi_1\to e^{-i\alpha^a\frac{\sigma^a}{2}}\psi_1 \\
+    \text{SU}(2):& \psi_{2,3}\to \psi_{2,3} \\
+    \text{U}(1)_Y:& \psi_{1,2,3}\to e^{-iy\beta}\psi_{1,2,3} \\
+\end{split}\end{equation}
+% \check
+This introduces the conserved \emph{hypercharge}, denoted $y$.
+% The subscript $L$ on the group indicates it acts only on right-handed fields.
+
+As was done in the previous field theories, a covariant derivative acting on the lepton fields is defined:
+\begin{equation}\label{eqn:ewCovDeriv}
+        % D_\mu\begin{pmatrix}\nu_e\\e_L\end{pmatrix}=&[\partial_\mu-ig'B_\mu Y_{\ell_L}-igW^a_\mu T^a]\begin{pmatrix}\nu_e\\e_L\end{pmatrix} \\
+        % D_\mu e_R=&[\partial_\mu-ig'B_\mu Y_{\ell_R}]e_R \\
+        D_\mu\equiv
+        \begin{cases}
+         \partial_\mu-ig'yB_\mu-igT^aW_\mu^a  & \text{Acting on }\psi_1\\
+         \partial_\mu-ig'yB_\mu & \text{Acting on }\psi_{2,3} \\
+        \end{cases}
+\end{equation}
+% Note! I found 2 refs with negative signs, one with positive signs. Since this is a coupling, I tend towards using negative...
+The derivative acts differently on the left-handed doublets then on the right-handed singlets.
+Here, $g'$ is the coupling associated with the U(1) subgroup, while $g$ is associated with the SU(2) subgroup.
+Keep in mind there is still an implicit sum over the index $a$, and $T^a=\frac{\sigma^a}{2}$.
+A field strength tensor for each of the four boson fields is defined and given in Equation \ref{eqn:ewFieldTensor}.
+\begin{equation}\begin{split}\label{eqn:ewFieldTensor}
+W^a_{\mu\nu} =& \partial_\mu W^a_\nu-\partial_\nu W^a_\mu-g\epsilon^{abc}W^b_\mu W^c_\nu; \quad a\in\{1,2,3\} \\
+B_{\mu\nu} =& \partial_\mu B_\nu-\partial_\nu B_\mu \\
+\end{split}\end{equation}
+Here, $\epsilon^{abc}$ is the SU(2) structure constant.
+An analogous term vanishes in the definition of $B^a_{\mu\nu}$ because U(1) is Abelian with structure constants of zero.
+Again for simplicity, the definition $\widetilde{W}_{\mu\nu}\equiv\frac{\sigma_a}{2}W_{\mu\nu}^a$ is made.
+
+
+% Lagrangian
+The field strength tensors combine to contract to produce the product $-\frac{1}{4}W^{a,\mu\nu}W^{a}_{\mu\nu}-\frac{1}{4}B^{\mu\nu}B_{\mu\nu}$.
+The covariant derivative in Equation \ref{eqn:ewCovDeriv} produces terms $i\overline{\psi}_j\slashed{D}\psi_j$ for each field $\psi$ in the theory.
+Combined, these terms form the EW Lagrangian given in Equation \ref{eqn:ewNoInt}.
+\begin{equation}\begin{split}\label{eqn:ewNoInt}
+\mathcal{L}_\text{EW} = -\frac{1}{4}W^{a,\mu\nu}W^{a}_{\mu\nu}- \frac{1}{4}B^{\mu\nu}B_{\mu\nu}+ \sum_j^3 i\overline{\psi}_j\slashed{D}\psi_j
+\end{split}\end{equation}
+Here, the form of the covariant derivative reveals two things.
+First, noting the covariant derivative's dependence in Equation \ref{eqn:ewCovDeriv}, there are no terms containing right-handed fermions and either $W^1_\mu$ or $W^2_\mu$.
+Since these form the basis for the \W bosons, this produces no interaction with the right-handed component of fermion fields.
+This is consistent with the lack of experimental evidence for right-handed neutrinos.
+Second, while left-handed fermions appear in terms with both $B_\mu$ and $W^3_\mu$, right-handed fermions appear only in terms with $B_\mu$. Therefore the \Z boson interacts differently with the left- and right-handed fields.
+Together, these facts show that EW theory is a \emph{chiral} theory in that it treats the left- and right-handed components of fields differently.
+
+The fermion mass term $m\overline{\psi}\psi$ is conspicuously missing from Equation \ref{eqn:ewNoInt}.
+This is because the left (doublet) and right (singlet) components of the fermion fields transform differently under SU(2) gauge transformations, as shown in Equation \ref{eqn:ewLepTrans}, therefore the product transforms as a doublet.
+The EW Lagrangian cannot include such terms and remain a singlet, and so these are forbidden.
+The fermions will instead gain their mass through the Brout-Englert-Higgs mechanism described in Section \ref{sec:higgsMechanism}.
+
+Linear combinations of $B_\mu$, $W_\mu^1$, $W_\mu^2$, and $W_\mu^3$ produce the observed $A_\mu$, \Z, and \W bosons.
+The mixing of $B_\mu$ and $W_\mu^3$ described by the Weinberg angle $\cos\theta_W=M_W/M_Z$, and is given in Equation \ref{eqn:wbmix}.
+\begin{equation}\begin{split}\label{eqn:wbmix}
+    % \begin{pmatrix}Z_\mu\\A_\mu\end{pmatrix}=&\begin{pmatrix}\cos{\theta_W}&-\sin{\theta_W}\\\sin{\theta_W}&\cos{\theta_W}\end{pmatrix} \begin{pmatrix}W^3_\mu\\B_\mu\end{pmatrix}
+    Z_\mu=\cos\theta_W W^3_\mu-\sin\theta_W B_\mu \\
+    A_\mu=\sin\theta_W W^3_\mu+\cos\theta_W B_\mu \\
+\end{split}\end{equation}
+The Weinberg angle is measured to be $\sin^2\theta_W$=0.231 at \Z mass scale.
+Meanwhile the fields $W_\mu^1$ and $W_\mu^2$ combine to yield the charged \W bosons as shown in Equation \ref{eqn:wwmix}.
+\begin{equation}\begin{split}\label{eqn:wwmix}
+    \W_\mu=\frac{1}{\sqrt{2}}(W_\mu^1\mp iW_\mu^2)
+\end{split}\end{equation}
+The EW Lagrangian can eventually be re-written in terms of these mass eigenstates.
+Since Feynman diagrams are usually drawn in that context, the Feynman rules will be defined after this.
+There are a few useful points to be made meanwhile about the coupling strengths.
+Plug Equations \label{eqn:wbmix} solution for $B_\mu$ into the right-handed covariant derivative in Equation \ref{eqn:ewCovDeriv}'s reveals that the right-handed lepton fields have a coupling to the $A_\mu$ field of $-g'\cos\theta_W$.
+Meanwhile a comparison with electrodynamics identifies this as the electric coupling strength.
+Requiring these to be equal necessitates $g=e/\cos\theta_W=0.357$.
+An analogous requirement for electrically neutral neutrinos yields $g'=g/\tan\theta_W=0.652$.
+\footnote{The coupling $e$ is related to the fine-structure constant $\alpha\approx1/137$ via $\alpha=e^2/4\pi$.}
+
+Before continuing, an electromagnetic charge operator $Q_i$ is defined for each $\psi_i$.
+$Q_2$ and $Q_3$ are simply the electromagnetic charges of $\psi_2$ and $\psi_3$.
+$Q_1$ is a diagonal matrix $\texttt{diag}\{a,b\}$ where $a$ and $b$ are the electromagnetic charges of the upper and lower components of the $\psi_1$ doublet.
+This allows the definition of hypercharge $y_i$ each state $\psi_i$ following the Gell-Mann-Nishijima formula: $Y/2=Q-T_3$.
+$T_3$ is the weak isospin of the left-handed fermions, corresponding to their position in the doublet. It is zero for the right-handed fermions.
+\cite{pich}
+
+The Lagrangian in Equation \ref{eqn:ewNoInt} contains interaction terms between fermions and the charged and neutral bosons.
+These can be seen by expanding the covariant derivative and plugging in the inverse of Equations \ref{eqn:wbmix} and \ref{eqn:wwmix}.
+The charged current takes the form in Equation \ref{eqn:ewLagrangianCc}.
+\begin{equation}\begin{split}\label{eqn:ewLagrangianCc}
+    \mathcal{L}_\text{CC} = -\frac{g}{\sqrt{2}}W_\mu^+[\nu_\ell\gamma^\mu \ell_L+\ubar\gamma^\mu d_L]
+\end{split}\end{equation}
+Here there is an implicit sum over lepton and quark generations, with $\ubar$ and $d_L$ corresponding to up and down type quarks from each generation.
+
+The Lagrangian in Equation \ref{eqn:ewNoInt} also contains interactions between fermions and the neutral bosons $A_\mu$ and $Z_\mu$.
+These are similarly identified by plugging equations Equations \ref{eqn:wbmix} and \ref{eqn:wwmix} (inverted) into the covariant derivative in Equation \ref{eqn:ewCovDeriv}.
+Grouping the terms with $A_\mu$ and $Z_\mu$ yields the Lagrangian of neutral current in Equation \ref{eqn:ewLagrangianNc}.
+\begin{equation}\begin{split}\label{eqn:ewLagrangianNc}
+    \mathcal{L}_\text{NC} = \sum_j^3 \overline{\psi}_j\gamma^\mu\left[A_\mu(gT_3\sin\theta_W+g'y_j\cos\theta_W)+Z_\mu(gT_3\cos\theta_W-g'y_j\sin\theta_W)\right]
+\end{split}\end{equation}
+The neutral current Lagrangian can be broken down further to reveal the QED interactions.
+The constraints on the Weinberg angle, and the definition $Y\equiv Q-T_3$ allow the term containing $A_\mu$ to produce a Lagrangian describing fermion-photon interactions:
+\begin{equation}\begin{split}
+    \mathcal{L}_{Af\fbar}=-eA_\mu\sum_j\overline{\psi}_j\gamma^\mu Q_j\psi_j.
+\end{split}\end{equation}
+The latter part of Equation \ref{eqn:ewLagrangianNc} describes fermion-\Z boson interactions, and is written:
+\begin{equation}\begin{split}
+    \mathcal{L}_{Zf\fbar} = -\frac{g}{2\cos\theta_W}Z_\mu\sum_f\overline{\psi}_j\gamma^\mu(\sigma_3-2Q_j\sin^2\theta_W)\psi_j.
+\end{split}\end{equation}
+
+In summary, the QCD Lagrangian contains terms describing three-point interactions between a each vector boson and two fermions.
+Further interactions appear in the following section.
+
+% \begin{table}[H]
+% % \begin{table}[htp]
+% \begin{center}
+% {\footnotesize
+% \begin{tabular}{l | l | l l l}
+% \toprule
+% Name & Lagrangian Term & Drawing & Rule \\
+% \midrule
+% \centered{\W-lepton\\interaction} & $-\frac{g}{\sqrt{2}}W_\mu^+\nu_\ell\gamma^\mu\ell_L$ &  $\feynmandiagram [small,baseline=(d.base), horizontal=d to b] { a[particle=\(\ell/\nu_\ell\)] -- [fermion] b -- [fermion] c[particle=\(\nu_\ell/\ell\)], b -- [boson] d [particle=\(\W\)], };$ & $-i\frac{g}{\sqrt{2}}P_L\gamma^\mu$  \\[1.0em]
+% \centered{\W-quark\\interaction} & \centered{$-\frac{g}{\sqrt{2}}W_\mu^+\ubar\gamma^\mu d_L$\\($u/d$ is an up/down-type quark)} &  $\feynmandiagram [small,baseline=(d.base), horizontal=d to b] { a[particle=\(d_\beta/u_\alpha\)] -- [fermion] b -- [fermion] c[particle=\(u_\alpha/d_\beta\)], b -- [boson] d [particle=\(\W\)], };$ & $-i\frac{g}{\sqrt{2}}P_L\gamma^\mu V_{\alpha\beta}$  \\[1.0em]
+% \centered{\Z-fermion\\interaction} & $-\frac{g}{2\cos\theta_W}Z_\mu\overline{\psi}_j\gamma^\mu(v_f-a_f\gamma^5)\psi_j$ &  $\feynmandiagram [small,baseline=(d.base), horizontal=d to b] { a -- [fermion] b -- [fermion] c, b -- [boson] d [particle=\(Z\)], };$ & $-i\frac{g}{2\cos\theta_W}(X^f)\gamma^\mu$  \\[1.0em]
+% \centered{Photon-fermion\\interaction} & $-eA_\mu\overline{\psi}_j\gamma^\mu Q_j\psi_j$ &  $\feynmandiagram [small,baseline=(d.base), horizontal=d to b] { a -- [fermion] b -- [fermion] c, b -- [boson] d [particle=\(\gamma\)], };$ & $-ieQ_j\gamma^\mu$  \\[1.0em]
+% % gff \\
+% \bottomrule
+% \end{tabular}
+% }
+% \caption{Summary of the Feynman rules for the charged and neutral EW interactions. Note the $P_L$ appears in charged current interactions, but not the neutral current interactions. Several abbreviations are used: $a_f=T_3^f$, $v_f=T_3^f(1-4|Q_f|\sin^2\theta_W)$, and $X^f=T_3^f(1-4|Q_f|\sin^2\theta_W-\gamma^5)$. The matrix $V_{\alpha\beta}=\ident$, but the fields and $V_{\alpha\beta}$ will be replaced in the following sections.}
+% \label{tab:ewRules0}
+% \end{center}
+% \end{table}
+
+\subsection{Electroweak Symmetry Breaking}\label{sec:higgsMechanism}
+
+In the previous three subsections, the QED, QCD, and EW Lagrangians are invariant under U(1), SU(3), and $\text{SU}(2)\times\text{U}(1)$ group transformations respectively.
+All are invariant under \poincare group transformations as well.
+The physical state of a system, however, is not necessarily invariant under these transformations.
+A classic example of this is found in a cooling magnet.
+Above the Curie temperature, the component atoms' magnetite dipole moments are oriented isotropically, and hence the system is invariant under rotations.
+When the material cools, the spins align in a particular direction, thereby breaking this invariance.
+The physical laws remain invariant, but the state of the system has removed rotational invariance.
+This situation is referred to as \emph{symmetry breaking}: the mechanism by which a low energy system can exhibit the behavior with a subset of the invariance found at high energy.
+
+A new doublet under SU(2) is introduced, with complex scalar components $\phi^+$ and $\phi^0$: $\Phi=\begin{pmatrix}\phi^+&\phi^0\end{pmatrix}^T$.
+This field transforms under the EW guage transformations as:
+\begin{equation}\begin{split}\label{eqn:scalarTransform}
+    \text{SU}(2)_L\quad\Phi(x)\to\Phi'(x)=&e^{-i\theta^a(x)\sigma^a/2}\Phi(x) \\
+    \text{U}(1)\quad\Phi(x)\to\Phi'(x)=&e^{-i\theta^a(x)/2}\Phi(x). \\
+\end{split}\end{equation}
+Along with $\Phi$, a potential energy is added to the system as a function of the field:
+\begin{equation}\begin{split}
+V(\Phi,\Phi^\dagger)=m^2\Phi^\dagger\Phi+\lambda(\Phi^\dagger\Phi)^2,
+\end{split}\end{equation}
+where $m^2$ and $\lambda$ are undetermined constants.
+If $m^2<0$ and $\lambda>0$ then the potential $V(\Phi,\Phi^\dagger)$ is minimized when $\Phi^\dagger\Phi=-\half m^2/\lambda$.
+This defines the vacuum expectation value, or VEV, of the field $\Phi$ as $v=\sqrt{-m^2/\lambda}$.
+By convention, the VEV is allocated to the neutral field $\phi^0$ by a choice of an SU(2) gauge transformation: $\braket{0|\Phi|0}=\begin{pmatrix}0&v/\sqrt{2}\end{pmatrix}^T$.
+
+The four degrees of freedom of $\Phi$ can be described by real scalar fields $h$ and $G^a$ with $a\in\{1,2,3\}$, as shown in the first line of Equation \ref{eqn:scalarExpand}.
+The field $h$ is called the Higgs field.
+The fields $G^a$ are pseudo Nambu-Goldstone bosons, and can be removed by a gauge choice $\theta^a=-G^a(x)/v$ from Equation \ref{eqn:scalarTransform}.
+This is shown in the second line of Equation \ref{eqn:scalarExpand}.
+\begin{equation}\begin{split}\label{eqn:scalarExpand}
+\Phi(x)=&e^{iG^a(x)\sigma^a/2v}\begin{pmatrix}0\\\frac{v+h(x)}{\sqrt{2}}\end{pmatrix} \\
+\Phi(x)=&\begin{pmatrix}0\\\frac{v+h(x)}{\sqrt{2}}\end{pmatrix}; \quad\text{After gauge choice} \\
+\end{split}\end{equation}
+
+The new field $\Phi$ allows new terms in the EW Lagrangian.
+First, a covariant derivative is defined:
+\begin{equation}\begin{split}
+        D_\mu\Phi=&\frac{1}{\sqrt{2}}\begin{pmatrix}0\\\partial_\mu h\end{pmatrix}+\frac{i}{\sqrt{2}}\left[\frac{g'}{2}B_\mu+\frac{g}{2}W_\mu^a\sigma^a\right] \begin{pmatrix}0\\v+h\end{pmatrix}
+\end{split}\end{equation}
+This defines an invariant kinetic term for $\Phi$, which is expanded in the first line of Equation \ref{eqn:scalarKinetic}.
+\begin{equation}\begin{split}\label{eqn:scalarKinetic}
+    D^\mu\Phi^\dagger D_\mu\Phi =& \half\partial_\mu h\partial^\mu h+\frac{(v+h)^2}{2}\begin{pmatrix}0&1\end{pmatrix}\left[\frac{g'}{2}B_\mu+\frac{g}{2}W_\mu^a\sigma^a\right]^2\begin{pmatrix}0\\1\end{pmatrix} \\
+    =& \half\partial_\mu h\partial^\mu h+\frac{(v+h)^2}{4}\left[g^2W^+_\mu W^{-\mu}+\half(g^2+g'^2)Z_\mu Z^\mu\right] \\
+\end{split}\end{equation}
+In the second line, the fields $B$ and $W_\mu^a$ are replaced with the vector fields from Equations \ref{eqn:wbmix} and \ref{eqn:wwmix}.
+In this form, three things become apparent after expanding $(v+h)^2$ and looking at terms, including $h$.
+First, terms involving two vector fields and one Higgs field appear, leading to three-point vertices.
+Second, terms involving two vector fields and two Higgs field appear, leading to four-point vertices.
+Third, no term appears linking the photon field $A_\mu$ directly to the Higgs field.
+
+Next, expanding $(v+h)^2$ includes terms proportional to $v^2$, including only $W^+_\mu W^{-\mu}$ or $Z_\mu Z^\mu$ fields.
+The Higgs mechanism has provided invariant mass terms for the \Z and \W bosons.
+The masses are easily ready from the coefficients:
+\begin{equation}\begin{split}
+m_{\W}^2=&\frac{v^2}{4}g^2 \\
+m_{\Z}^2=&\frac{v^2}{4}(g^2+g'^2) \\
+\end{split}\end{equation}
+No mass term appears for the photon field.
+
+The Higgs field also appears in the potential energy $V(\Phi,\Phi^\dagger)$.
+Noting $m^2=-v^2\lambda$ and inserting the form for $\Phi$ from Equation \ref{eqn:scalarExpand} into the equation for the potential yields:
+\begin{equation}\begin{split}\label{eqn:higgsPotential}
+    V(\Phi,\Phi^\dagger)=\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\end{split}\end{equation}
+This identifies three and four point Higgs self interaction vertices.
+Additionally, the potential includes a mass term for the Higgs boson: $m_h=\sqrt{2\lambda}v$.
+
+The final result is the origin of leptonic mass.
+The mass term that appears in the QED Lagrangian ($m\overline{\Psi}\Psi$) is not an SU(2) singlet.
+Instead, consider the Yukawa coupling between left ($\overline{L}_\ell=\begin{pmatrix}\overline{\nu}_\ell&\overline{\ell}_L\end{pmatrix}$) and right-handed ($R_\ell=\ell_R$) leptons $i$ with the scalar field $\Phi$.
+\begin{equation}\begin{split}\label{eqn:leptonYukawaLagrangian}
+        \mathcal{L}_{\text{Yukawa}}=&-y_i \overline{L}_i\Phi R_i \\
+        =&-y_i\begin{pmatrix}\overline{\nu}_\ell&\overline{\ell}_L\end{pmatrix}\begin{pmatrix}\phi^+\\\phi^0\end{pmatrix}\ell_R \\
+        % =&-y_i\begin{pmatrix}\overline{\nu}_e&\overline{e}_L\end{pmatrix}\Phi e_R \\
+        =&-\frac{y_iv}{\sqrt{2}}\overline{\ell}\ell-\frac{y_i}{\sqrt{2}}\overline{\ell}\ell h \\
+\end{split}\end{equation}
+The step from the second line to third line corresponds to the gauge choice in Equation \ref{eqn:scalarExpand}.
+This term is invariant under SU(2) transformations, because the exponential term in Equation \ref{eqn:scalarTransform} is canceled by the analogous term for the doublet in Equation \ref{eqn:ewLepTrans}.
+As a result of the Yukawa coupling, a mass term has appeared for the lepton $i$:
+\begin{equation}\begin{split}\label{eqn:yukawaMass}
+    m_\ell=\frac{y_iv}{\sqrt{2}}.
+\end{split}\end{equation}
+In addition, a three point interaction between the lepton and Higgs appears, with a coupling:
+\begin{equation}\begin{split}\label{eqn:yukawaCoupling}
+    g_{h\ell\ell}=\frac{y_i}{\sqrt{2}}.
+\end{split}\end{equation}
+The other fermions, excluding neutrinos, gain their mass through similar Yukawa couplings\footnote{Quarks benefit from additional mass from chiral symmetry breaking.}.
+Equations \ref{eqn:yukawaMass} and \ref{eqn:yukawaCoupling} are particularly relevant to the subject of this thesis.
+The former shows that the muon gains its mass due to the scalar field $\Phi$, and the latter is the topic of measurement in Chapter \ref{sec:hmumu}.
+
+% The addition of the scalar field to the Lagrangian adds new Feynman rules, and these are summarized in Tables \ref{tab:ewRules1} and \ref{tab:ewRules2}.
+
+
+% \afterpage{
+% \begin{table}[H]
+% % \begin{table}[htp]
+% \begin{center}
+% {\footnotesize
+% \begin{tabular}{l | l | l l l}
+% \toprule
+% Name & Lagrangian Term & Drawing & Rule \\
+% \midrule
+% \centered{\W propagator}      &  & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to b] { a[particle=\(\mu\)] --[charged boson] b[particle=\(\nu\)] }; $} & \centered{$\frac{i}{p^2-m_W^2+i\epsilon}\left[-g_{\mu\nu}+\frac{p_\mu p_\nu}{m_W^2}\right]$} \\ [1.0em]
+% \centered{\Z propagator}      &  & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to b] { a[particle=\(\mu\)] --[charged boson] b[particle=\(\nu\)] }; $} & \centered{$\frac{i}{p^2-m_Z^2+i\epsilon}\left[-g_{\mu\nu}+\frac{p_\mu p_\nu}{m_Z^2}\right]$} \\ [1.0em]
+% \centered{Fermion-Higgs\\interaction}      & $\frac{y_i}{\sqrt{2}}\overline{\ell}\ell h$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(\ell\)]} --[fermion] v , v --[fermion]  b[particle=\(\ell\)] , {d[particle=\(h\)]} --[scalar] v  };$} & \centered{$-iy_\ell/\sqrt{2}$} \\ [1.0em]
+% \centered{$W^+W^-H$\\interaction}      & $\frac{v}{2}g_sW^+_\mu W^{-\mu}$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(W^\nu\)]} --[charged boson] v , v --[charged boson]  b[particle=\(W^\mu\)] , {d[particle=\(h\)]} --[scalar] v  }; $} & \centered{$ig^{\mu\nu}gv/2$} \\ [1.0em]
+% \centered{$ZZH$\\interaction}      &  $\frac{v}{4}(g^2+g'^2)Z_\mu Z^\mu$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(Z^\nu\)]} --[charged boson] v , v --[charged boson]  b[particle=\(Z^\mu\)] , {d[particle=\(h\)]} --[scalar] v  }; $} & \centered{$ig^{\mu\nu}(g^2+g'^2v/2$)} \\ [1.0em]
+% \centered{Three Higgs\\interaction}        & $\lambda vh^3$  & \centered{$\feynmandiagram [ssmall,baseline=(d.base), horizontal=d to v] { c[particle=\(h\)] -- [scalar] v , a[particle=\(h\)] -- [scalar] v, d[particle=\(h\)] -- [scalar] v , };$} & \centered{$-i6\lambda v$} \\ [1.0em]
+% \centered{Four Higgs\\interaction}         &  $\frac{\lambda}{4}h^4$ & \centered{$\feynmandiagram [ssmall,baseline=(d.base), horizontal=a to c] { {a[particle=\(h\)],b[particle=\(h\)]} --[scalar] v --[scalar] {c[particle=\(h\)],d[particle=\(h\)]} };$} & \centered{$-i6\lambda$}  \\[1.0em]
+% \centered{$WWHH$\\interaction}             & $\frac{h^2}{4}g_sW^+_\mu W^{-\mu}$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] { {a[particle=\(W^\mu\)]} --[charged boson] v --[charged boson] b[particle=\(W^\nu\)], v --[scalar] {c[particle=\(h\)],d[particle=\(h\)]} };$} & \centered{$ig^{\mu\nu}g^2/2$}  \\[1.0em]
+% \centered{$ZZHH$\\interaction}             & $\frac{h^2}{8}(g^2+g'^2)Z_\mu Z^\mu$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] { {a[particle=\(Z^\mu\)]} --[charged boson] v --[charged boson] b[particle=\(Z^\nu\)], v --[scalar] {c[particle=\(h\)],d[particle=\(h\)]} };$} & \centered{$ig^{\mu\nu}(g^2+g'^2)/2$}  \\[1.0em]
+% \bottomrule
+% \end{tabular}
+% }
+% \caption{Summary of the Feynman rules for the EW Lagrangian, including the scalar Higgs field. }
+% \label{tab:ewRules1}
+% \end{center}
+% \end{table}
+% \clearpage
+% }
+
+
+% \afterpage{
+% \begin{table}[H]
+% % \begin{table}[htp]
+% \begin{center}
+% {\footnotesize
+% \begin{tabular}{l | l | l l l}
+% \toprule
+% Name & Lagrangian Term & Drawing & Rule \\
+% \midrule
+% \centered{Charged-current quark\\interaction}  & \centered{$\frac{g}{\sqrt{2}}W_\mu^+[\ubar\gamma^\mu d_L]$\\($u/d$ is an \\up/down-type quark)}     & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(W^\mu\)]} --[charged boson] v , v --[fermion] b[particle=\(q\)], {d[particle=\(q'\)]} --[fermion] v  };$} & $\frac{g}{2^{3/2}}(1-\gamma_5)$  \\[1.0em]
+% \centered{Charged-current lepton\\interaction} & $\frac{g}{\sqrt{2}}W_\mu^+\nu_\ell\gamma^\mu \ell_L$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(W^\mu\)]} --[charged boson] v , v --[fermion] b[particle=\(\ell\)], {d[particle=\(\nu_\ell\)]} --[fermion] v  };$} & $\frac{g}{2^{3/2}}(1-\gamma_5)$  \\[1.0em]
+% \centered{$\gamma W^+W^-$\\interaction}        & $\mathcal{L}_3$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(W^\mu\)]} --[charged boson,momentum=\(k\)] v , v --[charged boson,momentum=\(q\)] b[particle=\(W^\nu\)], {d[particle=\(A_\mu\)]} --[boson,momentum=\(p\)] v  };$} & \centered{$ie[g^{\mu\nu}(p-q)^\rho+$\\$~~~g^{\nu\rho}(q-k)^\mu+$\\$~~~g^{\rho\mu}(k-p)^\nu]$}  \\[1.0em]
+% \centered{$Z W^+W^-$\\interaction}             & $\mathcal{L}_3$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=d to v] { {a[particle=\(W^\mu\)]} --[charged boson,momentum=\(k\)] v , v --[charged boson,momentum=\(q\)] b[particle=\(W^\nu\)], {d[particle=\(Z_\mu\)]} --[boson,momentum=\(p\)] v  };$} & \centered{$ig\cos(\theta_W)[g^{\mu\nu}(p-q)^\rho+$\\$~~~~~~~~~~~~~~g^{\nu\rho}(q-k)^\mu+$\\$~~~~~~~~~~~~~~g^{\rho\mu}(k-p)^\nu]$}  \\[1.0em]
+% \centered{$W^+W^-W^+W^-$\\interaction}         & $\mathcal{L}_4$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] {{a[particle=\(W^\sigma\)]} --[charged boson] v --[charged boson] b[particle=\(W^\mu\)], c[particle=\(W^\rho\)] --[charged boson] v --[charged boson] d[particle=\(W^\nu\)] }; $} & \centered{$ig^2X^{\mu\nu,\rho\sigma}$}  \\[1.0em]
+% \centered{$\gamma\gamma WW$\\interaction}      & $\mathcal{L}_4$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] {{a[particle=\(A^\nu\)]} --[boson] v --[boson] b[particle=\(A^\mu\)], c[particle=\(W^\rho\)] --[charged boson] v --[charged boson] d[particle=\(W^\sigma\)] }; $} & \centered{$-ie^2X^{\mu\nu,\rho\sigma}$}  \\[1.0em]
+% \centered{$ZZW^+W^-$\\interaction}             & $\mathcal{L}_4$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] {{a[particle=\(Z^\nu\)]} --[charged boson] v --[charged boson] b[particle=\(Z^\mu\)], c[particle=\(W^\rho\)] --[charged boson] v --[charged boson] d[particle=\(W^\sigma\)] }; $} & \centered{$-ig^2\cos^2(\theta_W)X^{\mu\nu,\rho\sigma}$}  \\[1.0em]
+% \centered{$\gamma ZWW$\\interaction}           & $\mathcal{L}_4$ & \centered{$\feynmandiagram [ssmall,baseline=(v.base),horizontal=a to c] {{a[particle=\(Z^\nu\)]} --[charged boson] v --[charged boson] b[particle=\(A^\mu\)], c[particle=\(W^\rho\)] --[charged boson] v --[charged boson] d[particle=\(W^\sigma\)] }; $} & \centered{$-ig^2\cos(\theta_W)\sin(\theta_W)X^{\mu\nu,\rho\sigma}$}  \\[1.0em]
+% \bottomrule
+% \end{tabular}
+% }
+% \caption{Summary of the Feynman rules for the EW Lagrangian, including the scalar Higgs field. For convenience, $X^{\mu\nu,\rho\sigma}\equiv2g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}-g^{\mu\sigma}g^{\nu\rho}$. Fields marked ``$\mathcal{L}_3$'' and ``$\mathcal{L}_4$'' arise from the expansion of Equation \ref{eqn:ewNoInt}.}
+% \label{tab:ewRules2}
+% \end{center}
+% \end{table}
+% \clearpage
+% }
+
+\subsection{Cabibbo-Kobayashi-Maskawa Mixing}
+% \subsection{Chiral Symmetry Breaking}
+
+The Yukawa Lagrangian in Equation \ref{eqn:leptonYukawaLagrangian} can be expanded in a compact form for the nine charged fermions, shown in Equation \ref{eqn:fermionYukawaLagrangian}
+\begin{equation}\begin{split}\label{eqn:fermionYukawaLagrangian}
+        \mathcal{L}_{\text{Yukawa}}=-\left(1+\frac{h}{v}\right)\left[ \overline{\ell'}_L^i[m_{\ell}]_i^j\ell'_{Rj} + \overline{u'}_L^i[m_{u}]_i^ju'_{Rj} + \overline{d'}_L^i[m_{d}]_i^jd'_{Rj} \right]
+\end{split}\end{equation}
+Here, the leptons, up-type quarks, down-type quarks are grouped into vectors $\ell'$, $u'$, and $d'$ containing fields for each generation.
+These are the \emph{mass-eigenstate} fields $f$, and are related to the primed fields $f'$ by multiplication by unitary matrices $U_L$ and $U_R$: $f_L'=U_Lf_L$ and $f'_R=U_Rf_R$.
+The $3\times3$ matrices $[m_{\ell}]$, $[m_{u}]$, and $[m_{d}]$ by analogy to Equation \ref{eqn:leptonYukawaLagrangian} represent the masses fermions.
+The unitary matrices in $f'_L$ and $f'_R$ are chosen, such that the mass matrices are diagonal through the multiplication $U^\dagger_L[m]U_R$.
+The result is that Equation \ref{eqn:fermionYukawaLagrangian} is simplified such that mass terms appear as in Equation \ref{eqn:fermionYukawaLagrangian}.
+
+The electroweak Lagrangian in Equation of the form \ref{eqn:ewNoInt} is nearly unchanged with the substitution of the mass-eigenstate fields.
+The exception is the term for interactions between \W bosons and quarks, as given in Equation \label{eqn:ewLagrangianCc}.
+The change to mass-eigenstates introduces the product between two unrelated unitary matrices $U$ and $U'$ that correspond to the up-type and down-type quarks.
+The product $U^\dagger U'$ is not one, but instead defines the unitary Cabibbo-Kobayashi-Maskawa (CKM) matrix $V$.
+Instead of the choice of a unitary matrix $f_L'=U_Lf_L$ and $f'_R=U_Rf_R$ that is used to define the mass-eigenstates for leptons, an analogous definition for quarks is made: $q'_{L,i}=V_i^jq_{L,j}$.
+The Lagrangian may be rewritten in terms of the mass-eigenstates with the use of the CKM matrix:
+
+\begin{equation}\begin{split}
+    \mathcal{L}=-\frac{g}{\sqrt{2}}V_i^jW_\mu\ubar^i_L\gamma d_{L,j}.
+\end{split}\end{equation}
+
+The global measurement of the CKM matrix parameters, along with unitary within generations, is given in Equation \ref{eqn:ckm} \cite{pdg2019}.
+\begin{equation}\begin{split}\label{eqn:ckm}
+V=
+\begin{pmatrix}
+0.97446 \pm 0.00010 & 0.22452 \pm 0.00044 & 0.00365 \pm 0.00012 \\
+0.22438 \pm 0.00044 & 0.97359^{+0.00010}_{-0.00011} & 0.04214 \pm 0.00076 \\
+0.00896^{+0.00024}_{-0.00023} & 0.04133 \pm 0.00074 & 0.999105 \pm 0.000032
+\end{pmatrix}
+\end{split}\end{equation}
+
+
+\section{Summary}
+
+The Standard Model Lagrangian is built from the fields and interactions introduced in this chapter.
+The first component is the QCD Lagrangian, repeated in Equation \ref{eqn:qcdLagrangianSummary}.
+Here, the index $i$ is summed over all fermions.
+The covariant derivative $D$ acts differently on different fields, as noted in the prior sections. 
+\begin{equation}\begin{split}\label{eqn:qcdLagrangianSummary}
+    \mathcal{L}_\text{QCD}=-\frac{1}{4}F^{\mu\nu a}F^a_{\mu\nu}+i\overline{q}_i\slashed{D}q_i-m\overline{q}_iq_i \\
+\end{split}\end{equation}
+%
+This is followed by the EW Lagrangian, repeated in Equation \ref{eqn:eqLagrangianSummary}.
+Here the indices on $\Psi_i$ are mapped each left-handed doublet and right-handed singlet fermion fields in each generation.
+\begin{equation}\begin{split}\label{eqn:eqLagrangianSummary}
+    \mathcal{L}_\text{EW}=-\frac{1}{4}W^a_{\mu\nu}W^{a,\mu\nu}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}+i\overline{\Psi}_i\slashed{D}\Psi_i
+\end{split}\end{equation}
+%
+The next term given in Equation \ref{eqn:yLagrangianSummary} summarizes the Yukawa coupling facilitated by the Higgs field $\Phi$.
+Again, $\Psi_i$ include the relevant left-handed and right-handed fields.
+The Yukawa coupling constants are described compactly by $3\times3$ matrices, $y_{ij}=\frac{\sqrt{2}}{mv}$, that correspond to the masses from Equation \ref{eqn:fermionYukawaLagrangian}.
+\begin{equation}\begin{split}\label{eqn:yLagrangianSummary}
+    \mathcal{L}_\text{Yukawa}=\overline{\Psi}_iy_{ij}\Psi_j\Phi
+\end{split}\end{equation}
+%
+Finally the Higgs sector Lagrangian is defined in Equation \ref{eqn:hLagrangianSummary}.
+This consists of a kinetic term and the Higgs potential defined in Equation \ref{eqn:higgsPotential}.
+\begin{equation}\begin{split}\label{eqn:hLagrangianSummary}
+    \mathcal{L}_\text{Higgs}=D_\mu\Phi D^\mu\Phi-V(\Phi,\Phi^\dagger)
+\end{split}\end{equation}
+%
+The sum of these Lagrangians comprise the complete Standard Model Lagrangian, given in Equation \ref{eqn:smLagrangian}.
+\begin{equation}\begin{split}\label{eqn:smLagrangian}
+    \boxed{\mathcal{L}_\text{SM}=\mathcal{L}_\text{QCD}+\mathcal{L}_\text{EW}+\mathcal{L}_\text{Yukawa}+\mathcal{L}_\text{Higgs}}
+\end{split}\end{equation} 
+
+
+% Since the discovery of the Higgs boson, the full Standard Model Lagrangian is often presented in the compact form of Equation \ref{eqn:smLagrangian}.
+% \begin{flalign}\label{eqn:smLagrangian}
+% ~&~& \mathcal{L}_\text{SM} =& -\frac{1}{4}F^a_{\mu\nu}F^{a,\mu\nu}-\frac{1}{4}W^a_{\mu\nu}W^{a,\mu\nu}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}               &\text{gauge fields} &~ \notag\\
+% ~&~&                        & +i\overline{\Psi}_i\slashed{D}\Psi_i+\text{h.c.}   &\text{covariant derivatives} &~ \notag\\
+% ~&~&                        & +\overline{\Psi}_iy_{ij}\Psi_j\Phi+\text{h.c.}                &\text{Yukawa couplings} &~ \notag\\
+% ~&~&                        & +D_\mu\Phi D^\mu\Phi-V(\Phi,\Phi^\dagger);         &\text{Higgs sector} &~
+% \end{flalign}
+% This form of the Lagrangian begins with a sum over the contracted the gauge field strength tensors, $F^a$, which includes the eight gluon fields associated with SU(3) from Equation \ref{eqn:qcdLagrangian2}.
+% Next are the three electroweak tensors $W^a$ associated with SU(2) and the single tensor $B$ associated with U(1), both defined in Equation \ref{eqn:ewFieldTensor}.
+% The next line contains the covariant derivatives acting on fermion fields $\Psi_i$. 
+% The third line contains Yukawa couplings for each fermion, again summed over indices $i$ and $j$.
+% This is because the fields $\Psi$ are gauge eigenstates, rather than mass eigenstates.
+% The final line contains the scalar kinetic term and the Higgs potential.
+
+\begin{table}[htp]
+\caption{Gauge couplings for the subgroups in the Standard Model. The running strong coupling $g_s$  and the weak couplings $g$ and $g'$ are calculated using the $\overline{MS}$ renormalization scheme. Both are calculated at the energy scale of the \Z boson.}
+\begin{center}
+\begin{tabular}{l l l l}
+\toprule
+Group & Coupling & Value \\
+\midrule
+U(1)   & $g'$  & 0.357 \\
+SU(2)  & $g$   & 0.652 \\
+SU(3)  & $g_s$ & 1.220 \\
+\bottomrule
+\end{tabular}
+\label{tab:couplings}
+\end{center}
+\end{table}
+
+There are 19 free parameters of the Standard Model that are determined by measurements.
+These include the masses of the six quarks and three charged leptons defined in Table \ref{tab:particles}.
+Four parameters, (three Euler angles and a CP-violating phase) are used to define the CKM matrix given in Equation \ref{eqn:ckm}.
+The three gauge couplings are listed in Table \ref{tab:couplings}.
+The two free parameters introduced by electroweak symmetry breaking are the vacuum expectation value $v=246.2$~GeV and the Higgs boson mass $m_\text{H}=125.1$~GeV.
+The final parameter, $\theta_\text{QCD}\approx0$, is the coefficient to a CP violating term in QCD.
+The breadth and depth of the phenomena described by the mathematical formulation of the Standard Model are a testament to its success as a descriptive theory.
+
+% The previous section dealt with the abstract notions of groups and relations.
+% Representations of these groups provide a useful description of the physical world.
+% This section will discuss how these representations are used in particle physics theory.
+% The task is to build a map between the mathematical structures, which are stripped of physical meaning, and the physical model.
+% The connection between the abstract words of groups and symmetries and the more concrete world of QFT is as follows.
+% The fields of fermions correspond to the modules of certain representations, on which the members of the algebra can act.
+% Charges, the physical characteristics of particles that are conserved, correspond to the eigenvalues of the group's generators.
+% The number of charges described by a group is equal to the dimension of the representation.
+% Physical interactions through a force are described by the eigenvectors of the earlier defined Cartan generators of the group.
+% The generators of the group describe particles that mediate forces to particles charged under the group.
+% The force-carrying particles described by the Cartan generators do not change the corresponding charge of a particle.
+% Non-Cartan generators, however, can change charge.
+

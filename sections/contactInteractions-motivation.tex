@@ -1,0 +1,82 @@
+\section{Theoretical Motivation for Non-resonance Signatures}\label{sec:ciMotivation}
+
+The effects of a new interaction may be observed at an energy much lower than that required to produce direct evidence of the existence of a new gauge boson.
+The charged weak interaction responsible for nuclear $\beta$ decay provides such an example.
+A non-renormalizable description of this process was formulated by Fermi in the form of a four-fermion contact interaction~\cite{Fermi:1934hr}.
+A CI can also describe deviations from the SM in proton--proton scattering due to quark and lepton compositeness, where a characteristic energy scale \lam corresponds to the binding energy between fermion constituents.
+The following Lagrangian can describe a generic \llqq contact interaction, including fermion compositeness \cite{eichten, Eichten:1984eu};
+% A new interaction or compositeness in the process $q\overline{q} \to \ell^+\ell^-$ can be described by the following four-fermion contact interaction Lagrangian~\cite{eichten, Eichten:1984eu},
+
+\begin{equation}\label{eqn:ciLagrangian}
+\begin{array}{r@{\,}c@{}c@{\,}l@{\,}l}
+\mathcal L = \frac{g^2}{2\Lambda^2}\;[ && \eta_{\mathrm{LL}}&\, (\overline q_{\mathrm L}\gamma_{\mu} q_{\mathrm L})\,(\overline\ell_{\mathrm L}\gamma^{\mu}\ell_{\mathrm L}) \nonumber \\
+& +&\eta_{\mathrm{RR}}& (\overline q_{\mathrm R}\gamma_{\mu} q_{\mathrm R}) \,(\overline\ell_{\mathrm R}\gamma^{\mu}\ell_{\mathrm R}) \\
+&+&\eta_{\mathrm{LR}}& (\overline q_{\mathrm L}\gamma_{\mu} q_{\mathrm L}) \,(\overline\ell_{\mathrm R}\gamma^{\mu}\ell_{\mathrm R}) \\
+&+&\eta_{\mathrm{RL}}& (\overline q_{\mathrm R}\gamma_{\mu} q_{\mathrm R}) \,(\overline\ell_{\mathrm L}\gamma^{\mu}\ell_{\mathrm L})& ] \: ,\nonumber
+\end{array}
+\end{equation}
+
+\noindent where $g$ is a coupling constant chosen by convention\footnote{The interested reader may note that this convention, followed in all ATLAS results, may be adjusted by consistent multiplication of \lam.} to satisfy $g^2/4\pi = 1$, \lam is the contact interaction scale, and $q_{\mathrm L,R}$ and $\ell_{\mathrm L,R}$ are left-handed and right-handed quark and lepton fields, respectively.
+The parameters $\eta_{ij}$, where $i$ and $j$ may be left (L) or right (R), define the chiral structure of the new interaction.
+Different chiral structures are considered by choices of the coefficients $\eta_{ij}$. For example, the left-right model is obtained by setting $\eta_{\mathrm{LR}} = \pm 1$ and $\eta_{\mathrm{RL}} = \eta_{\mathrm{LL}} = \eta_{\mathrm{RR}} = 0$.
+Likewise, the left-left (LL), right-left (RL), and right-right (RR) chirality models are correspond to Lagrangians with the corresponding $\eta_{ij}$ set to $\pm 1$, and the remaining $\eta_{ij}=0$.
+The sign of $\eta_{ij}$ determines the sign of interference: $\eta_{ij}=-1$ results in constructive interference, while  $\eta_{ij} = +1$ results in destructive with the Standard Model. 
+
+Equation \ref{eqn:ciLagrangian} becomes more specific in the context of \llqq CI searches in dilepton final states at the LHC.
+The terms take the form $\eta_{ij}\left(\bar{q}_i\gamma_{\mu}q_i\right)\left(\bar{\ell}_j\gamma^{\mu}\ell_j\right)$, where $q_i$ and $\ell_j$ are the quark and lepton fields respectively.
+The differential cross-section for the process $q\bar{q}\rightarrow\ell^+\ell^-$, in the presence of CI, can be separated into the SM DY term plus terms involving the new contact interaction.
+% This separation is given in Equation \ref{eqn:cixs}.
+\begin{equation}
+\frac{\text{d}\sigma}{\text{d}m_{\ell\ell}} = \frac{\text{d}\sigma_\textrm{DY}}{\text{d}m_{\ell\ell}} - \eta_{ij}\frac{F_\textrm{I}}{\Lambda^2} + \frac{F_\textrm{C}}{\Lambda^4}
+\label{eqn:cixs}
+\end{equation}
+In Equation \ref{eqn:cixs}, the first term accounts for the DY process, the second term corresponds to the interference between the DY and CI processes, and the third term corresponds to the pure CI contribution.
+The latter two terms include $F_\textrm{I}$ and $F_\textrm{C}$, respectively, which are functions of the differential cross-section with respect to $m_{\ell\ell}$ with no dependence on \lam~\cite{Eichten:1984eu}.
+The interference may be constructive or destructive, and it is determined by the sign of $\eta_{ij}$.
+
+\begin{figure}[htb]
+\begin{center}
+\begin{equation}
+\begin{tikzpicture}
+% \draw[style=help lines] (-3,-5) grid (9,2);
+\draw (-2,-2) -- (-2,2);
+\draw (9.3,-2) -- (9.3,2);
+\node (A) at (9.5,1.9) {2};
+\begin{feynman}[medium]
+    \vertex (p1);
+    \vertex [right=3.6em of p1] (p2);
+    \vertex [above left=of p1] (qa){\(\phantom{^+}\qbar\)};
+    \vertex [below left=of p1] (qb){\(\phantom{^+}q\)};
+    \vertex [above right=of p2] (h){\(\ell^{-}\phantom{\qbar}\)};
+    \vertex [below right=of p2] (v){\(\ell^{+}\phantom{\qbar}\)};
+    \diagram* {
+    (qb) --[fermion] (p1) --[fermion] (qa),
+    (p1) --[boson,edge label=\(\gamma^*/Z\)] (p2),
+    (v) --[fermion] (p2) --[fermion] (h),
+    };
+\end{feynman}
+\node (A) at (10.5em,0) {+};
+\begin{feynman}[xshift=17em,medium]
+    \vertex [blob] (p1){\(\lam\)};
+    \vertex [above left =4.80em of p1] (qa){\(\phantom{^+}\qbar\)};
+    \vertex [below left =4.80em of p1] (qb){\(\phantom{^+}q\)};
+    \vertex [above right=4.80em of p1] (h){\(\ell^{-}\phantom{\qbar}\)};
+    \vertex [below right=4.80em of p1] (v){\(\ell^{+}\phantom{\qbar}\)};
+    \diagram* {
+    (qb) --[fermion] (p1) --[fermion] (qa),
+    (v) --[fermion] (p1) --[fermion] (h),
+    };
+\end{feynman}
+\end{tikzpicture}
+\end{equation}
+\end{center}
+\vspace{-.4cm}
+\caption{Leading-order production mechanism for Drell-Yan with additional contact term with scale \lam in the dilepton final state.}
+\label{FeynmanCI}
+\end{figure}
+
+Contact interactions have motivated a rich set of searches.
+Numerous searches for CI have been carried out in neutrino--nucleus and electron--electron scattering~\cite{Anthony:2005pm}, as well as electron--positron~\cite{Abdallah:2008ab, Schael:2006wu}, electron--proton~\cite{Aaron:2011mv}, and proton--antiproton colliders~\cite{Abulencia:2006iv,Abazov:2009ac}.
+Searches for CI have also been performed by the ATLAS and CMS Collaborations~\cite{Aad:2014wca, Khachatryan:2014fba}.
+The strongest exclusion limits for \llqq CI come from the previous ATLAS non-resonant dilepton analysis conducted using 36.1\fb of \sqrts=13~TeV proton--proton data \cite{Aaboud:2016cth}.
+Other ATLAS studies of note include the 2012/2014 search for contact interactions using \sqrts=7/8~TeV collisions at ATLAS \cite{EXOT-2013-19, EXOT-2012-17}.

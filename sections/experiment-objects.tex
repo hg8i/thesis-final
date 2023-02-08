@@ -1,0 +1,209 @@
+
+\section{Physics Object Reconstruction}\label{sec:physObjects}
+The analyses presented in this thesis view the data collected by the ATLAS experiment through the abstraction of \emph{physics objects}.
+It is worth noting that physics objects are not exactly isomorphic to the actual physical entities emanating from the collision.
+These are patterns of detector hits and energy deposits that are construed to have some physical meaning.
+In some cases, these patterns are clearly identified with particles like muons or electrons passing through the detector.
+In other cases, the identification is more pragmatic for the purpose of analysis, as is the case when describing \emph{missing transverse momentum} ($E_T^\text{miss}$) as an object.
+Somewhere in between these are clusters of energy deposits called \emph{jets}, which are identified as the result of the hadronization of quarks and gluons.
+
+The difference between the ``physics object'' of a jet and the quark or gluon it is presumed to describe is clear.
+Different definitions of ``cluster'' lead to different jet energies, and even different numbers of jets.
+This subtlety in definition also applies to muons, electrons, and of course, $E_T^\text{miss}$.
+The following section describes the choices made in defining the physics objects used in this thesis.
+
+There are three steps in choosing what physics objects to use.
+The first step is in the reconstruction algorithm, which arranges the data recorded in an event into reasonable approximations of particles and jets.
+Next, some of these candidates are accepted or rejected based on identification criteria.
+Finally, a secondary requirement of isolation is imposed on the objects to isolate objects originating directly, or promptly, from the collision.
+This final step is particularly important in the context of this thesis, where prompt leptons are of primary interest.
+
+\subsection{Electrons}
+Electrons are reconstructed from data collected by the inner detector and electromagnetic calorimeter.
+An electron passing through the ID typically produces four hits in the pixel layers and eight hits in the Silicon Tracker (SCT) layers, from which the track and impact parameter are established.
+After passing through the silicon detectors, the electron produces transition radiation surrounding the Transition Radiation Tracker (TRT).
+This helps identify electrons as relativistic charged particles.
+Next, the electron enters the electromagnetic calorimeter, where it deposits most of its energy.
+The segmented structure of the calorimeter measures both the energy deposited directly by the electron and subsequent showers of secondary particles.
+
+The search for electron candidates begins with a scan of energy deposits in the calorimeter, searching for localized clusters in $\eta-\phi$ space.
+Next, the hits in the inner detector pixel and SCT layers are grouped first by layer and then between layers to form tracks.
+Calorimeter clusters with azimuth $\phi_\text{calo}$ and ID tracks with azimuth $\phi_\text{track}$ are matched with a fitting procedure.
+A restriction $-0.10<\Delta\phi<0.05$ where $\Delta\phi=-q\times(\phi_\text{calo}-\phi_\text{track})$ and $q$ is the charge of the track is made, and the asymmetric range accounts for bremsstrahlung effects \cite{elecReco}.
+
+\subsubsection{Identification}
+
+The choice of which electron candidates to consider for analysis is made using a likelihood (LH) identification.
+This quantifies the probability for a candidate electron to have been produced by a physical electron passing through the detector.
+The goal is to identify prompt electrons (signal) from jets, photon conversion electrons, and hadronic decay electrons (background).
+Fourteen quantities, $\vec{x}$, are measured for the candidate electron.
+These quantities describe the distribution of energy in the calorimeter layers, the impact parameter from the ID, the momentum lost by the track over time, the TRT response, and the $\eta-\phi$ match between the track and calorimeter cluster.
+The PDFs for their values, $\vec{P}_{S(B)}$, are measured from simulation for signal and background.
+
+
+The likelihood for a candidate to be signal (background) is given in Equation \ref{eqn:elecLH}.
+\begin{equation}\begin{split}\label{eqn:elecLH}
+L_{S(B)}(\vec{x}) = \prod_{i=1}^{14}P_{S(B),i}(x_i)
+\end{split}\end{equation}
+The discriminant $d_L$ is defined in Equation \ref{eqn:discLH} and peaks near one for signal, and zero for background.
+\begin{equation}\begin{split}\label{eqn:discLH}
+d_L=\frac{L_S}{L_S+L_B}
+\end{split}\end{equation} 
+Electron candidates passing increasingly restrictive thresholds of $d_L$ comprise the \code{VeryLoose}, \code{Loose(AndBLayer)}, \code{Medium}, and \code{Tight} LH identification working points.
+In this thesis, the \code{LooseAndBLayer} and \code{Medium} LH identifications are used.
+Both additionally require at least two pixel hits and seven total hits in the silicon ID.
+At least one pixel hit is required in the innermost working pixel layer.
+These have efficiencies of 88\% and 80\% for electrons with \et=40~GeV, respectively.
+
+Electrons that are reconstructed with a path traveling directly through a broken calorimeter cell are marked with the label \emph{BADCLUSELECTRON}.
+It is helpful to exclude such electrons from consideration due to their poor \et measurement.
+
+% NR:  LooseAndBLayerLLH (QCD Fakes), MediumLLH
+% hmm: Medium LH
+\subsubsection{Isolation}
+The signal models of interest for this thesis lead to electrons produced in isolation from other particles.
+These electrons originate promptly from the interaction point.
+In order to identify such electrons, the activity within a $\eta-\phi$ cone of $\Delta R=\sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$ is quantitatively by measures of charged tracks and calorimeter energy deposits.
+A variable cone size of $\Delta R=\text{min}(0.2,10\text{GeV}/\pt)$ is used to count tracks with $\pt>1$~GeV around the electron. The \pt of the tracks within this cone, excluding the electron's tracks, are summed to define \ptvarconeElec.
+The electron's ``tracks'' is plural to account for bremsstrahlung radiation converting to secondary electrons. 
+These are counted as part of the electron candidate if the extrapolated track falls within $\Delta\eta+\Delta\phi=0.05\times0.1$ of the primary calorimeter cluster.
+Meanwhile, a fixed cone size of $\Delta R=0.2$ is used to sum up the activity in the calorimeters.
+First, the energy from the electron is subtracted within an area of $\Delta\eta+\Delta\phi=0.125\times0.175$.
+Energy from pileup effects is subtracted, and the remaining \et is summed to define \etcone.
+
+Two isolation schemes are used in this thesis.
+The first, \code{FixedCutLoose}, enforces a requirement that $\etcone/\et<0.20$ and $\ptvarconeElec/\pt<0.15$.
+The efficiency, $\epsilon_\text{iso}$, of this requirement for prompt electrons is $\approx99\%$.
+These cuts perform well in the relatively narrow kinematic region of interest for \hmm, but the search for high-mass phenomena needs a more flexible scheme.
+A dynamic isolation, \code{Gradient}, is defined as a function of the electron \et.
+It is defined such that the efficiency $\epsilon_\text{iso}=0.1143\times\et+92.14\%$ is constant across $\eta$.
+\cite{elecReco}
+
+
+% NR:  gradient
+% hmm: FCLoose
+
+\subsection{Muons}
+
+Data from both the inner detector and muon spectrometer can be used to reconstruct muons.
+In the former case, a similar procedure to that used to reconstruct ID electrons is used.
+In the latter case, an algorithm searches data from MS chambers for hits that follow plausible muon paths, called segments.
+Then, starting from segments, candidate tracks are built by combinatorially including hits from tracks in other layers.
+The best tracks are selected based on the $\chi^2$ fit quality and number of hits used.
+Each track must contain at least two segments.
+\footnote{There is an exception in the transition region between the barrel and endcap where one segment is sufficient, however such muons are excluded from consideration in this thesis.}
+
+\subsubsection{Identification}
+
+Four types of muons are reconstructed.
+Combined muons (CB), which are reconstructed using tracks in the ID and MS.
+\begin{itemize}
+\item Segment-tagged muons (ST), which are built from ID tracks extrapolated to match MS hits.
+\item Calorimeter-tagged muons, which are built using ID tracks extrapolated to match calorimeter energy deposits.
+\item Extrapolated muons (ME), which are reconstructed using only the MS and the location of the interaction point.
+\end{itemize}
+
+Five criteria define the commonly used identifications: \code{Loose}, \code{Medium}, \code{Tight}, \code{Low}-\pt, \code{High}-\pt.
+These working points admit or reject muons based on several variables:
+\begin{itemize}
+    \item The absolute difference between the charge to momentum ratio measured in the MS versus the ID, as a fraction of the sum in quadrature of the corresponding MS and ID uncertainties. This is the q/p significance.
+    \item The absolute difference between the \pt measured in the MS vs the ID, as a fraction of the combined \pt. This is the $p'$ variable.
+    \item The normalized $\chi^2$ of the combined track fit.
+\end{itemize}
+% Medium muons
+The baseline identification for ATLAS searches is Medium, which begins with CB and ME muons.
+CB muons are required to use at least three hits in two MDT layers, or one MDT layer and no more than one missing layer within $|\eta|<0.1$.
+The later allowance is made due to lost coverage in the barrel.
+ME muons are required to use at least three MDT/CSC layers and fall within $2.5<|\eta|<2.7$, where the ID loses coverage.
+For all muons, the q/p significance must be less than seven.
+\cite{muonReco}
+
+% Loose muons
+The choice of identification depends on the requirements of the analysis.
+The searches in this thesis are performed using both expanded and restricted muon identifications.
+The \hmm search is concerned with small yields of low-\pt muons; therefore, the \code{Loose} working point is used to maximize reconstruction efficiency.
+The \code{Loose} identification is a superset of the \code{Medium} identification.
+Additional CT and ST muons are allowed in $|\eta|<0.1$. This adds approximately 2.5\% more muons in the barrel region.
+\cite{muonReco}
+
+% High-pt muons
+In contrast, the high-mass non-resonant search is concerned with more energetic muons.
+For these, a subset of the Medium identification, the \code{High}-\pt identification, is used to reduce incorrectly reconstructed muons.
+CB muons otherwise passing the Medium criteria must have three hits in three MS stations.
+Some regions of the MS are excluded based on their alignment accuracy.
+This restriction trades efficiency to improve \pt resolution by approximately 30\% for muons with $\pt>1.5$ TeV.
+It reduces the reconstruction efficiency by $\approx$20\% but improves \pt resolution above 1.5 TeV by $\approx$30\%.
+\cite{muonReco}
+
+\subsubsection{Isolation}
+
+As is the case for electrons, the muons of interest in this thesis originate promptly from the interaction point, either from the decay of a Higgs boson or through a contact interaction.
+Both types of processes are expected to produce muons that are isolated from other particles in the event.
+In contract, semi-leptonic decays and hadronic decays produce muons in close proximity to other particles.
+To identify the muons of interest, the concept of isolation is quantified by the sum of tracks in a variable size cone around the muon.
+Four related variables are defined.
+First variable is \ptvarconeMuon, which is defined as the scalar sum of \pt for tracks within a cone size $\Delta R=\text{min}(0.3,10\text{GeV}/\pt)$. Only tracks with $\pt>1$~GeV are counted, and the muon \pt is excluded.
+The second and third variables are \etcone and \ptcone, which are defined as the scalar sum of \et or \pt, respectively, within a cone size of $\Delta R=0.2$.
+The fourth variable, \neutralcone, is similar to \etcone. It is the sum of neutral \et within a cone size of $\Delta R=0.2$.
+
+These variables are used to define the three isolation working points used in this thesis.
+The first, FixedCutTightTrackOnly, simply required $\ptvarconeMuon/\pt<0.06$.
+The second is FixedCutPflowLoose, which requires both $\ptvarconeMuon+0.4\neutralcone)/\pt<0.16$ and $\ptcone+0.4\neutralcone)/\pt<0.16$.
+The third is FixedCutLoose, which requires both $\ptvarconeMuon/\pt<0.15$ and $\etcone/\pt<0.30$.
+While the efficiency of these isolation requirements varies with \pt, in general, fewer than 1\% of prompt muons are lost.
+\cite{muonReco}
+
+\subsubsection{Bad Muon Veto}\label{sec:bmv}
+
+In the high-\pt regime, it becomes difficult to accurately reconstruct muons due to the small bending radius in the magnetic field.
+A criteria named \emph{Bad Muon Veto} (BMV) is used to address this by ignoring poorly reconstructed muons in the tails of the relative \pt resolution distributions, $\sigma_{\pt}/\pt$, given in Equation \ref{eqn:muonRes}.
+
+\begin{equation}\begin{split}\label{eqn:muonRes}
+    \frac{\sigma(p)}{p}=(\frac{p_0}{\pt}\oplus p_1 \oplus p_2\times \pt)
+\end{split}\end{equation} 
+The parameters $p_0$, $p_1$, and $p_2$ are measured for the MS and ID in different $\eta$ regions. 
+The first term describes uncertainty in energy loss as a muon travels through detector material and becomes less impactful at higher \pt.
+The second term covers multiple scattering and irregularities in the magnetic field.
+The third term dominates at high-\pt and describes the intrinsic spacial resolution of the muon detectors, including the accuracy of their alignment \cite{muonReco}.
+A cut is made on the relative uncertainty:
+\begin{equation}
+\frac{\sigma(q/p)}{(q/p)} < C(\pt)\cdot \sigma_{rel}^{exp}.
+\end{equation}
+Here $C(\pt)$ is a \pt-dependent coefficient which is equal to 2.5 when $\pt<1$~TeV and decreases linearly above this.
+The application of the BMV reduces efficiency by 7\% for high-\pt muons, while removing poorly reconstructed muons that should not be considered for analysis.
+
+% Isolation
+% NR: FCTightTrackOnly
+% hmm: FixedCutPflowLoose
+
+\subsection{Jets}\label{sec:expJets}
+
+Strongly charged quarks and gluons exiting a collision hadronize, producing to a collimated jet of heavier particles.
+Since none of the final states under consideration in this thesis include quarks or gluons, it is helpful to exclude their presence in some cases.
+To this end, jets are reconstructed such that events that contain them may be excluded.
+Charged tracks from the ID are associated to calorimeter regions to remove associated deposits using the PFlow algorithm \cite{jetReco}.
+The remaining energy is grouped using together by considering pseudo-distance measure between two energy deposits $i$ and $j$,
+\begin{equation}\begin{split}
+d_{ij} =& \text{min}(p^{-2}_{\text{T}i},p^{-2}_{\text{T}j})\frac{\Delta_{ij}^2}{R^2},
+\end{split}\end{equation} 
+where $k_{\text{T}i}$ and $p_{\text{T}j}$ are the cluster energies, $\Delta_{ij}=\sqrt{(\Delta y)^2+(\Delta\phi)^2}$ is their separation in rapidity and azimuth, and $R$ is a parameter set to 0.4.
+The proceeds by finding the minimum of the set $\{d_{ij},p^{-2}_{\text{T}i}\}$ for all clusters $i$ and $j$. 
+If $d_{ij}$ is the minimum, clusters $i$ and $j$ are combined into one.
+If $p^{-2}_{\text{T}i}$ is the minimum, then cluster $i$ is considered to be a jet and is removed from the set.
+Minima are found and removed until none remain.
+This defines all the jets in the event \cite{antikt}.
+
+Jets originating from bottom quarks and the decay of B-hadrons (b-jets) are of particular interest for the \hmm analysis.
+A multivariate discriminant, MV2c10, is helps to distinguish b-jets from other light jets \cite{btag}.
+This separates the b-jets from light flavor jets based on the characteristic displaced vertices of their associated tracks.
+An identification that tags 85\% of b-jets defines the ``b-tag working point'' that proves useful to reject events, including b-jets.
+
+\subsection{Missing transverse momentum}
+
+The final ``object'' to consider in events is the missing transverse momentum, \met.
+The transverse momenta of muons, electrons, and the remaining tracks in the ID are summed to produce the total measured \pt of the event.
+Since the total \pt of the initial state is close to zero, the negative of this \pt sum represents the \pt of objects that have not been reconstructed \cite{met}.
+The \met of an event is a helpful proxy for high-\pt neutrino, which carry \pt without detection.
+This makes \met useful in the \hmm search when identifying the decay of \W to leptons and neutrinos.
+In events with high-\pt muons, mis-measured muon \pt also appears in the \met sum.
+This makes \met useful in the search for high-mass phenomena to study such muons.

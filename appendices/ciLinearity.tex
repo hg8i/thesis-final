@@ -1,0 +1,90 @@
+% \chapter{Linearity of CI S+B Model}\label{sec:ciLinearity}
+\newappendix{Linearity of the CI S+B Model}\label{sec:ciLinearity}
+
+% Describe signal injection study
+
+The shape of the non-resonant contact interaction signals, are broad and extend even into the low-mass region. If such a signal is present, it would appear in a low-mass CR and has the potential to effect the shape of the background model fit. The signal injection study described in this section is used to ensure that this doesn't happen.
+
+\begin{equation}\label{eq:bModel}
+f_\text{B}(p_i,m_{ll}) = {\color{black} N_\text{bkg}*B(p_i,m_{ll})}
+\end{equation}
+
+\begin{equation}\label{eq:sbModel}
+f_\text{SB}(p_i,m_{ll},\Lambda') = {\color{black} N_\text{bkg}*B(p_i,m_{ll})} + {\color{black} N_\text{sig}(\Lambda')*S(\Lambda',m_{ll})}
+\end{equation}
+
+\begin{figure}[hb]
+\centering
+\begin{overpic}[width=0.3\textwidth]{figures/injections/sbVsBOnlyInj/sb.pdf}\put(50,0){\textrm{(a)}}\end{overpic}
+\begin{overpic}[width=0.3\textwidth]{figures/injections/sbVsBOnlyInj/bOnly.pdf}\put(50,0){\textrm{(b)}}\end{overpic}
+\caption{Illustration of the linearity test for the S+B background model (a) and the B-only background model (b). Both show fits of the respective models to B-only simulation with signal shapes added on top. The B-only model becomes increasingly deflected as more signal is injected. The S+B model does not get deflected when injecting signal.}
+\label{fig:sbVsBOnlyInjection}
+\end{figure}
+
+
+In the case that a contribution to the $m_{ll}$ spectra is present in the control region, this signal may deflect fit of a background only model, such as $f_\text{B}$ in equation \ref{eq:bModel}. Here $N_\text{bkg}$ is the normalization of the PDF, and $B(p_i,m_{ll}$ is the background model, described in Section \ref{sec:ciBkg}. Instead, a signal+background model such as $f_\text{SB}$ in equation \ref{eq:sbModel} has been developed in order to not deflect in the presence of an injected signal. Here, $N_\text{sig}(\Lambda')$ is the normalization expected from signal simulation described in \ref{sec:ciSig}. The normalization has been linearly interpolated between the generated signal simulation, and is a function of $\Lambda'$. Likewise, $S(\Lambda',m_{ll})$ is the signal shape linearly interpolated between signal simulation shapes. The purpose of the term $N_\text{sig}(\Lambda')*S(\Lambda',m_{ll})$ is to absorb a signal shape if it is present in spectrum. In this case, the background component of the model, $N_\text{bkg}*B(p_i,m_{ll})$ can model the background component with minimal deflection from the signal shape.
+
+Signal injection tests are used to validate the requirement that $f_\text{SB}$ can provide an accurate background estimate, regardless of whether a signal is present or not. The primary criteria is that the background model not be deflected by the injected signal, thereby changing the expected background in the SR. This is tested by checking that the ``signal recovered'' scales proportionally with the ``signal injected'' in the SR. This is done using a background-only simulation, and adding the signal contributions described in Section \ref{sec:ciSig} to make an S+B simulation. The signal recovered is simply the difference in the SR of the number of observed events from the S+B simulation, and the number of expected background events from $N_\text{bkg}*B(p_i,m_{ll})$ in equation \ref{eq:sbModel}. The signal injected is the integral in the SR of the signal histogram added to the template.
+
+An illustration of the linearity of the S+B model in comparison to the B-only model is shown in figure \ref{fig:sbVsBOnlyInjection}.
+
+The results of the test are shown in Figures \ref{fig:injMm} (\mm) and \ref{fig:injEe} (\ee) for models of various $\Lambda$ signal models injected. 
+
+The performance of the injection tests are checked. The injection curves should intersect with the origin, indicating a small spurious signal recovered from the background only case. The curves should also be strait lines, indicating the background model is consistent over the range of $\Lambda$ of interest present in the CR.
+
+\clearpage
+
+\begin{figure}[H]
+\centering
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-LL-ee.pdf}\put(50,0){\textrm{(a)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-LR-ee.pdf}\put(50,0){\textrm{(b)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-RL-ee.pdf}\put(50,0){\textrm{(c)}}\end{overpic}\\
+\vspace{1em}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-RR-ee.pdf}\put(50,0){\textrm{(d)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-LL-ee.pdf}\put(50,0){\textrm{(e)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-LR-ee.pdf}\put(50,0){\textrm{(f)}}\end{overpic}\\
+\vspace{1em}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-RL-ee.pdf}\put(50,0){\textrm{(g)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-RR-ee.pdf}\put(50,0){\textrm{(h)}}\end{overpic}
+\caption{Constructive LL (a), LR (b), LL (c), and LR (d) and destructive LL (e), LR (f), LL (g), and LR (h) S+B injection tests for the $ee$ channel. \emph{Signal Injected} corresponds to the number of signal events in the SR injected by that model. \emph{Signal Recovered} corresponds to the number of events in the SR above the background expectation. Each point on the plot is labeled for a different $\Lambda$ scale, and corresponds to that particular model being injected. The error bands are the $1\sigma$ and $2\sigma$ errors on the background only estimate.}
+\label{fig:injEe}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-LL-mm.pdf}\put(50,0){\textrm{(a)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-LR-mm.pdf}\put(50,0){\textrm{(b)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-RL-mm.pdf}\put(50,0){\textrm{(c)}}\end{overpic}\\
+\vspace{1em}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-const-RR-mm.pdf}\put(50,0){\textrm{(d)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-LL-mm.pdf}\put(50,0){\textrm{(e)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-LR-mm.pdf}\put(50,0){\textrm{(f)}}\end{overpic}\\
+\vspace{1em}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-RL-mm.pdf}\put(50,0){\textrm{(g)}}\end{overpic}
+\begin{overpic}[width=0.30\textwidth]{figures/injections/finalInjections/inj-dest-RR-mm.pdf}\put(50,0){\textrm{(h)}}\end{overpic}
+\caption{Constructive LL (a), LR (b), LL (c) and, LR (d) and destructive LL (e), LR (e), LL (f), and LR (g) S+B injection tests for the $\mu\mu$ channel. \emph{Signal Injected} corresponds to the number of signal events in the SR injected by that model. \emph{Signal Recovered} corresponds to the number of events in the SR above the background expectation. Each point on the plot is labeled for a different $\Lambda$ scale, and corresponds to that particular model being injected. The error bands are the $1\sigma$ and $2\sigma$ errors on the background only estimate.}
+\label{fig:injMm}
+\end{figure}
+
+\section{Linearity from Theoretical Variations}
+\label{sec:pdfInjections}
+
+This signal injection studies used to establish the linearity of the S+B model follow a similar pattern: different contact interactions are injected onto an simulation background.
+These studies use the nominal background estimate which makes an implicit assumption about the background form.
+To remove this bias, this study checks that the linearity measured from each theoretical variation does not significantly differ from the linearity of the nominal background.
+A large $\Lambda=18$ TeV injected signal was used. This creates signal plus background templates where the background is varied under different theoretical assumptions. 
+The figure of merit for the linearity is the \emph{distortion}, $D$, which is defined as the difference between the expected yield from a fit and simulated yield from each systematically varied sample.
+The difference between nominal $D$ and the $D$ measured on the varied sample is considered. This is chosen to isolate the impact on the linearity coming from the variation. The distributions of the measured distortions are shown in Figure \ref{fig:pdfLinEe}.
+
+\begin{figure}[H]
+\centering
+\begin{overpic}[width=0.24\textwidth]{figures/injections/pdfLinearity/const-LL-ee.pdf}\put(50,-10){\textrm{(a)}}\end{overpic}
+\begin{overpic}[width=0.24\textwidth]{figures/injections/pdfLinearity/dest-LL-ee.pdf}\put(50,-10){\textrm{(b)}}\end{overpic}
+\begin{overpic}[width=0.24\textwidth]{figures/injections/pdfLinearity/const-LL-mm.pdf}\put(50,-10){\textrm{(c)}}\end{overpic}
+\begin{overpic}[width=0.24\textwidth]{figures/injections/pdfLinearity/dest-LL-mm.pdf}\put(50,-10){\textrm{(d)}}\end{overpic}
+\vspace{1em}
+\caption{Distributions of the distortion of the background estimate for constructive \ee (a), destructive \ee (b), (c) constructive \mm, and (d) destructive \mm. Shown is the significance of the distortion, where the significance is measured from the background estimate uncertainties added in quadrature. The distribution is centered around the nominal distortion, which has been studied in the previous section. The red dot indicates the nominal distortion at zero.}
+\label{fig:pdfLinEe}
+\end{figure}
+
+

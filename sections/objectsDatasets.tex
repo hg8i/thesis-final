@@ -1,0 +1,128 @@
+\chapter{Datasets and Objects}\label{sec:objectsDatasets}
+
+The two studies described in this thesis are based on data recorded during Run~2 between 2015 and 2018.
+This chapter lists the details of these datasets in Section \ref{sec:physData}, as well the simulated datasets used in Section \ref{sec:physSim}.  
+Section \ref{sec:physObjects} describes the physical objects reconstructed from the events in these datasets.
+
+
+\section{Recorded Dataset}\label{sec:physData}
+
+Both searches use the full dataset collected by ATLAS during the Run~2 of the LHC.
+Only events recorded during good operation of the detector are used.
+The Good Run Lists (GRL) identify the data taking periods during which the data used for analysis was collected.
+Table \ref{tab:GRLs} summarizes the datasets and luminosities for each year.
+
+\begin{table}[H]
+        \caption{Data luminosities for events delivered to ATLAS and for events passing the GRL requirement with the corresponding uncertainty, by year\cite{ATLAS-CONF-2019-021}.}
+    \begin{center}\small
+        \begin{tabular}{cr r rr}
+            \toprule
+            Year & Delivered & Recorded [\fb] & Uncertainty [\fb] \\
+            \midrule
+            2015-16 & 42.5 & 36.2 & 0.8 \\
+            2017    & 50.2 & 44.3 & 1.0 \\
+            2018    & 63.4 & 58.5 & 1.2 \\
+            \midrule
+            Total   & 156.1 & 139.0 & 2.4 \\
+            \bottomrule
+        \end{tabular}
+        \label{tab:GRLs}
+    \end{center}
+\end{table}
+
+The luminosity is measured using the ATLAS calorimeters and two dedicated Cherenkov radiation detectors, LUCID2, located 17~m from the interaction point in the A and C sided.
+The collision luminosity is determined on a bunch-by-bunch basis using the signal strength from LUCID2 and the calorimeters.
+The combined luminosity of the Run~2 collisions recorded and passing the GRL requirement is 139.0~fb$^{-1}$$\pm$1.7\% \cite{ATLAS-CONF-2019-021}.
+
+\section{Simulated Datasets}\label{sec:physSim}
+
+Simulated datasets serve a variety of roles in both analyses.
+Both analyses deal with relatively weak mechanisms of signal production and relatively voluminous processes of background production.
+If present, the signal processes contribute to the ensemble of events produced in collisions.
+Simulation is used to quantitatively understand the effect of a signal process.
+The result is a dataset of simulated events produced by a particular mechanism.
+This is useful in modeling the distributions of kinematic variables in signal events in order to carefully select a phase-space in which to search for signal events.
+Signal simulation is also useful to predict the expected multiplicity of signal events.
+Simulation is also used to understand the background processes.
+In the case of the \hmm search, background processes include all production mechanisms in the Standard Model except for those involved in Higgs boson production.
+In the case of the \nr search, background processes are defined more broadly to include any mechanism except for the contact interactions that are the target of the search.
+In each case, simulated background datasets provide insight into the particular production mechanisms expected to contribute to the observed dataset.
+Empirical models are developed and tested on the background datasets.
+
+The simulation relies on a number of input parameters that are known to varying degrees.
+Different values of these parameters leads to different predictions in the simulation, which corresponds to uncertainty in the predictions derived from the simulated datasets.
+The impact of these uncertainties differers between the \hmm and \nr searches, and is described in their respective chapters.
+
+The simulations are produced by a series of programs, as described in Section \ref{sec:phenoSim}.
+The first program is a matrix element Generator, which uses the input of a particular parton density function (PDF).
+Different event generators are available with various strengths and weaknesses.
+The work of this thesis uses samples produced primarily by \sherpa \cite{Gleisberg:2008ta} and \powheg \cite{Alioli:2010xd,Frixione:2007vw}.
+In two instances, \pythia \cite{pythia8} and \madgraph \cite{Alwall:2014hca} are selected to produce signal events.
+The parton distribution function also varies depending on the process being simulated.
+Most simulated datasets are produced with NNPDF3.0NLO \cite{Ball:2014uwa}, and CT10 \cite{ct10}.
+In some cases, variations such as NNPDF23LO \cite{Ball:2012cx} or NNLOPS \cite{Hamilton:2013fea} are used.
+When unavoidable, PDF4LHC \cite{Butterworth:2015oua} is used.
+Next are programs that calculate the parton shower and hadronization.
+In nearly all cases, \pythia and \evtgen are used to compute these effects.
+
+The simulations are classed based on the precision to which the matrix element (ME) is calculated.
+The exact evaluation of the ME corresponds to the evaluation of an infinite perturbative expansion of the Hamiltonian that governs the transition of the initial state to the final state.
+This expansion can be made in terms of the coupling strengths of the interactions involved.
+The degree of precision of the simulation corresponds to the number of terms, equivalently Feynman diagrams, included in the perturbative expansion.
+This begins with the leading order (LO) calculation, which includes the set of Feynman diagrams with no closed loops.
+Higher order calculations are performed beginning with next-to-leading order (NLO) which includes one-loop diagrams, and next-to-next-to-leading order (NNLO) with two loops.
+The choice of precision depends on both the relative cross-section of the mechanism and how the simulation is to be used.
+Mechanisms with a large cross-section are simulated with to high order to achieve a level of precision in the final prediction of the dataset.
+Mechanisms with a low cross-section can be simulated to lower order and retain a similar level of precision.
+
+The list of simulated datasets used in this work is provided in Table \ref{tab:simulatedDatasets}.
+
+
+\begin{table}[htp]
+\caption{Samples in the top are used in the \nr analysis, while samples in the bottom are used for the \hmm search. The dilepton production via Drell-Yan processes (\ee and \mm) are calculated to NLO precision with additional LO contributions from diagrams with three or four final state jets.}
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l l l l l l l l}
+\toprule
+    & Process           & QCD      & EW       & ME Generator           & PS and Hadronization \\
+\midrule
+\multirow{5}{*}[-1.5em]{\begin{sideways}\nr\end{sideways}}    
+    & Drell-Yan         & NNLO     & NLO      & \powheg, CT10          & \pythia+\evtgen \\ % CTEQ6L1   
+    & Drell-Yan         & LO       &          & \powheg, NDPDF23LO     & \pythia+\evtgen \\ % NNPDF23LO 
+    & $t\overline{t}$   & NLO      &          & \powheg, NDPDF3.0NLO   & \pythia+\evtgen \\ % NNPDF23LO 
+    & Single top        & NLO      &          & \powheg, NDPDF3.0NLO   & \pythia+\evtgen \\ % NNPDF23LO 
+    & Diboson           & NLO      &          & \sherpa, CT10          & \sherpa \\ % CT10              
+\midrule
+\multirow{10}{*}[-1.5em]{\begin{sideways}\hmm\end{sideways}}    
+    & Drell-Yan         & NLO      & NLO      & \sherpa, NNPDF30NNLO   &                            \\
+    & $t\overline{t}$   & NNLO     &          & \powheg, NNPDF3.0LO    & \pythia+\evtgen            \\
+    & Single top        & NNLO     &          & \powheg, NNPDF3.0LO    & \pythia+\evtgen            \\
+    & Diboson           & NLO      &          & \sherpa, NNPDF3.0LO    & \pythia+\evtgen            \\
+    & ggH               & NNLO     &          & \powheg, PDF4LHC15     & \pythia+\evtgen            \\
+    & VBF               & NLO      &          & \powheg, NNPDF3.0      & \pythia+\evtgen            \\
+    & $qq/qg\to WH$     & NLO      &          & \powheg, NNPDF3.0      & \pythia+\evtgen            \\
+    & $qq/qg\to ZH$     & NLO      &          & \powheg, NNPDF3.0      & \pythia+\evtgen            \\
+    & $gg   \to ZH$     & LO       & LO       & \powheg, NNPDF3.0      & \pythia+\evtgen            \\
+    & ttH               & NLO      & NLO      & \madgraph, NNPDF3.0LO  & \pythia+\evtgen            \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:simulatedDatasets}
+\end{center}
+\end{table}
+
+% Normalization
+Kinematic variables are calculated from the reconstructed final states in simulated events.
+These variables form probability density distributions that reflect the likelihood of measuring a particular kinematic variable in an event from a given production mechanism.
+Statistical fluctuations become less important as the number of the simulated events increases which makes the distributions more informative.
+In general the event multiplicity in the simulated datasets exceeds that of the observed data by an order of magnitude.
+To represent the observation, the simulated distributions are normalized to match a theoretically predicted cross section.
+For ggF Higgs production simulation this normalization is based on three-loop (N3LO) QCD calculations and NLO EW calculations.
+For other Higgs signals the QCD precision reduced to NNLO \cite{higgsCross}.
+The cross section of Drell-Yan is calculated to NNLO precision.
+The cross section of diboson processes is calculated to NLO precision.
+The \ttbar cross section is available at NNLO precision, while the smaller single-top cross sections are calculated to NLO precision.
+For the purpose of the \nr analysis, after the samples have been normalized to their predicted cross section, a common factor scales all the simulations to match the multiplicity of observed data in a control region. 
+
+\input{sections/experiment-objects.tex}
+

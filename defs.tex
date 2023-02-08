@@ -1,0 +1,285 @@
+% linking and coloring
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+% \usepackage[hidelinks]{hyperref}
+
+
+% \usepackage[margin=1in]{geometry}
+
+
+% List of appendix and centering
+\usepackage{tocloft}
+\newcommand{\listappendicesname}{\begin{centering}~~~~~~~~~~~~List of Appendices\end{centering}}
+\newlistof{appendices}{apc}{\listappendicesname}
+\newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{\thechapter~#1}}
+\newcommand{\newappendix}[1]{\chapter{#1}\appendices{#1}}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Huge\bfseries}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\Huge\bfseries}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\Huge\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+
+\newcommand{\threestars}{\begin{center}$ {\bullet}\,{\bullet}\,{\bullet} $\end{center}}
+
+
+\usepackage{setspace}
+\usepackage{upgreek}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{slashed}
+\usepackage{mathalfa}
+\usepackage{float}
+\usepackage{overpic}
+\usepackage{afterpage}
+\usepackage{pdfpages}
+
+
+% \usepackage{natbib}
+% \usepackage{unsrt}
+
+\usepackage[section]{placeins}
+
+
+
+\usepackage{physics}
+\usepackage{braket} % include after physics
+\usepackage{xspace}
+
+\usepackage{multirow}
+\usepackage{indentfirst}
+
+\usepackage[margin=1.5cm]{caption}
+\usepackage{subcaption}
+% \usepackage[splitrule]{footmisc}
+\interfootnotelinepenalty=10000
+
+
+
+\def\code#1{\texttt{#1}}
+
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{.}{#1} }
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{makecell}
+
+
+
+
+% feynman diagrams
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.0.0}
+\usepackage{rotating}
+
+
+\newcommand*{\titleName}{Searches for the Rare Decay of the Higgs Boson to Two Muons and for New Physics in Dilepton Final States with the ATLAS Experiment}
+
+% particles
+\newcommand*{\pp}{\ensuremath{pp}\xspace}
+\newcommand*{\mm}{\ensuremath{\mu\mu}\xspace}
+\newcommand*{\tautau}{\ensuremath{\tau\tau}\xspace}
+\newcommand*{\ee}{\ensuremath{ee}\xspace}
+\let\llt\ll % booya!
+\renewcommand*{\ll}{\ensuremath{\ell\ell}\xspace}
+\newcommand*{\W}{\ensuremath{W^\pm}\xspace}
+\newcommand*{\Wp}{\ensuremath{W^+}\xspace}
+\newcommand*{\Wm}{\ensuremath{W^-}\xspace}
+\newcommand*{\Z}{\ensuremath{Z}\xspace}
+\newcommand*{\jpsi}{\ensuremath{J/\psi}\xspace}
+\newcommand*{\vhmm}{\ensuremath{V(H\to\mu\mu)}\xspace}
+\newcommand*{\vhllmm}{\ensuremath{VH\to\ell(\ell/\nu)\mu\mu}\xspace}
+\newcommand*{\mh}{\ensuremath{m_{\text{H}}}\xspace}
+\newcommand*{\muu}{\ensuremath{m_{\mu\mu}}\xspace}
+\newcommand*{\mee}{\ensuremath{m_{ee}}\xspace}
+\newcommand*{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
+\newcommand*{\qqll}{\ensuremath{q\overline{q}\ell^+\ell^-}\xspace}
+\newcommand*{\llqq}{\ensuremath{\qqll}\xspace}
+\newcommand*{\e}{\ensuremath{e}\xspace}
+\newcommand*{\m}{\ensuremath{\mu}\xspace}
+\newcommand*{\h}{\ensuremath{H}\xspace}
+\newcommand*{\pt}{\ensuremath{p_\text{T}}\xspace}
+\newcommand*{\vecpt}{\ensuremath{\vec{p}_\text{T}}\xspace}
+\newcommand*{\plong}{\ensuremath{p_\text{L}}\xspace}
+\newcommand*{\httt}{\ensuremath{H_\text{T}}\xspace}
+\newcommand*{\mt}{\ensuremath{E_\text{T}}\xspace}
+\newcommand*{\et}{\ensuremath{E_\text{T}}\xspace}
+\newcommand*{\met}{\ensuremath{E_T^\mathrm{miss}}\xspace}
+\newcommand*{\sqrts}{\ensuremath{\sqrt{s}}\xspace}
+\newcommand*{\sqrths}{\ensuremath{\sqrt{\hat{s}}}\xspace}
+
+\newcommand*{\zhat}{\ensuremath{\hat{z}}\xspace}
+\newcommand*{\xhat}{\ensuremath{\hat{x}}\xspace}
+\newcommand*{\yhat}{\ensuremath{\hat{y}}\xspace}
+
+% chiralities
+\newcommand*{\fl}{\ensuremath{f_\text{L}}\xspace}
+\newcommand*{\fr}{\ensuremath{f_\text{R}}\xspace}
+\newcommand*{\flp}{\ensuremath{f'_\text{L}}\xspace}
+\newcommand*{\frp}{\ensuremath{f'_\text{R}}\xspace}
+\newcommand*{\ufl}{\ensuremath{\overline{f}_\text{L}}\xspace}
+\newcommand*{\ufr}{\ensuremath{\overline{f}_\text{R}}\xspace}
+\newcommand*{\uflp}{\ensuremath{\overline{f}'_\text{L}}\xspace}
+\newcommand*{\ufrp}{\ensuremath{\overline{f}'_\text{R}}\xspace}
+
+% mandelstram
+\newcommand*{\shat}{\ensuremath{\hat{s}}\xspace}
+\newcommand*{\uhat}{\ensuremath{\hat{u}}\xspace}
+\newcommand*{\that}{\ensuremath{\hat{t}}\xspace}
+\newcommand*{\qbar}{\ensuremath{\overline{q}}\xspace}
+\newcommand*{\ubar}{\ensuremath{\overline{u}}\xspace}
+\newcommand*{\dbar}{\ensuremath{\overline{d}}\xspace}
+\newcommand*{\pbar}{\ensuremath{\overline{p}}\xspace}
+\newcommand*{\fbar}{\ensuremath{\overline{f}}\xspace}
+\newcommand*{\tbar}{\ensuremath{\overline{t}}\xspace}
+\newcommand*{\bbar}{\ensuremath{\overline{b}}\xspace}
+\newcommand*{\cbar}{\ensuremath{\overline{c}}\xspace}
+\newcommand*{\ttbar}{\ensuremath{t\overline{t}}\xspace}
+\newcommand*{\bbbar}{\ensuremath{b\overline{b}}\xspace}
+
+\newcommand*{\neutralcone}{\ensuremath{\pt^\text{neu20}}\xspace}
+\newcommand*{\ptconeThirty}{\ensuremath{\pt^\text{cone30}}\xspace}
+\newcommand*{\ptcone}{\ensuremath{\pt^\text{cone20}}\xspace}
+\newcommand*{\ptvarconeMuon}{\ensuremath{\pt^\text{varcone30}}\xspace}
+\newcommand*{\ptvarconeElec}{\ensuremath{\pt^\text{varcone20}}\xspace}
+\newcommand*{\etcone}{\ensuremath{\et^\text{topocone20}}\xspace}
+\newcommand*{\xsbr}{\ensuremath{\sigma_\text{visible}\times\text{BR}}\xspace}
+\newcommand*{\acceff}{\ensuremath{\mathcal{A}\times\epsilon_\text{sig}}\xspace}
+\newcommand*{\lam}{\ensuremath{\Lambda}\xspace}
+\newcommand*{\nsig}{\ensuremath{N_\text{sig}}\xspace}
+\newcommand*{\nbkg}{\ensuremath{N_\text{bkg}}\xspace}
+
+% Generators
+\newcommand*{\powheg}{\textsc{Powheg-Box}\xspace}
+\newcommand*{\sherpa}{\textsc{Sherpa}\xspace}
+\newcommand*{\madgraph}{\textsc{MadGraph5}\_aMC@NLO\xspace}
+\newcommand*{\pythia}{\textsc{Pythia}\xspace}
+\newcommand*{\evtgen}{\textsc{EvtGen}\xspace}
+\newcommand*{\geant}{\textsc{Geant4}\xspace}
+\newcommand*{\xgb}{\code{XGBoost}\xspace}
+\newcommand*{\etal}{\emph{et~al.}\xspace}
+
+
+
+
+% statistics
+\newcommand*{\cls}{\ensuremath{\text{CL}_\text{s}}\xspace}
+\newcommand*{\clb}{\ensuremath{\text{CL}_\text{b}}\xspace}
+\newcommand*{\clsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
+\newcommand*{\mus}{\ensuremath{\mu_\text{S}}\xspace}
+\newcommand*{\nss}{\ensuremath{N_\text{ss}}\xspace}
+
+% processes
+\newcommand*{\hmm}{\ensuremath{H\to\mm}\xspace}
+\newcommand*{\nr}{\ensuremath{non-resonant}\xspace}
+
+% units
+\newcommand*{\cms}{\ensuremath{\text{cm}^{-2}\text{s}^{-1}}\xspace}
+\newcommand*{\fb}{\ensuremath{\text{fb}^{-1}}\xspace}
+\newcommand*{\um}{\ensuremath{\mu\text{m}}\xspace}
+\newcommand*{\us}{\ensuremath{\mu\text{s}}\xspace}
+
+% variables
+
+\newcommand*{\half}{\ensuremath{\frac{1}{2}}\xspace}
+\newcommand*{\as}{\ensuremath{\alpha_s\xspace}}
+\newcommand*{\reals}{\ensuremath{\mathbb{R}}\xspace}
+\newcommand*{\ident}{\ensuremath{\mathbb{I}}\xspace}
+\newcommand*{\nxn}{\ensuremath{n\times n}\xspace}
+
+\newcommand*{\vtheta}{\ensuremath{\vec{\theta}}\xspace}
+\newcommand*{\poincare}{Poincar\'e\xspace}
+\renewcommand*{\check}{{\color{red}[check]}\xspace}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% \usepackage[showframe, textwidth = 15cm, nomarginpar, noheadfoot]{geometry}
+\usepackage{mathtools}
+\newcommand{\shortnote}[1]{ &  & \text{\smal4l\llap{#1}}}
+\newcommand{\longeqnote}[1]{& & \\ \notag  &  &  &  &  & \text{\small\llap{#1}}}
+
+\newcommand{\centered}[1]{\begin{tabular}{l} #1 \end{tabular}}
+
+% statistics
+\newcommand*{\nobs}{\ensuremath{N_\mathrm{text}}\xspace}
+
+
+\newcommand*{\POWHEG}{\textsc{Powheg}\xspace}
+\newcommand*{\POWHEGV}[1]{\textsc{Powheg}~#1\xspace}
+\newcommand*{\POWHEGBOX}{\textsc{Powheg-Box}\xspace}
+\newcommand*{\POWHEGBOXV}[1]{\textsc{Powheg-Box}~#1\xspace}
+\newcommand*{\PYTHIA}{\textsc{Pythia}\xspace}
+\newcommand*{\PYTHIAV}[1]{\textsc{Pythia}~#1\xspace}
+\newcommand*{\SHERPA}{\textsc{Sherpa}\xspace}
+\newcommand*{\SHERPAV}[1]{\textsc{Sherpa}~#1\xspace}
+\newcommand*{\GEANT}{\textsc{Geant}\xspace}
+
+
+
+% ############################################################
+% Commands for Ensemble Appendix
+% ############################################################
+\newcommand*{\spur}{\ensuremath{\sigma^\mathrm{spur}}\xspace}
+\newcommand*{\func}{\ensuremath{f(\mll)}\xspace}
+\newcommand*{\truth}{\ensuremath{f^\mathrm{truth}(\mll)}\xspace}
+\newcommand*{\realsBkg}{\ensuremath{\mathbb{R}^{\dbkg}}\xspace}
+\newcommand*{\realsSyst}{\ensuremath{\mathbb{R}^{\dsyst}}\xspace}
+\newcommand*{\eeReal}{\ensuremath{\mathbb{R}}\xspace}
+\newcommand*{\map}{\ensuremath{h(\realsBkg)\mapsto\eeReal}\xspace}
+% mapping theta->bkg shape
+\newcommand*{\mapThetaToBkg}{\ensuremath{g(\nps|\systs)\mapsto\realsBkg}\xspace}
+\newcommand*{\thetaToBkg}{\ensuremath{g(\nps|\systs)}\xspace}
+\newcommand*{\eeDd}{\ensuremath{\Delta}\xspace}
+\newcommand*{\deltaTheta}{\ensuremath{\Delta^\theta}\xspace}
+\newcommand*{\deltaD}{\ensuremath{\Delta^D}\xspace}
+\newcommand*{\deltaDSquared}{\ensuremath{(\Delta^D)^2}\xspace}
+\newcommand*{\deltaThetaSquared}{\ensuremath{(\Delta^\theta)^2}\xspace}
+\newcommand*{\np}{\ensuremath{\theta_i}\xspace}
+\newcommand*{\npmeasured}{\ensuremath{\hat{\theta_i}}\xspace}
+\newcommand*{\npprob}{\ensuremath{G(\theta_i)}\xspace}
+\newcommand*{\nps}{\ensuremath{\vec{\theta}}\xspace}
+% Dimensions
+\newcommand*{\ddata}{\ensuremath{N_\mathrm{data}}\xspace}
+\newcommand*{\dbkg}{\ensuremath{N_\mathrm{bkg}}\xspace}
+\newcommand*{\dsyst}{\ensuremath{N_\mathrm{syst}}\xspace}
+% mean and std
+\newcommand*{\meanD}{\ensuremath{\mathrm{E}[\deltaD]}\xspace}
+\newcommand*{\meanDSquared}{\ensuremath{\mathrm{E}[(\deltaD)^2]}\xspace}
+\newcommand*{\meanTheta}{\ensuremath{\mathrm{E}[\deltaTheta]}\xspace}
+\newcommand*{\meanThetaSquared}{\ensuremath{\mathrm{E}[(\deltaTheta)^2]}\xspace}
+\newcommand*{\stdD}{\ensuremath{\mathrm{var}[\deltaD]}\xspace}
+\newcommand*{\stdTheta}{\ensuremath{\mathrm{var}[\deltaTheta]}\xspace}
+% # datasets
+\newcommand*{\template}{\ensuremath{\vec{D}}\xspace}
+\newcommand*{\mc}{\ensuremath{\vec{D}^\mathrm{MC}}\xspace}
+\newcommand*{\data}{\ensuremath{\vec{D}^\mathrm{data}}\xspace}
+\newcommand*{\truthdata}{\ensuremath{\vec{D}^\mathrm{truth}}\xspace}
+\newcommand*{\truthguess}{\ensuremath{\vec{X}^\mathrm{truth}}\xspace}
+\newcommand*{\syst}{\ensuremath{\vec{D}^\mathrm{syst}_i}\xspace}
+\newcommand*{\systUp}{\ensuremath{\vec{D}^\mathrm{+syst}_i}\xspace}
+\newcommand*{\systDn}{\ensuremath{\vec{D}^\mathrm{-syst}_i}\xspace}
+\newcommand*{\systs}{\ensuremath{\{\vec{D}^\mathrm{syst}\}}\xspace}
+% analysis functions
+\newcommand*{\eeNbkg}{\ensuremath{F(\vec{D})}\xspace}
+\newcommand*{\nbkgmc}{\ensuremath{F(\mc)}\xspace}
+\newcommand*{\nbkgdata}{\ensuremath{F(\data)}\xspace}
+\newcommand*{\nbkgtruth}{\ensuremath{F(\truthdata)}\xspace}
+
+\newcommand*{\gsm}{\ensuremath{\text{G}_\text{SM}}\xspace}
+
+\newcommand*{\feynx}{\ensuremath{x}\xspace}
+
+\newcommand*{\first}{1\textsuperscript{st}\xspace}
+\newcommand*{\second}{2\textsuperscript{nd}\xspace}
+\newcommand*{\third}{3\textsuperscript{rd}\xspace}

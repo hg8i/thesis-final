@@ -1,0 +1,312 @@
+\chapter{Introduction}
+
+% Experimental observations are the foundations of the our knowledge of these building blocks.
+% The most complete mathematical description of these building blocks based, on experimental knowledge, is the Standard Model of particle physics.
+
+
+% Particles
+The Universe consists of particles, the space they inhabit, and the interactions between them.
+Fundamental particles are the most basic unit of matter, with observable properties including mass, charge couplings, spin, and lifetime.
+Particles with integer spins are called bosons, while particles with half-integer spins are called fermions.
+Particles may be composite, such as the proton, or elementary, as is assumed for the electron.
+Particles and the interactions between them together form the physical world.
+The most complete mathematical description of these building blocks, based on experimental knowledge, is the Standard Model (SM) of particle physics.
+This theory has evolved and expanded since original development in 1974, with each iteration encompassing the consensus view of the physics community.
+% The Standard model describes particles at the most fundamental, with no internal substructure.
+
+% Added by Bing
+This dissertation presents research on the nature of particle physics conducted at the Large Hadron Collider with the ATLAS experiment. 
+The basic principles of particle physics are introduced in this chapter, followed by the particular research topics of this thesis.
+
+\section{Particles, Space, and Interactions}
+
+% Fermions
+Each type of fermion exists in a pair, consisting of \emph{particles} and \emph{anti-particles} with equal mass and opposite electric charges.
+The fermions are further divided into leptons with integer electric charge and quarks with fractional electric charges.
+There are three \emph{flavors} of charged leptons. In ascending mass these are the electron, the muon, and the tauon.
+There are also three flavors of neutral leptons, corresponding to each charged lepton flavor, called neutrinos.
+Recent measurements provide an indication that the neutrino masses are ordered similarly to the order of charged leptons \cite{kamio}.
+The leptons are arranged into three \emph{generations} based on the approximate conservation of the number of leptons minus the number of anti-leptons belonging to each generation in a given interaction.
+There are six quarks, divided into up-type quarks and down-type quarks.
+The up-type quarks are the up, charm, and top quarks.
+The down-type quarks are the down, strange, and bottom quarks.
+Like the leptons, up- and down-type quarks are paired together in generations of ascending mass.
+Quarks commonly exist in bound-states consisting of two (meson) and three (baryon) quarks.
+% Bosons
+The bosons mediate forces between the particles.
+The most familiar boson, the photon, mediates the electromagnetic force between charged particles.
+The gluons carry the strong nuclear force, binding quarks inside multi-quark composite particles called hadrons.
+The \W and \Z bosons carry the weak nuclear force, responsible for nuclear beta decays.
+These bosons are called \emph{vector gauge bosons} because of their association with gauge groups.
+Finally, the recently discovered scalar particle, the Higgs boson, mediates a momentum exchange between massive particles.
+% Summary
+These particles are summarized in Table \ref{tab:particles}.
+
+\begin{table}[htp]
+\begin{center}
+\caption{Particles of the Standard Model listed along with their symbol and several properties \cite{pdg2018}. ($^*$ The graviton is not considered part of the SM.)}
+{\footnotesize
+\begin{tabular}{c c l c l c c c c c c}
+\toprule
+& & Name & Symbol & \multicolumn{1}{c}{Generation} & Charge & Spin & Mass [MeV/c$^2$] \\
+\midrule
+\multirow{12}{*}[0em]{\begin{sideways}Fermions\end{sideways}} & \multirow{6}{*}[0em]{\begin{sideways}Leptons\end{sideways}} & Electron & \e & ~~~~~~\first & -1 & 1/2 & 0.511 \\
+& & Muon   			  & \m         & ~~~~~~\second & -1 & 1/2 & 105.7 \\
+& & Tau    			  & $\tau$     & ~~~~~~\third  & -1 & 1/2 & 1776.8 \\
+& & Electron Neutrino & $\nu_e$    & ~~~~~~\first  & 0  & 1/2 &  $<2\times10^{-6}$\\
+& & Muon Neutrino     & $\nu_\mu$  & ~~~~~~\second & 0  & 1/2 &  $<2\times10^{-6}$\\
+& & Tau Neutrino      & $\nu_\tau$ & ~~~~~~\third  & 0  & 1/2 &  $<2\times10^{-6}$\\
+\cline{2-8}
+& \multirow{6}{*}[0em]{\begin{sideways}Quarks\end{sideways}} & Up & $u$ & ~~~~~~\first & 2/3 & 1/2 &  $2.2\pm0.5$ \\
+& & Charm             & $c$ & ~~~~~~\second &  2/3 & 1/2 &  $1.275\pm0.035\times10^{3}$ \\
+& & Top               & $t$ & ~~~~~~\third  &  2/3 & 1/2 &  $173.0\pm0.4\times10^{3}$ \\
+& & Down              & $d$ & ~~~~~~\first  & -1/3 & 1/2 &  $4.7\pm0.5$ \\
+& & Strange           & $s$ & ~~~~~~\second & -1/3 & 1/2 &  $95\pm9$ \\
+& & Bottom            & $b$ & ~~~~~~\third  & -1/3 & 1/2 &  $4.18\pm0.04\times10^{3}$ \\
+\midrule
+\multicolumn{2}{c}{\multirow{6}{*}[0em]{\begin{sideways}Bosons\end{sideways}}} & Photon & $\gamma$ && 0 & 1 & $<1\times10^{-24}$ \\
+& & Gluon         & $g$ & & 0 & 1 & 0 \\
+& & Z boson       & \Z  & & 0 & 1 & $91.1876\times 10^3$ \\
+& & W boson       & \W  & & $\pm$1 & 1 & $80.39\times 10^3$ \\
+& & Higgs boson   & \h  & & 0 & 0 & $125.18\times 10^3$ \\
+& & Graviton$^*$  & $g$ & & 0 & 2 & $<1\times 10^{-38}$ \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:particles}
+\end{center}
+\end{table}
+
+While the Standard Model has been successful in the description of particles and their interactions, it is an incomplete description of the Universe.
+The most visible shortcoming is the lack of a description of gravity; the quantum effects of gravity are expected to manifest themselves at energy scales that are inaccessible to modern particle experiments.
+Other absences in the theory include particles that explain the phenomena of dark matter and dark energy.
+The theory also lacks a single broadly accepted explanation for the mass of neutrinos, although several plausible mechanisms have been proposed \cite{jw2019}.
+Ongoing experiments are investigating discrepancies between predicted and observed quantities, such as the anomalous magnetic moment of the muon.
+Despite these absences the present version of the Standard Model is a remarkably predictive theory.
+
+% \section{Spacetime}
+
+Spacetime is the four-dimensional manifold that particles inhabit at a microscopic scale.
+Three of these are spacial dimensions, and one is time: 3+1-dimensional spacetime.
+The special theory of relativity describes the distinction between the dimensions: rotations from one spacial dimension to another take place in Euclidean space, while rotations from a spatial dimension into time take place in a hyperbolic space.
+None of this should be taken at face value, or as posed by Ehrenfest in 1917, \emph{in what way does it become manifest in the fundamental laws of physics that space has three dimensions?}
+One point to consider is the stability of elliptical orbits in a two-body system.
+If the number of space dimensions exceeds three, then stable circular orbits under gravity are impossible.
+This result holds for the quantum orbits of electrons around a nucleus as well.
+Therefore if one is to find oneself in a universe with atoms, chemistry, and planets, then the number of spatial dimensions in which these take place is limited to three~\cite{ehrenfest}.
+This limit on space dimensions suggests the question: why one time dimension?
+In the case of multiple time dimensions, solutions to partial differential equations such as those that describe the laws of physics are ambiguous.
+This is analogous to the situation in 3+1-dimensional spacetime wherein predictions outside the lightcone are impossible.
+It has been argued by Tegmark that this precludes observers, as the lack of predictability renders reality incomprehensible~\cite{tegmark-time}.
+
+
+% \section{Interactions}
+Until the discovery of the Higgs boson, there were four known fundamental forces through which particles might interact: gravity, the electromagnetic force, the weak nuclear force, and the strong nuclear force.
+An interaction between two or more particles entails the exchange of momentum between the participants.
+For each force, the momentum exchange is mediated by a boson.
+Gluons mediate the strong nuclear force.
+The weak nuclear force is mediated by the \Wp, \Wm, and \Z bosons.
+Photons mediate the electromagnetic force.
+It is expected that gravity is mediated by a hypothetical particle called a graviton; however, this has not been observed. The gravitational interaction strength is more than an order of 40 magnitude smaller compared to the electromagnetic interaction. At the microscopic level, the interaction of the gravity could be ignored and is not included in the Standard Model.
+
+In 2012, the ATLAS and CMS experiments at the Large Hadron Collider at CERN discovered the Higgs boson. Like the vector bosons associated with the four canonical forces, the scalar particle, Higgs boson, mediates a momentum exchange between particles. The interactions with fermions are not universal, proportional to fermion's mass.
+
+\begin{table}[htp]
+\begin{center}
+\caption{Interactions in experienced by particles. The strength of the force depends on the energy scale at which it is measured, so approximate values are given \cite{robinson}. In the case of Gravity, which is not included in the Standard Model, the coupling strength is assumed to be on the order of the gravitational constant \cite{donogue}.}
+{\normalsize
+\begin{tabular}{c c l c c c c c c c}
+\toprule
+Interaction            & Force Carrier &  Relative Strength   & Range [m]  \\
+\midrule
+Strong           & Gluon      &  1           & $10^{-15}$ \\
+Electromagnetic  & Photon     &  $10^{-2}$   & $\infty$   \\
+Weak             & \W, \Z     &  $10^{-5}$   & $10^{-18}$ \\
+Higgs            & Higgs      &  $<10^{-5}$  & $10^{-19}$ \\
+Gravity          & Graviton   &  $ 10^{-39}$ & $\infty$   \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:forces}
+\end{center}
+\end{table}
+
+\section{Energies and Measures}
+
+Enormous energy concentrations are required to enable the production of massive particles and facilitate rare interactions.
+In order to study these processes, it is convenient to define units of measurements using energy as the basic unit to describe the particle mass, momentum, lifetime, and travel distance.
+
+Energies are measured in units of \emph{electron-volts}, eV.
+This is equal to the energy required to move an electron through one volt of electric potential.
+One eV is a small amount of energy, equivalent the amount needed to move a single electron from one terminal of a AA battery to the other.
+In the scope of discovered particles and interactions, eV are often presented along with metric prefixes.
+One mega-electronvolt (MeV) is one million eV, and is the energy scale reached by the earliest circular particle accelerators with fixed magnetic fields called cyclotrons.
+One giga-electronvolt (GeV) is one billion eV, and became accessible with the development of synchrotron accelerators that gradually increased their fields to reach higher energies.
+One tera-electronvolt (TeV) is one trillion eV.
+The stack of AA batteries required to accelerate an electron to 1 TeV would reach from Earth to Mars at its closest approach.
+Although the Tevatron at Fermilab came close, the TeV scale was first reached at the Large Hadron Collider (LHC) at CERN.
+The energy at the LHC subsequently accelerated protons to energies of 7~TeV.
+The particular energy scales of interest in this thesis range from tens of GeV to tens of TeV.
+
+Several quantities are useful in describing interactions between particles: energy, mass, momentum, distance, and time.
+The unit of eV already describes quantities of energy.
+In standard international (SI) units, energy is measured in units of joules (J) equal to kg$\frac{\text m^2}{\text s^2}$.
+Mass is, therefore, expressible as energy divided by velocity squared.
+A convenient velocity to use is the speed of light, $c$.
+In this case, mass is expressed in units of GeV/$c^2$.
+Likewise, momentum, which is measured in SI units as kg$\frac{\text m}{\text s}$, can be expressed in units of GeV/$c$.
+Distance and time can be expressed with the aid of the reduced Planck's constant $\hbar=6.58\times10^{-25}~$GeV$\cdot$s.
+Using $\hbar$, distance is measured in units of $\hbar c/$GeV, and time is measured in units of $\hbar/$GeV.
+These are referred to as \emph{Planck units} and are commonly used throughout this thesis along with SI units following the field's standard practice.
+In cases where their presence can be inferred from the quantity, the SI units are replaced such that the constants $\hbar$ and $c$ have numerical values of 1, leaving powers of GeV.
+These units are summarized in Table \ref{tab:units}.
+
+\begin{table}[htp]
+\caption{Description of the units used to describe dimensions in this thesis. Each row lists equivalent quantities.}
+\begin{center}
+\begin{tabular}{l l l l l l}
+\toprule
+Dimension & SI Units &  Planck Units & Natural Units \\
+          &          &               & $c=1$, $\hbar = 1$ \\
+\midrule
+Energy    &    1.602$\times10^{-10}$J               & ~~~~GeV            & ~~~~GeV \\
+Mass      &    1.783$\times10^{-27}$kg              & ~~~~GeV/$c^2$      & ~~~~GeV \\
+Momentum  &    5.344$\times10^{-19}$kg$\cdot$m/s    & ~~~~GeV/$c$        & ~~~~GeV \\
+Distance  &    1.973$\times10^{-16}$m               & ~~~~$\hbar c/$GeV  & ~~~~GeV$^{-1}$ \\
+Time      &    6.582$\times10^{-25}$s               & ~~~~$\hbar/$GeV    & ~~~~GeV$^{-1}$ \\
+\bottomrule
+\end{tabular}
+\label{tab:units}
+\end{center}
+\end{table}
+
+The probability that two marbles rolled towards each other will collide is proportional to their respective cross-sectional areas, called cross-sections.
+Likewise, the probability of a particular interaction between particles is measured in units of area.
+The unit \emph{barn} is defined such that 1b=$10^{-28}\text m^2$.
+It was named during the Manhattan Project by Marshall Holloway and C. P. Baker; the two rejected the idea of naming the unit after John Manley due to the ``use of the term for purposes other than the name of a person'' \cite{holloway}.
+As the progenitors remark, the barn is quite a large area to describe particle interactions.
+Therefore prefixed versions like picobarn ($1\text{pb}=10^{-12}$b) and femptobarn ($1\text{fb}=10^{-15}$b) are commonly used in colliding beam experiments.
+The barn is essentially an SI unit. If it were to be expressed in the natural units of Table \ref{tab:units}, it would be approximately equal to $2568\frac{\hbar^2 c^2}{\text{GeV}^2}$.
+
+% Symbols
+Throughout this thesis numerous quantities are calculated from observations.
+Perhaps the most central quantity is \emph{invariant-mass}, defined as the squared energy minus the squared momentum of a system.
+For a system containing a single particle, the invariant-mass measured in any inertial reference frame of motion is identical to the particle's mass measured at rest.
+This thesis is primarily concerned with systems of two component particles, such as the dielectron and dimuon systems.
+In such systems the energy, $E$ is defined by the scalar sum of the components' energy and the momentum, $\vec{p}$, as the vectorial sum.
+The invariant-mass of dielectron, dimuon, or dilepton systems is denoted as \mee, \muu, or \mll depending on the context.
+Other common quantities refer to transverse measurements perpendicular the path of colliding beams, \zhat.
+The first is \emph{transverse momentum}, \vecpt, which is a 2-vector defined as a system's momentum perpendicular \zhat.
+The magnitude of \vecpt is labeled \pt.
+Other transverse quantities include \emph{transverse mass}, $\mt\equiv \sqrt{E^2-p_z^2}$, and the vectorial \emph{transverse energy}, $\vec{E}_\text{T}\equiv=E\frac{\vec{p}_\text{T}}{|\vec{p}|}$.
+
+\section{Two Analyses}
+% ATLAS and data
+This thesis presents two studies based on data collected by the ATLAS experiment at the Large Hadron Collider based at CERN.
+These studies analyze data recorded from collisions of proton beams with a center-of-mass energy of $\sqrt{s}=13$~TeV.
+Each collision of interest, or event, is recorded and studied in order to extract information about the underlying interactions involved with the collision. 
+The first study is concerned with the predicted interaction of the Higgs boson with pairs of muons.
+The second study searches for enhancements in the production of energetic pairs of leptons (dileptons) as predicted by extended theories beyond Standard Model. 
+
+The unifying theme of these analyses is their focus on the production of leptons in their final state.
+In both cases the final discriminant variable, from which a measurement is extracted, is the invariant-mass of a dilepton pair. 
+The similarity ends here, with different physics goals and theoretical models distinguishing each effort.
+
+\subsection{Search for the Higgs decay to Two Muons}
+% \cite{jw2019}
+The first study presented in this thesis relates to the Higgs boson.
+The Higgs boson was discovered in 2012 by the ATLAS and CMS collaborations \cite{atlashiggs,cmshiggs}.
+This discovery provided the impetuous for subsequent study of the new particle.
+A concerted effort has been made to measure the properties of the Higgs boson, with a particular focus on measuring its interactions with the rest of the Standard Model particles.
+The first interactions were measured using the Higgs coupling to the gauge bosons and the heaviest fermions.
+This work is aided by the relatively large coupling to heavier particles than to lighter particles.
+At the time of writing, the lightest particle for which there is evidence of its direct coupling to the Higgs is the tau lepton ($m_\tau=1.8$~GeV).
+
+The first focus of this thesis is to search for a presently unobserved interaction of the Higgs boson with muons.
+This interaction is interesting from two perspectives.
+First, unlike previously measured Higgs interactions, this coupling involves second generation fermions.
+This is important as a test of Higgs properties with a new sector of particles.
+Second, this interaction is produces fermion mass and is consequently an important property of the muon. 
+The muon, with a mass of $m_\mu=0.1$~GeV, is a relatively light fermion. As a result, the strength of its coupling to the Higgs boson is relatively weak.
+
+% Previous work.
+The search for evidence of the \hmm process has attracted significant attention since the Higgs discovery.
+Despite the efforts of both the ATLAS and CMS collaborations, it has yet to be detected with a significance meeting the threshold of 3$\sigma$.
+These searches focuses on the decay of the Higgs boson to a muon/anti-muon pair (\hmm).
+They consider events that produce two oppositely charged muons in their final state.
+The previous work by both collaborations has investigated partial datasets produced before the completion of Run~2.
+These studies set upper limits on the strength of the interaction, but are not sensitive enough to report significant evidence \cite{atlasHmm36,cmsHmm35}.
+
+The study presented in this thesis offers an iteration on these past efforts, as well as the first examination of the full Run~2 dataset.
+A major challenge faced in this analysis is the separation of signal events producing a Higgs boson from background events that lack a Higgs.
+Several strategies are employed that distinguish this iteration from prior results.
+The first improvement is to expand the scope of the analyzed data to include Higgs bosons produced by previously unconsidered processes.
+The most significant of these is ``Higgs produced in association with a vector boson'' (VH); this mechanism produces a vector boson in addition to the Higgs.
+The additional vector boson is useful to help discriminate the VH process from background processes.
+A new categorization scheme is employed to study these events.
+Many of the event topologies produced by these new production mechanisms have never been studied before.
+A second improvement is in the use of multivariate discriminants to label events as signal-like or background-like. 
+The type of discriminant used is an ensemble of decision trees, called a \emph{boosted decision tree}, that categorize events based on quantities measured by the detector.
+This iteration of the analysis expands the use of multivariate discriminants and introduces robust model validation techniques to constrain biases introduced by their use.
+
+For each event that is considered, the invariant-mass of the Higgs candidate dimuons is calculated based on measured energies and momenta of selected two muons.
+These form several spectra of invariant-mass, with each spectrum corresponding to a particular selection of events.
+Background production mechanisms produce a monotonically decreasing spectrum, while events produced by a \hmm process produce a narrow resonant shape in the spectrum.
+Statistical tests are performed to measure the size and significance of this resonance above the smoothly falling background.
+
+The results of this analysis are significant for two reasons.
+First, they represent the first observations of phase spaces related to the newly considered Higgs production mechanisms.
+Second, they represent the complete result for \hmm using the ATLAS Run~2 dataset.
+Together this an analysis provides a blueprint for subsequent studies based on anticipated data from a future Run~3.
+The results will also be combined with other studies of the Higgs boson to produce a more complete understanding of the boson's properties.
+
+\subsection{Search for Non-resonant Signatures and Contact Interactions}
+The second study presented in this thesis searches for the production of dileptons beyond the Standard Model prediction.
+This strategy stands in contrast to the search for \hmm, which targets a signal predicted by the SM.
+The analysis searches for broad \emph{non-resonant} phenomena in the dilepton invariant-mass spectrum without constraining the specific source of the production.
+The target of this study is distinguished from the narrow spectral resonances, such as those searched for in the \hmm analysis.
+
+A wide variety of new physics models predict non-resonant phenomena.
+A particularly interesting group of theories are contact interactions; these describe the effective behavior of new energetic interactions at a relatively low energy.
+These new interactions can be facilitated by a yet-undiscovered heavy boson.
+Contact interactions may also be an indication of unexpected sub-structure within fermions.
+For these varied reasons, contact interactions have attracted substantial experimental interest for decades \cite{eichten,zeusCi,alephCi}.
+
+The search presented in this thesis expands on previous results by the ATLAS collaboration \cite{EXOT-2016-05,EXOT-2015-07,EXOT-2013-19,EXOT-2012-17}.
+It is carried out in two channels: a dielectron channel and a dimuon channel.
+The final discriminant variable is the dilepton invariant-mass in each respective channels.
+The search focuses on the highest mass events in the dilepton invariant-mass spectra.
+As a result, the focus of the analysis is the description of the spectrum tails and the associated uncertainties of those descriptions.
+
+As in the case of the search for \hmm, this study benefits from the unprecedented size of the full Run~2 dataset.
+Further improvements offer a dramatic departure from prior efforts.
+A new method is introduced to describe the expected invariant-mass spectrum based on a functional form fit to the observed data in a low invariant-mass control region.
+This function is then extrapolated to higher invariant-mass to describe the background. 
+This novel background model necessitated the development of new types of systematic uncertainty.
+
+Perhaps the most impactful development of this analysis is the identical treatment of events above a certain invariant-mass thresholds.
+These are counted without reference to their energy.
+As a result, the observed yield of events can be interpreted in terms of a wide variety of signal models that predict differently shaped contributions to the dilepton invariant-mass spectra.
+A detailed comparison of the sensitivity expected from including and ignoring the spectral shape found no significant cost to adopting this strategy. 
+
+The observations of the analysis are interpreted both in terms of contact interactions and from a signal model-independent perspective.
+The contact interaction results probe an enormous energy scale at tens of TeV.
+The model-independent results represent the first such results for a non-resonant search in the high-mass spectrum.
+
+% Summary
+\section{Organization}
+
+The topic of this thesis is two studies related to the production of dilepton events.
+Both studies are informed by the theoretical predictions of the Standard Model.
+Furthermore, both are conducted using the data recorded by the ATLAS experiment at the LHC.
+In light of these commonalities, the first chapters of this thesis present the common background for each study.
+Chapter \ref{sec:theory} presents the Standard Model.
+Chapter \ref{sec:experiment} describes the ATLAS experiment, the LHC, and the data collection.
+Chapter \ref{sec:phenomenology} discusses the phenological basis for studying physics at the LHC.
+Chapter \ref{sec:objectsDatasets} describes the details of the datasets used for both studies.
+Next, separate chapters present the specific details of each study.
+Chapter \ref{sec:hmumu} presents the study of the Higgs boson's interaction with muons.
+Chapter \ref{sec:ci} presents the search for contact interactions and related phenomena.
+Finally, Chapter \ref{sec:summary} summarises the results of both studies and discusses the prospect for future work.
+
+

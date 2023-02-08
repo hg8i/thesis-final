@@ -1,0 +1,38 @@
+\section{Statistical Analysis}\label{sec:hmmStat}
+
+This section details the statistical framework used to evaluate various hypotheses given the observed data.
+The basis for the concepts discussed here is more precisely defined in Section \ref{sec:ciStat}.
+The background-only (B-only) model described in Section \ref{sec:hmmBkg} and the signal+background model (S+B) described in Section \ref{sec:hmmSig} can be used to make predictions about the \muu distribution and multiplicity of observed events.
+Each prediction defines a hypothesis whose plausibility may be evaluated, given its agreement with the observation.
+These hypotheses are used for two purposes: measuring significances and setting limits on a parameter of interest (POI).
+A slightly different type of hypothesis is defined for each purpose.
+
+The first type of hypothesis predicts the event multiplicity in the invariant-mass range $\muu\in[120,130]$~GeV where the VH signal is expected to be present.
+The prediction is based on the B-only function described in Equation \ref{eqn:hmmBkgFunc}, normalized to the observed data outside the $[120,130]$~GeV window.
+The integral of the function within $[120,130]$~GeV defines the number of background events $N_b$ predicted with masses in that region.
+The uncertainty on this prediction is $\sigma_\text{b}$ as specified in Table \ref{tab:hmmSigmsB}.
+This hypothesis is a background-only hypothesis without a signal component.
+The likelihood to observe a particular number of events in this region is determined by the PDF given in Equation \ref{eqn:hmmNullLikelihoodNSig}.
+\begin{equation}\begin{split}\label{eqn:hmmNullLikelihoodNSig}\\
+\text{PDF}_\text{b}(\vec{\theta}) =& \text{Pois}((1+\theta_\text{b})\times N_b) \times \text{Gaus}(\theta_\text{b},\sigma_\text{b}) 
+\end{split}\end{equation} 
+The function $\text{Pois}(N_\text{exp})$ is the Poisson probability distributions with medians $N_\text{exp}$.
+The number of expected events is modified by the nuisance parameter $\theta_\text{b}$ that is fit to the observation.
+The Gaussian term provides a constraint on the values that $\theta_\text{b}$ can take, determined by the corresponding uncertainty $\sigma_\text{b}$.
+
+The shape of the PDF is calculated numerically.
+For a given number of observed events, the integral of the PDF for values above the observation is defined as observation's \emph{p-value}.
+The background \emph{significance} of a p-value is defined as the inverse of the cumulative distribution function of the upper tail of the normal distribution.
+Together, the p-value and the significance calculation reflect on the probability of having made a particular observation given the B-only hypothesis.
+If this probability is below an arbitrary threshold, then the B-only hypothesis is said to be incompatible with the observation to that threshold.
+
+The second type of hypothesis predicts the differential \muu shape in the invariant-mass range $\muu\in[110,160]$~GeV.
+First, a B-only hypothesis is defined based on the differential shape of the B-only function.
+Additionally, an S+B hypothesis is defined based on the corresponding shape of the S+B model described in Equation \ref{eqn:hmmSbFunc}.
+The signal strength \mus in the S+B model is the POI and defines a set of S+B hypotheses of varying signal amplitudes.
+In addition to the POI signal strength \mus, the spurious signal uncertainty from Table \ref{tab:hmmSs} and the experimental uncertainty from Table \ref{tab:hmmExpUncert} constrain nuisance parameters that may enhance or reduce the signal component in the model.
+A comparison is made between the two hypotheses using the \cls method described fully in Section \ref{sec:ciStat}.
+This produces a likelihood of the S+B model relative to the B-only model.
+Limits are set on the POI at the point where the corresponding S+B model has been found to be incompatible with the observed data.
+The incompatibility threshold is defined by convention when the S+B model has been rejected with 95\% confidence.  
+
